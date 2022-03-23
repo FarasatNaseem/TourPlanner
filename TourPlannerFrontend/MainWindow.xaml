@@ -4,17 +4,21 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:TourPlannerFrontend" 
-        xmlns:view="clr-namespace:TourPlannerFrontend.View"
+        xmlns:view="clr-namespace:TourPlannerFrontend.View" 
+        xmlns:viewmodel="clr-namespace:TourPlannerFrontend.ViewModel"
+        d:DataContext="{d:DesignInstance Type=viewmodel:MainViewModel}"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800"
         >
 
+        
     <DockPanel>
         <Label FontSize="20" DockPanel.Dock="Top">
             <Bold>Tour Planner</Bold>
         </Label>
-        <view:HeaderView DockPanel.Dock="Top" Margin="0 0 0 0" VerticalAlignment="Center"/>
-        <view:SearchView DockPanel.Dock="Top" Margin="0 0 0 0" VerticalAlignment="Center"/>
-        <view:TourListView HorizontalAlignment="Left"/>
+        <view:HeaderView DockPanel.Dock="Top" VerticalAlignment="Center"/>
+        <view:SearchView DockPanel.Dock="Top" VerticalAlignment="Center"/>
+        <view:TourListView HorizontalAlignment="Left" DataContext="{Binding CurrentViewModel}"/>
+        <view:TourDescriptionView DockPanel.Dock="Top" DataContext="{Binding CurrentViewModel}"/>
     </DockPanel>
 </Window>
