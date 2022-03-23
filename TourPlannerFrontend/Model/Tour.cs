@@ -4,7 +4,7 @@
 
     public class Tour
     {
-        public Tour(string name, string tourDescription, string from, string to, string transportType, string tourDistance, TimeSpan estimatedTime, string routeInformation)
+        public Tour( string name, string tourDescription, string from, string to, string transportType, string tourDistance, TimeSpan estimatedTime, string routeInformation)
         {
             this.Name = name;
             this.TourDescription = tourDescription;
