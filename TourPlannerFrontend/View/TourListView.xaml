@@ -4,8 +4,11 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:TourPlannerFrontend.View"
+             xmlns:viewmodel="clr-namespace:TourPlannerFrontend.ViewModel"
+             d:DataContext="{d:DesignInstance Type=viewmodel:TourListViewModel}"
              mc:Ignorable="d" 
              d:DesignHeight="410" d:DesignWidth="250">
+
     <Border CornerRadius="1" BorderBrush="LightGray" Background="White" BorderThickness="1" >
         <DockPanel>
             <Grid DockPanel.Dock="Top">
@@ -18,13 +21,29 @@
 
                 <Grid.RowDefinitions>
                     <RowDefinition Height="40"/>
+                    <RowDefinition Height="1*"/>
                 </Grid.RowDefinitions>
 
-                <Button FontSize="20" Grid.Column="0" Grid.Row="1"  Margin="2" >Tours</Button>
-                <Button FontSize="20" Grid.Column="1" Grid.Row="1"  Margin="2">+</Button>
-                <Button FontSize="20" Grid.Column="2" Grid.Row="1"  Margin="2">-</Button>
-                <Button FontSize="20" Grid.Column="3" Grid.Row="1"  Margin="2">[]</Button>
+                <Button FontSize="20" Grid.Column="0" Grid.Row="0"  Margin="2" >Tours</Button>
+                <Button FontSize="20" Grid.Column="1" Grid.Row="0"  Margin="2" Command="{Binding AddCommand}">+</Button>
+                <Button FontSize="20" Grid.Column="2" Grid.Row="0"  Margin="2" Command="{Binding DeleteCommand}">-</Button>
+                <Button FontSize="20" Grid.Column="3" Grid.Row="0"  Margin="2">[]</Button>
+
+                <ListView Grid.ColumnSpan="4" Grid.Row="1"  Margin="1" ItemsSource="{Binding Tours}">
+                    <ListView.View>
+                        <GridView>
+                            <GridViewColumn >
+                                <GridViewColumn.CellTemplate>
+                                    <DataTemplate>
+                                        <TextBlock Width="40" HorizontalAlignment="Center" Text="{Binding Name}" />
+                                    </DataTemplate>
+                                </GridViewColumn.CellTemplate>
+                            </GridViewColumn>
+                        </GridView>
+                    </ListView.View>
+                </ListView>
             </Grid>
         </DockPanel>
     </Border>
+
 </UserControl>
