@@ -28,7 +28,7 @@ namespace TourPlannerFrontend.ViewModel
 
             DeleteCommand = new BaseCommand((_) =>
             {
-                 Delete();
+                Delete();
             });
 
 
