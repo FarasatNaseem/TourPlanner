@@ -1,7 +1,6 @@
-﻿using System.Collections.Generic;
-
-namespace TourPlannerFrontend.Model
+﻿namespace TourPlanner.Model
 {
+    using System.Collections.Generic;
     public class Tour
     {
         public Tour(int id, string name, string tourDescription, string from, string to, double distance, string routeImage, List<TourLog> logs)

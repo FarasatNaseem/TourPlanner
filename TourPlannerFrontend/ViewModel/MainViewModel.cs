@@ -10,11 +10,13 @@ namespace TourPlannerFrontend.ViewModel
 {
     public class MainViewModel : BaseViewModel
     {
-        public BaseViewModel CurrentViewModel { get; }
+        public BaseViewModel TourListVM { get; }
+        public BaseViewModel TourLogsVM { get; }
 
         public MainViewModel()
         {
-            this.CurrentViewModel = new TourListViewModel();
+            this.TourLogsVM = new TourLogViewModel();
+            this.TourListVM = new TourListViewModel(this.TourLogsVM);
         }
     }
 }

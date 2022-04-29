@@ -1,7 +1,8 @@
-﻿namespace TourPlannerFrontend.ViewModel.Commands
+﻿namespace TourPlanner.BL.Command
 {
     using System;
     using System.Windows.Input;
+
     public class BaseCommand : ICommand
     {
         public event EventHandler CanExecuteChanged;

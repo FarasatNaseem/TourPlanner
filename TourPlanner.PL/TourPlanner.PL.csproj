@@ -7,7 +7,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Infragistics.DataPresenter.DataSources.OData" Version="16.1.1000" />
+    <ProjectReference Include="..\TourPlanner.BL\TourPlanner.BL.csproj" />
   </ItemGroup>
 
 </Project>
