@@ -5,9 +5,7 @@ C:\Users\Privat\source\repos\TourPlanner\TourPlanner.PL\bin\Debug\net5.0-windows
 C:\Users\Privat\source\repos\TourPlanner\TourPlanner.PL\bin\Debug\net5.0-windows\TourPlanner.PL.dll
 C:\Users\Privat\source\repos\TourPlanner\TourPlanner.PL\bin\Debug\net5.0-windows\ref\TourPlanner.PL.dll
 C:\Users\Privat\source\repos\TourPlanner\TourPlanner.PL\bin\Debug\net5.0-windows\TourPlanner.PL.pdb
-C:\Users\Privat\source\repos\TourPlanner\TourPlanner.PL\bin\Debug\net5.0-windows\TourPlanner.BL.dll
 C:\Users\Privat\source\repos\TourPlanner\TourPlanner.PL\bin\Debug\net5.0-windows\TourPlanner.Model.dll
-C:\Users\Privat\source\repos\TourPlanner\TourPlanner.PL\bin\Debug\net5.0-windows\TourPlanner.BL.pdb
 C:\Users\Privat\source\repos\TourPlanner\TourPlanner.PL\bin\Debug\net5.0-windows\TourPlanner.Model.pdb
 C:\Users\Privat\source\repos\TourPlanner\TourPlanner.PL\obj\Debug\net5.0-windows\TourPlanner.PL.csproj.AssemblyReference.cache
 C:\Users\Privat\source\repos\TourPlanner\TourPlanner.PL\obj\Debug\net5.0-windows\MainWindow.g.cs
@@ -34,3 +32,7 @@ C:\Users\Privat\source\repos\TourPlanner\TourPlanner.PL\obj\Debug\net5.0-windows
 C:\Users\Privat\source\repos\TourPlanner\TourPlanner.PL\obj\Debug\net5.0-windows\View\SearchView.g.cs
 C:\Users\Privat\source\repos\TourPlanner\TourPlanner.PL\obj\Debug\net5.0-windows\View\HeaderView.baml
 C:\Users\Privat\source\repos\TourPlanner\TourPlanner.PL\obj\Debug\net5.0-windows\View\SearchView.baml
+C:\Users\Privat\source\repos\TourPlanner\TourPlanner.PL\bin\Debug\net5.0-windows\TourPlanner.Client.BL.dll
+C:\Users\Privat\source\repos\TourPlanner\TourPlanner.PL\bin\Debug\net5.0-windows\TourPlanner.Client.DL.dll
+C:\Users\Privat\source\repos\TourPlanner\TourPlanner.PL\bin\Debug\net5.0-windows\TourPlanner.Client.BL.pdb
+C:\Users\Privat\source\repos\TourPlanner\TourPlanner.PL\bin\Debug\net5.0-windows\TourPlanner.Client.DL.pdb

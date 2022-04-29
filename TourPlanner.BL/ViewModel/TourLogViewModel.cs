@@ -3,11 +3,11 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
 using System.Windows.Input;
-using TourPlanner.BL.Command;
-using TourPlanner.BL.Wrapper;
+using TourPlanner.Client.BL.Command;
+using TourPlanner.Client.BL.Wrapper;
 using TourPlanner.Model;
 
-namespace TourPlanner.BL.ViewModel
+namespace TourPlanner.Client.BL.ViewModel
 {
     public class TourLogViewModel : BaseViewModel
     {

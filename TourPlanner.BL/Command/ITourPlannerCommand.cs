@@ -1,4 +1,4 @@
-﻿namespace TourPlanner.BL.Command
+﻿namespace TourPlanner.Client.BL.Command
 {
     public interface ITourPlannerCommand
     {

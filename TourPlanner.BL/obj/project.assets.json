@@ -2,6 +2,19 @@
   "version": 3,
   "targets": {
     "net5.0": {
+      "TourPlanner.Client.DL/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "dependencies": {
+          "TourPlanner.Model": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/TourPlanner.Client.DL.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/TourPlanner.Client.DL.dll": {}
+        }
+      },
       "TourPlanner.Model/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v5.0",
@@ -15,6 +28,11 @@
     }
   },
   "libraries": {
+    "TourPlanner.Client.DL/1.0.0": {
+      "type": "project",
+      "path": "../TourPlanner.DL/TourPlanner.Client.DL.csproj",
+      "msbuildProject": "../TourPlanner.DL/TourPlanner.Client.DL.csproj"
+    },
     "TourPlanner.Model/1.0.0": {
       "type": "project",
       "path": "../TourPlanner.Model/TourPlanner.Model.csproj",
@@ -23,6 +41,7 @@
   },
   "projectFileDependencyGroups": {
     "net5.0": [
+      "TourPlanner.Client.DL >= 1.0.0",
       "TourPlanner.Model >= 1.0.0"
     ]
   },
@@ -32,9 +51,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Privat\\source\\repos\\TourPlanner\\TourPlanner.BL\\TourPlanner.BL.csproj",
-      "projectName": "TourPlanner.BL",
-      "projectPath": "C:\\Users\\Privat\\source\\repos\\TourPlanner\\TourPlanner.BL\\TourPlanner.BL.csproj",
+      "projectUniqueName": "C:\\Users\\Privat\\source\\repos\\TourPlanner\\TourPlanner.BL\\TourPlanner.Client.BL.csproj",
+      "projectName": "TourPlanner.Client.BL",
+      "projectPath": "C:\\Users\\Privat\\source\\repos\\TourPlanner\\TourPlanner.BL\\TourPlanner.Client.BL.csproj",
       "packagesPath": "C:\\Users\\Privat\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\Privat\\source\\repos\\TourPlanner\\TourPlanner.BL\\obj\\",
       "projectStyle": "PackageReference",
@@ -53,6 +72,9 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
+            "C:\\Users\\Privat\\source\\repos\\TourPlanner\\TourPlanner.DL\\TourPlanner.Client.DL.csproj": {
+              "projectPath": "C:\\Users\\Privat\\source\\repos\\TourPlanner\\TourPlanner.DL\\TourPlanner.Client.DL.csproj"
+            },
             "C:\\Users\\Privat\\source\\repos\\TourPlanner\\TourPlanner.Model\\TourPlanner.Model.csproj": {
               "projectPath": "C:\\Users\\Privat\\source\\repos\\TourPlanner\\TourPlanner.Model\\TourPlanner.Model.csproj"
             }

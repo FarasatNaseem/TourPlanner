@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "rvlpq2M7UFZWI3QmGc/dIRMH1oSUyscxFQ+yEmlFDni0Hoqwyv9Hs9yDEDVPEyLbPIU0SqNX+PtZU6gWkRtAnA==",
+  "dgSpecHash": "moOH2cYI6ZLRd+xYbJIUuMB43hfabg+nmTbU5vn0zMOBqHetHR3MeKlJ3TTq0bUJ4I4otazQt+cWbOwKxLzhCQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Privat\\source\\repos\\TourPlanner\\TourPlanner.DL\\TourPlanner.DL.csproj",
+  "projectFilePath": "C:\\Users\\Privat\\source\\repos\\TourPlanner\\TourPlanner.DL\\TourPlanner.Client.DL.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

@@ -5,10 +5,10 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:TourPlanner.PL"
         xmlns:view="clr-namespace:TourPlanner.PL.View"
-        xmlns:viewmodel="clr-namespace:TourPlanner.BL.ViewModel;assembly=TourPlanner.BL" 
+        xmlns:viewmodel="clr-namespace:TourPlanner.Client.BL.ViewModel;assembly=TourPlanner.Client.BL" 
         d:DataContext="{d:DesignInstance Type=viewmodel:MainViewModel}"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="450" Width="900">
     <DockPanel>
         <view:HeaderView DockPanel.Dock="Top" VerticalAlignment="Center"/>
         <view:SearchView DockPanel.Dock="Top" VerticalAlignment="Center"/>

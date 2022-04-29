@@ -1,4 +1,4 @@
-﻿namespace TourPlanner.BL.ViewModel
+﻿namespace TourPlanner.Client.BL.ViewModel
 {
     using System.ComponentModel;
     using System.Runtime.CompilerServices;

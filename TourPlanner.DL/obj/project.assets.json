@@ -1,11 +1,30 @@
 {
   "version": 3,
   "targets": {
-    "net5.0": {}
+    "net5.0": {
+      "TourPlanner.Model/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "compile": {
+          "bin/placeholder/TourPlanner.Model.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/TourPlanner.Model.dll": {}
+        }
+      }
+    }
   },
-  "libraries": {},
+  "libraries": {
+    "TourPlanner.Model/1.0.0": {
+      "type": "project",
+      "path": "../TourPlanner.Model/TourPlanner.Model.csproj",
+      "msbuildProject": "../TourPlanner.Model/TourPlanner.Model.csproj"
+    }
+  },
   "projectFileDependencyGroups": {
-    "net5.0": []
+    "net5.0": [
+      "TourPlanner.Model >= 1.0.0"
+    ]
   },
   "packageFolders": {
     "C:\\Users\\Privat\\.nuget\\packages\\": {}
@@ -13,9 +32,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Privat\\source\\repos\\TourPlanner\\TourPlanner.DL\\TourPlanner.DL.csproj",
-      "projectName": "TourPlanner.DL",
-      "projectPath": "C:\\Users\\Privat\\source\\repos\\TourPlanner\\TourPlanner.DL\\TourPlanner.DL.csproj",
+      "projectUniqueName": "C:\\Users\\Privat\\source\\repos\\TourPlanner\\TourPlanner.DL\\TourPlanner.Client.DL.csproj",
+      "projectName": "TourPlanner.Client.DL",
+      "projectPath": "C:\\Users\\Privat\\source\\repos\\TourPlanner\\TourPlanner.DL\\TourPlanner.Client.DL.csproj",
       "packagesPath": "C:\\Users\\Privat\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\Privat\\source\\repos\\TourPlanner\\TourPlanner.DL\\obj\\",
       "projectStyle": "PackageReference",
@@ -33,7 +52,11 @@
       "frameworks": {
         "net5.0": {
           "targetAlias": "net5.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\Privat\\source\\repos\\TourPlanner\\TourPlanner.Model\\TourPlanner.Model.csproj": {
+              "projectPath": "C:\\Users\\Privat\\source\\repos\\TourPlanner\\TourPlanner.Model\\TourPlanner.Model.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

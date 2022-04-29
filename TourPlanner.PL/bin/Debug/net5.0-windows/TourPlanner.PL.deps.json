@@ -8,18 +8,27 @@
     ".NETCoreApp,Version=v5.0": {
       "TourPlanner.PL/1.0.0": {
         "dependencies": {
-          "TourPlanner.BL": "1.0.0"
+          "TourPlanner.Client.BL": "1.0.0"
         },
         "runtime": {
           "TourPlanner.PL.dll": {}
         }
       },
-      "TourPlanner.BL/1.0.0": {
+      "TourPlanner.Client.BL/1.0.0": {
+        "dependencies": {
+          "TourPlanner.Client.DL": "1.0.0",
+          "TourPlanner.Model": "1.0.0"
+        },
+        "runtime": {
+          "TourPlanner.Client.BL.dll": {}
+        }
+      },
+      "TourPlanner.Client.DL/1.0.0": {
         "dependencies": {
           "TourPlanner.Model": "1.0.0"
         },
         "runtime": {
-          "TourPlanner.BL.dll": {}
+          "TourPlanner.Client.DL.dll": {}
         }
       },
       "TourPlanner.Model/1.0.0": {
@@ -35,7 +44,12 @@
       "serviceable": false,
       "sha512": ""
     },
-    "TourPlanner.BL/1.0.0": {
+    "TourPlanner.Client.BL/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "TourPlanner.Client.DL/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

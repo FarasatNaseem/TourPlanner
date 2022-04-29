@@ -1,9 +1,9 @@
-﻿namespace TourPlanner.BL.Wrapper
+﻿namespace TourPlanner.Client.BL.Wrapper
 {
     using System.Linq;
     using System.Collections.ObjectModel;
     using System.ComponentModel;
-    using TourPlanner.BL.ViewModel;
+    using TourPlanner.Client.BL.ViewModel;
     using TourPlanner.Model;
     public class TourWrapper : BaseViewModel
     {

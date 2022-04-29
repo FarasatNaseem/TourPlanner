@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace TourPlanner.BL.ViewModel
+namespace TourPlanner.Client.BL.ViewModel
 {
     public class MainViewModel : BaseViewModel
     {

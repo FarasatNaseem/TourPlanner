@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace TourPlanner.BL.Command
+namespace TourPlanner.Client.BL.Command
 {
     public class AddTourLogCommand : ITourPlannerCommand
     {

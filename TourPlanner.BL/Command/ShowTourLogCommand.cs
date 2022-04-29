@@ -1,9 +1,9 @@
-﻿namespace TourPlanner.BL.Command
+﻿namespace TourPlanner.Client.BL.Command
 {
     using System.Collections.ObjectModel;
-    using TourPlanner.BL.Logic;
-    using TourPlanner.BL.ViewModel;
-    using TourPlanner.BL.Wrapper;
+    using TourPlanner.Client.BL.Logic;
+    using TourPlanner.Client.BL.ViewModel;
+    using TourPlanner.Client.BL.Wrapper;
     public class ShowTourLogCommand : ITourPlannerCommand
     {
         private readonly BaseViewModel _tourLogViewModel;

@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
-using TourPlanner.BL.ViewModel;
-using TourPlanner.BL.Wrapper;
+using TourPlanner.Client.BL.ViewModel;
+using TourPlanner.Client.BL.Wrapper;
 
-namespace TourPlanner.BL.Logic
+namespace TourPlanner.Client.BL.Logic
 {
     public class ShowTourLogOperationExecuter : IOperationExecuter<int>
     {

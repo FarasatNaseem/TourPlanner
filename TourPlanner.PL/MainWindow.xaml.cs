@@ -12,7 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-using TourPlanner.BL.ViewModel;
+using TourPlanner.Client.BL.ViewModel;
 
 namespace TourPlanner.PL
 {

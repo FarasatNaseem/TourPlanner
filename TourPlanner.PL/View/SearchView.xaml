@@ -5,7 +5,7 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:TourPlanner.PL.View"
              mc:Ignorable="d" 
-             d:DesignHeight="40" d:DesignWidth="790">
+             d:DesignHeight="40" d:DesignWidth="890">
 
     <Border CornerRadius="1" BorderBrush="LightGray" Background="white" BorderThickness="1" >
         <DockPanel>

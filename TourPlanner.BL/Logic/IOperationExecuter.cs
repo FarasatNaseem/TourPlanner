@@ -1,4 +1,4 @@
-﻿namespace TourPlanner.BL.Logic
+﻿namespace TourPlanner.Client.BL.Logic
 {
     public interface IOperationExecuter<Parameter> 
     {

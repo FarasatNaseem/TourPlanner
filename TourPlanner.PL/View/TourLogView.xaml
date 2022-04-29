@@ -5,7 +5,7 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:c1="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:local="clr-namespace:TourPlanner.PL.View"
-             xmlns:viewmodel="clr-namespace:TourPlanner.BL.ViewModel;assembly=TourPlanner.BL"
+             xmlns:viewmodel="clr-namespace:TourPlanner.Client.BL.ViewModel;assembly=TourPlanner.Client.BL"
              d:DataContext="{d:DesignInstance Type=viewmodel:TourLogViewModel}"
              mc:Ignorable="d" 
              d:DesignHeight="410" d:DesignWidth="600">

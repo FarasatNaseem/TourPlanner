@@ -1,7 +1,7 @@
-﻿namespace TourPlanner.BL.Wrapper
+﻿namespace TourPlanner.Client.BL.Wrapper
 {
     using System;
-    using TourPlanner.BL.ViewModel;
+    using TourPlanner.Client.BL.ViewModel;
     using TourPlanner.Model;
 
     public class TourLogWrapper : BaseViewModel
