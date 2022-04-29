@@ -1,0 +1,111 @@
+{
+  "version": 3,
+  "targets": {
+    "net5.0-windows7.0": {
+      "TourPlanner.BL/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "dependencies": {
+          "TourPlanner.Model": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/TourPlanner.BL.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/TourPlanner.BL.dll": {}
+        }
+      },
+      "TourPlanner.Model/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "compile": {
+          "bin/placeholder/TourPlanner.Model.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/TourPlanner.Model.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "TourPlanner.BL/1.0.0": {
+      "type": "project",
+      "path": "../TourPlanner.BL/TourPlanner.BL.csproj",
+      "msbuildProject": "../TourPlanner.BL/TourPlanner.BL.csproj"
+    },
+    "TourPlanner.Model/1.0.0": {
+      "type": "project",
+      "path": "../TourPlanner.Model/TourPlanner.Model.csproj",
+      "msbuildProject": "../TourPlanner.Model/TourPlanner.Model.csproj"
+    }
+  },
+  "projectFileDependencyGroups": {
+    "net5.0-windows7.0": [
+      "TourPlanner.BL >= 1.0.0"
+    ]
+  },
+  "packageFolders": {
+    "C:\\Users\\Privat\\.nuget\\packages\\": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "C:\\Users\\Privat\\source\\repos\\TourPlanner\\TourPlanner.PL\\TourPlanner.PL.csproj",
+      "projectName": "TourPlanner.PL",
+      "projectPath": "C:\\Users\\Privat\\source\\repos\\TourPlanner\\TourPlanner.PL\\TourPlanner.PL.csproj",
+      "packagesPath": "C:\\Users\\Privat\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Privat\\source\\repos\\TourPlanner\\TourPlanner.PL\\obj\\",
+      "projectStyle": "PackageReference",
+      "configFilePaths": [
+        "C:\\Users\\Privat\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+      ],
+      "originalTargetFrameworks": [
+        "net5.0-windows7.0"
+      ],
+      "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "net5.0-windows7.0": {
+          "targetAlias": "net5.0-windows",
+          "projectReferences": {
+            "C:\\Users\\Privat\\source\\repos\\TourPlanner\\TourPlanner.BL\\TourPlanner.BL.csproj": {
+              "projectPath": "C:\\Users\\Privat\\source\\repos\\TourPlanner\\TourPlanner.BL\\TourPlanner.BL.csproj"
+            }
+          }
+        }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
+      }
+    },
+    "frameworks": {
+      "net5.0-windows7.0": {
+        "targetAlias": "net5.0-windows",
+        "imports": [
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48"
+        ],
+        "assetTargetFallback": true,
+        "warn": true,
+        "frameworkReferences": {
+          "Microsoft.NETCore.App": {
+            "privateAssets": "all"
+          },
+          "Microsoft.WindowsDesktop.App.WPF": {
+            "privateAssets": "none"
+          }
+        },
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.401\\RuntimeIdentifierGraph.json"
+      }
+    }
+  }
+}

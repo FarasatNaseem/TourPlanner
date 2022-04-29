@@ -1,0 +1,15 @@
+C:\Users\Privat\source\repos\TourPlanner\TourPlanner.BL\obj\Debug\net5.0\TourPlanner.BL.csproj.AssemblyReference.cache
+C:\Users\Privat\source\repos\TourPlanner\TourPlanner.BL\obj\Debug\net5.0\TourPlanner.BL.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Privat\source\repos\TourPlanner\TourPlanner.BL\obj\Debug\net5.0\TourPlanner.BL.AssemblyInfoInputs.cache
+C:\Users\Privat\source\repos\TourPlanner\TourPlanner.BL\obj\Debug\net5.0\TourPlanner.BL.AssemblyInfo.cs
+C:\Users\Privat\source\repos\TourPlanner\TourPlanner.BL\obj\Debug\net5.0\TourPlanner.BL.csproj.CoreCompileInputs.cache
+C:\Users\Privat\source\repos\TourPlanner\TourPlanner.BL\bin\Debug\net5.0\TourPlanner.BL.deps.json
+C:\Users\Privat\source\repos\TourPlanner\TourPlanner.BL\bin\Debug\net5.0\TourPlanner.BL.dll
+C:\Users\Privat\source\repos\TourPlanner\TourPlanner.BL\bin\Debug\net5.0\ref\TourPlanner.BL.dll
+C:\Users\Privat\source\repos\TourPlanner\TourPlanner.BL\bin\Debug\net5.0\TourPlanner.BL.pdb
+C:\Users\Privat\source\repos\TourPlanner\TourPlanner.BL\bin\Debug\net5.0\TourPlanner.Model.dll
+C:\Users\Privat\source\repos\TourPlanner\TourPlanner.BL\bin\Debug\net5.0\TourPlanner.Model.pdb
+C:\Users\Privat\source\repos\TourPlanner\TourPlanner.BL\obj\Debug\net5.0\TourPlanner.BL.csproj.CopyComplete
+C:\Users\Privat\source\repos\TourPlanner\TourPlanner.BL\obj\Debug\net5.0\TourPlanner.BL.dll
+C:\Users\Privat\source\repos\TourPlanner\TourPlanner.BL\obj\Debug\net5.0\ref\TourPlanner.BL.dll
+C:\Users\Privat\source\repos\TourPlanner\TourPlanner.BL\obj\Debug\net5.0\TourPlanner.BL.pdb

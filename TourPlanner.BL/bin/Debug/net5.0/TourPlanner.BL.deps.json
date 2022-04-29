@@ -1,0 +1,36 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v5.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v5.0": {
+      "TourPlanner.BL/1.0.0": {
+        "dependencies": {
+          "TourPlanner.Model": "1.0.0"
+        },
+        "runtime": {
+          "TourPlanner.BL.dll": {}
+        }
+      },
+      "TourPlanner.Model/1.0.0": {
+        "runtime": {
+          "TourPlanner.Model.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "TourPlanner.BL/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "TourPlanner.Model/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
