@@ -8,13 +8,13 @@ namespace TourPlanner.Client.BL.ViewModel
 {
     public class MainViewModel : BaseViewModel
     {
-        public BaseViewModel TourVM { get; }
-        public BaseViewModel TourLogVM { get; }
+        public BaseViewModel HomeVM { get; }
+        public BaseViewModel AddTourVM { get; }
 
         public MainViewModel()
         {
-            this.TourLogVM = new TourLogViewModel();
-            this.TourVM = new TourViewModel(this.TourLogVM);
+            this.HomeVM = new HomeViewModel();
+            this.AddTourVM = new AddTourViewModel();
         }
     }
 }

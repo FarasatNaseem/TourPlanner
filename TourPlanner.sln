@@ -17,11 +17,15 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TourPlanner.Client.BL", "To
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TourPlanner.Client.DL", "TourPlanner.DL\TourPlanner.Client.DL.csproj", "{269680C8-35E7-4656-B29F-34C847CD23F5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TourPlanner.API", "TourPlanner.API\TourPlanner.API.csproj", "{9B2296E4-6BB3-487B-A923-6E911E4D88FD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TourPlanner.API", "TourPlanner.API\TourPlanner.API.csproj", "{9B2296E4-6BB3-487B-A923-6E911E4D88FD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TourPlanner.Server.DL", "TourPlanner.Server.DL\TourPlanner.Server.DL.csproj", "{B148CBD7-6E7A-463B-8B54-B2E26DB28405}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TourPlanner.Server.DL", "TourPlanner.Server.DL\TourPlanner.Server.DL.csproj", "{B148CBD7-6E7A-463B-8B54-B2E26DB28405}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TourPlanner.Server.BL", "TourPlanner.Server.BL\TourPlanner.Server.BL.csproj", "{32212332-97F0-488B-8864-B68161E5D0A0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TourPlanner.Server.BL", "TourPlanner.Server.BL\TourPlanner.Server.BL.csproj", "{32212332-97F0-488B-8864-B68161E5D0A0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TourPlanner.Client.BL.Test", "TourPlanner.Client.BL.Test\TourPlanner.Client.BL.Test.csproj", "{72BDD3E6-3750-4D8E-9215-35B82A9274AB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TourPlanner.Client.DL.Test", "TourPlanner.Client.DL.Test\TourPlanner.Client.DL.Test.csproj", "{828C0AF0-CE15-4536-BB24-F9B9271B7BB9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -57,6 +61,14 @@ Global
 		{32212332-97F0-488B-8864-B68161E5D0A0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{32212332-97F0-488B-8864-B68161E5D0A0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{32212332-97F0-488B-8864-B68161E5D0A0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{72BDD3E6-3750-4D8E-9215-35B82A9274AB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{72BDD3E6-3750-4D8E-9215-35B82A9274AB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{72BDD3E6-3750-4D8E-9215-35B82A9274AB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{72BDD3E6-3750-4D8E-9215-35B82A9274AB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{828C0AF0-CE15-4536-BB24-F9B9271B7BB9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{828C0AF0-CE15-4536-BB24-F9B9271B7BB9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{828C0AF0-CE15-4536-BB24-F9B9271B7BB9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{828C0AF0-CE15-4536-BB24-F9B9271B7BB9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -69,6 +81,8 @@ Global
 		{9B2296E4-6BB3-487B-A923-6E911E4D88FD} = {710E2D1F-7973-4F17-AF76-355FB252271D}
 		{B148CBD7-6E7A-463B-8B54-B2E26DB28405} = {710E2D1F-7973-4F17-AF76-355FB252271D}
 		{32212332-97F0-488B-8864-B68161E5D0A0} = {710E2D1F-7973-4F17-AF76-355FB252271D}
+		{72BDD3E6-3750-4D8E-9215-35B82A9274AB} = {D66EF554-A783-4B73-9CB0-C82A15C1F5F9}
+		{828C0AF0-CE15-4536-BB24-F9B9271B7BB9} = {D66EF554-A783-4B73-9CB0-C82A15C1F5F9}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {3B62392C-CCC2-428D-89CD-75603F943770}

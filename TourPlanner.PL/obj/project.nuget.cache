@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "AiYmnMesM8DLDBnRG066maX12RTX7E9AG5mumx+fmNltP8x+GzUG6LHyttRLydvKtlxjh9noZRyM0x/wbJS8gQ==",
+  "dgSpecHash": "zQpD2BRF4kq3jlpI/so1gUv/HxMC6xKSCZ1jiucBt4mu+3eDPMwgMKMOi0q0ymChRTVhkM9JRHKAa+laG6eaHg==",
   "success": true,
   "projectFilePath": "C:\\Users\\Privat\\source\\repos\\TourPlanner\\TourPlanner.PL\\TourPlanner.PL.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\Privat\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512"
+  ],
   "logs": []
 }

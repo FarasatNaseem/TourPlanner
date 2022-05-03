@@ -53,56 +53,64 @@
         <!--5-->
         <Border BorderBrush="LightGray" Background="White" BorderThickness="1" >
             <Grid Margin="2" DockPanel.Dock="Top" Grid.ColumnSpan="4" >
-                <DataGrid ItemsSource="{Binding Tours}" RowDetailsVisibilityMode="Visible" AutoGenerateColumns="False">
-                    <DataGrid.Columns>
-                        <DataGridTextColumn Header="Name" Binding="{Binding Name}"  Width="Auto"/>
-                        <DataGridTextColumn Header="From" Binding="{Binding From}"  Width="Auto"/>
-                        <DataGridTextColumn Header="To" Binding="{Binding To}"  Width="Auto"/>
-                        <DataGridTextColumn Header="Distance" Binding="{Binding Distance}"  Width="Auto"/>
-                        <DataGridTextColumn Header="Description" Binding="{Binding Description}"  Width="Auto"/>
-                    </DataGrid.Columns>
-                    <DataGrid.RowDetailsTemplate>
-                        <DataTemplate>
-                            <DataGrid ItemsSource="{Binding Logs}" AutoGenerateColumns="False" >
-                                <DataGrid.Columns>
-                                    <DataGridTextColumn Header="Id" Binding="{Binding ID}" Width="Auto"/>
-                                    <DataGridTextColumn Header="Distance" Binding="{Binding Distance}" Width="Auto"/>
-                                    <DataGridTextColumn Header="DateTime" Binding="{Binding DateTime}" Width="Auto"/>
-                                    <DataGridTextColumn Header="Comment" Binding="{Binding Comment}" Width="Auto"/>
-                                    <DataGridTextColumn Header="Difficulty" Binding="{Binding Difficulty}" Width="Auto"/>
-                                    <DataGridTextColumn Header="Duration" Binding="{Binding Duration}" Width="Auto"/>
-                                    <c1:DataGridTemplateColumn>
-                                        <c1:DataGridTemplateColumn.CellTemplate>
-                                            <DataTemplate>
-                                                <Grid>
-                                                    <Button Command="{Binding DataContext.DeleteCommand, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type UserControl}}}" CommandParameter="{Binding Path=PrimaryKey}" Content="Remove"/>
-                                                </Grid>
-                                            </DataTemplate>
-                                        </c1:DataGridTemplateColumn.CellTemplate>
-                                    </c1:DataGridTemplateColumn>
-                                    <c1:DataGridTemplateColumn>
-                                        <c1:DataGridTemplateColumn.CellTemplate>
-                                            <DataTemplate>
-                                                <Grid>
-                                                    <Button Command="{Binding DataContext.UpdateCommand, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type UserControl}}}" CommandParameter="{Binding Path=PrimaryKey}" Content="Update"/>
-                                                </Grid>
-                                            </DataTemplate>
-                                        </c1:DataGridTemplateColumn.CellTemplate>
-                                    </c1:DataGridTemplateColumn>
-                                    <c1:DataGridTemplateColumn>
-                                        <c1:DataGridTemplateColumn.CellTemplate>
-                                            <DataTemplate>
-                                                <Grid>
-                                                    <Button Command="{Binding DataContext.GenerateReportCommand, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type UserControl}}}" CommandParameter="{Binding Path=PrimaryKey}" Content="GenerateReport"/>
-                                                </Grid>
-                                            </DataTemplate>
-                                        </c1:DataGridTemplateColumn.CellTemplate>
-                                    </c1:DataGridTemplateColumn>
-                                </DataGrid.Columns>
-                            </DataGrid>
-                        </DataTemplate>
-                    </DataGrid.RowDetailsTemplate>
-                </DataGrid>
+                <Border BorderBrush="LightGray" Background="White"  BorderThickness="1" Margin="2">
+                    <DataGrid ItemsSource="{Binding Tours}" RowDetailsVisibilityMode="Visible" AutoGenerateColumns="False">
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Header="Name" Binding="{Binding Name}"  Width="Auto"/>
+                            <DataGridTextColumn Header="From" Binding="{Binding From}"  Width="Auto"/>
+                            <DataGridTextColumn Header="To" Binding="{Binding To}"  Width="Auto"/>
+                            <DataGridTextColumn Header="Distance" Binding="{Binding Distance}"  Width="Auto"/>
+                            <DataGridTextColumn Header="Description" Binding="{Binding Description}"  Width="Auto"/>
+                        </DataGrid.Columns>
+                        <DataGrid.RowDetailsTemplate>
+                            <DataTemplate>
+                                <DataGrid ItemsSource="{Binding Logs}" AutoGenerateColumns="False" >
+                                    <DataGrid.Columns>
+                                        <DataGridTextColumn Header="Id" Binding="{Binding ID}" Width="Auto"/>
+                                        <DataGridTextColumn Header="Distance" Binding="{Binding Distance}" Width="Auto"/>
+                                        <DataGridTextColumn Header="DateTime" Binding="{Binding DateTime}" Width="Auto"/>
+                                        <DataGridTextColumn Header="Comment" Binding="{Binding Comment}" Width="Auto"/>
+                                        <DataGridTextColumn Header="Difficulty" Binding="{Binding Difficulty}" Width="Auto"/>
+                                        <DataGridTextColumn Header="Duration" Binding="{Binding Duration}" Width="Auto"/>
+                                        <c1:DataGridTemplateColumn>
+                                            <c1:DataGridTemplateColumn.CellTemplate>
+                                                <DataTemplate>
+                                                    <Grid>
+                                                        <Border BorderBrush="LightGray" Background="White"  BorderThickness="1" Margin="2">
+                                                            <Button Command="{Binding DataContext.DeleteCommand, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type UserControl}}}" CommandParameter="{Binding Path=PrimaryKey}" Content="Remove"/>
+                                                        </Border>
+                                                    </Grid>
+                                                </DataTemplate>
+                                            </c1:DataGridTemplateColumn.CellTemplate>
+                                        </c1:DataGridTemplateColumn>
+                                        <c1:DataGridTemplateColumn>
+                                            <c1:DataGridTemplateColumn.CellTemplate>
+                                                <DataTemplate>
+                                                    <Grid>
+                                                        <Border BorderBrush="LightGray" Background="White"  BorderThickness="1" Margin="2">
+                                                            <Button Command="{Binding DataContext.UpdateCommand, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type UserControl}}}" CommandParameter="{Binding Path=PrimaryKey}" Content="Update"/>
+                                                        </Border>
+                                                    </Grid>
+                                                </DataTemplate>
+                                            </c1:DataGridTemplateColumn.CellTemplate>
+                                        </c1:DataGridTemplateColumn>
+                                        <c1:DataGridTemplateColumn>
+                                            <c1:DataGridTemplateColumn.CellTemplate>
+                                                <DataTemplate>
+                                                    <Grid>
+                                                        <Border BorderBrush="LightGray" Background="White"  BorderThickness="1" Margin="2">
+                                                            <Button Command="{Binding DataContext.GenerateReportCommand, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type UserControl}}}" CommandParameter="{Binding Path=PrimaryKey}" Content="GenerateReport"/>
+                                                        </Border>
+                                                    </Grid>
+                                                </DataTemplate>
+                                            </c1:DataGridTemplateColumn.CellTemplate>
+                                        </c1:DataGridTemplateColumn>
+                                    </DataGrid.Columns>
+                                </DataGrid>
+                            </DataTemplate>
+                        </DataGrid.RowDetailsTemplate>
+                    </DataGrid>
+                </Border>
             </Grid>
         </Border>
         <!--5-->

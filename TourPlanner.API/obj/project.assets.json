@@ -75,6 +75,16 @@
         "frameworkReferences": [
           "Microsoft.AspNetCore.App"
         ]
+      },
+      "TourPlanner.Model/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "compile": {
+          "bin/placeholder/TourPlanner.Model.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/TourPlanner.Model.dll": {}
+        }
       }
     }
   },
@@ -185,11 +195,17 @@
         "swashbuckle.aspnetcore.swaggerui.5.6.3.nupkg.sha512",
         "swashbuckle.aspnetcore.swaggerui.nuspec"
       ]
+    },
+    "TourPlanner.Model/1.0.0": {
+      "type": "project",
+      "path": "../TourPlanner.Model/TourPlanner.Model.csproj",
+      "msbuildProject": "../TourPlanner.Model/TourPlanner.Model.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net5.0": [
-      "Swashbuckle.AspNetCore >= 5.6.3"
+      "Swashbuckle.AspNetCore >= 5.6.3",
+      "TourPlanner.Model >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -218,7 +234,11 @@
       "frameworks": {
         "net5.0": {
           "targetAlias": "net5.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\Privat\\source\\repos\\TourPlanner\\TourPlanner.Model\\TourPlanner.Model.csproj": {
+              "projectPath": "C:\\Users\\Privat\\source\\repos\\TourPlanner\\TourPlanner.Model\\TourPlanner.Model.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

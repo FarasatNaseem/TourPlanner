@@ -7,7 +7,6 @@
         {
             this.id = id;
             this.PrimaryKey = primaryKey;
-            this.Type = type;
             this.Distance = distance;
             this.DateTime = dateTime;
             this.Comment = comment;
@@ -19,8 +18,6 @@
         public int id { get; }
 
         public int PrimaryKey { get; }
-
-        public TransportType Type { get; }
 
         public double Distance { get; }
 

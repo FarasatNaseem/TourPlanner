@@ -8,7 +8,6 @@
     {
         private int _id;
         private int _primaryKey;
-        private TransportType _type;
         private double _distance;
         private DateTime _dateTime;
         private string _comment;
@@ -20,7 +19,6 @@
         {
             this.ID = log.id;
             this.PrimaryKey = log.PrimaryKey;
-            this.Type = log.Type;
             this.Distance = log.Distance;
             this.DateTime = log.DateTime;
             this.Comment = log.Comment;
@@ -50,17 +48,6 @@
                     return;
                 }
                 _primaryKey = value;
-                OnPropertyChanged();
-            }
-        }
-
-        public TransportType Type
-        {
-            get => _type;
-            set
-            {
-                if (_type == value) return;
-                _type = value;
                 OnPropertyChanged();
             }
         }

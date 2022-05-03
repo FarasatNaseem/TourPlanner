@@ -10,9 +10,7 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="900">
     <DockPanel>
-        <view:HeaderView DockPanel.Dock="Top" VerticalAlignment="Center"/>
-        <view:SearchView DockPanel.Dock="Top" VerticalAlignment="Center"/>
-        <view:TourView HorizontalAlignment="Left" DataContext="{Binding TourVM}"/>
-        <view:TourLogView HorizontalAlignment="Left" DataContext="{Binding TourLogVM}"/>
+        <!--<view:HomeView DockPanel.Dock="Top" DataContext="{Binding HomeVM}"/>-->
+        <view:AddTourView DockPanel.Dock="Top" DataContext="{Binding AddTourVM}"/>
     </DockPanel>
 </Window>

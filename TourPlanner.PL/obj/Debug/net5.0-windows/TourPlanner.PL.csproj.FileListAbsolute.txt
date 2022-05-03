@@ -36,3 +36,8 @@ C:\Users\Privat\source\repos\TourPlanner\TourPlanner.PL\bin\Debug\net5.0-windows
 C:\Users\Privat\source\repos\TourPlanner\TourPlanner.PL\bin\Debug\net5.0-windows\TourPlanner.Client.DL.dll
 C:\Users\Privat\source\repos\TourPlanner\TourPlanner.PL\bin\Debug\net5.0-windows\TourPlanner.Client.BL.pdb
 C:\Users\Privat\source\repos\TourPlanner\TourPlanner.PL\bin\Debug\net5.0-windows\TourPlanner.Client.DL.pdb
+C:\Users\Privat\source\repos\TourPlanner\TourPlanner.PL\obj\Debug\net5.0-windows\View\HomeView.g.cs
+C:\Users\Privat\source\repos\TourPlanner\TourPlanner.PL\obj\Debug\net5.0-windows\View\HomeView.baml
+C:\Users\Privat\source\repos\TourPlanner\TourPlanner.PL\obj\Debug\net5.0-windows\View\AddTourView.g.cs
+C:\Users\Privat\source\repos\TourPlanner\TourPlanner.PL\obj\Debug\net5.0-windows\View\AddTourView.baml
+C:\Users\Privat\source\repos\TourPlanner\TourPlanner.PL\bin\Debug\net5.0-windows\Newtonsoft.Json.dll

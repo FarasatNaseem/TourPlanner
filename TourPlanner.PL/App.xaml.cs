@@ -5,6 +5,7 @@ using System.Data;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows;
+using TourPlanner.Client.BL.ViewModel;
 
 namespace TourPlanner.PL
 {
@@ -13,5 +14,6 @@ namespace TourPlanner.PL
     /// </summary>
     public partial class App : Application
     {
+      
     }
 }

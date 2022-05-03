@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net.Http;
@@ -27,12 +28,13 @@ namespace TourPlanner.Client.DL.Services
         public async Task<(bool, string)> Create(object dataToStoreInDB)
         {
             Tour tour = (Tour)dataToStoreInDB;
-            var response = await this._clientService.PostAsync($"url",
-                    new StringContent(
-                        /*JsonConvert.SerializeObject(tour)*/ " ",
-                        Encoding.Default,
-                        "application/json"
-                    ));
+
+            var response = await _clientService.PostAsync($"https://localhost:5001/Tour",
+                   new StringContent(
+                       JsonConvert.SerializeObject(tour),
+                       Encoding.Default,
+                       "application/json"
+                   ));
 
             return (true, "New Tour is created");
         }

@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v5.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v5.0": {
+      "TourPlanner.Server.DL/1.0.0": {
+        "runtime": {
+          "TourPlanner.Server.DL.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "TourPlanner.Server.DL/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

@@ -1,0 +1,113 @@
+﻿<UserControl x:Class="TourPlanner.PL.View.AddTourView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:TourPlanner.PL.View"
+             xmlns:viewmodel="clr-namespace:TourPlanner.Client.BL.ViewModel;assembly=TourPlanner.Client.BL"
+             d:DataContext="{d:DesignInstance Type=viewmodel:AddTourViewModel}"
+             d:DesignHeight="450"
+             d:DesignWidth="800"
+            FontSize="15"
+            mc:Ignorable="d">
+    <UserControl.Resources>
+        <BooleanToVisibilityConverter x:Key="BooleanToVisibilityConverter" />
+    </UserControl.Resources>
+    <!--<UserControl.Background>
+        <ImageBrush
+            ImageSource="/Resources/login-background.jpg"
+            Opacity="0.5"
+            Stretch="UniformToFill" />
+    </UserControl.Background>-->
+    <Border Margin="10" Padding="10"
+        HorizontalAlignment="Center"
+        VerticalAlignment="Center"
+        Background="White"
+        BorderThickness="3"
+        CornerRadius="10">
+        <Border.Effect>
+            <DropShadowEffect BlurRadius="10" Color="Gray" />
+        </Border.Effect>
+        <Grid Grid.IsSharedSizeScope="True">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto" />
+                <RowDefinition Height="auto" />
+            </Grid.RowDefinitions>
+
+            <TextBlock Grid.Row="0"
+                HorizontalAlignment="Center"
+                FontSize="48"
+                Text="Tour Planner" />
+
+            <Grid Grid.Row="1" Margin="0,20">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="auto" />
+                </Grid.RowDefinitions>
+
+                <Grid Grid.Row="0" Margin="0,10">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="auto" SharedSizeGroup="Label" />
+                        <ColumnDefinition Width="300" />
+                    </Grid.ColumnDefinitions>
+
+                    <TextBlock Grid.Column="0" Text="Name" />
+                    <TextBox Grid.Column="1" Margin="20,0,0,0"
+                        Text="{Binding Name, UpdateSourceTrigger=PropertyChanged}" />
+                </Grid>
+
+                <Grid Grid.Row="1" Margin="0,10">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="auto" SharedSizeGroup="Label" />
+                        <ColumnDefinition Width="300" />
+                    </Grid.ColumnDefinitions>
+
+                    <TextBlock Grid.Column="0" Text="From" />
+                    <TextBox Grid.Column="1" Margin="20,0,0,0"
+                        Text="{Binding From, UpdateSourceTrigger=PropertyChanged}" />
+                </Grid>
+
+                <Grid Grid.Row="2" Margin="0,10">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="auto" SharedSizeGroup="Label" />
+                        <ColumnDefinition Width="300" />
+                    </Grid.ColumnDefinitions>
+
+                    <TextBlock Grid.Column="0" Text="To" />
+                    <TextBox Grid.Column="1" Margin="20,0,0,0"
+                        Text="{Binding To, UpdateSourceTrigger=PropertyChanged}" />
+                </Grid>
+
+                <Grid Grid.Row="3" Margin="0,10">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="auto" SharedSizeGroup="Label" />
+                        <ColumnDefinition Width="300" />
+                    </Grid.ColumnDefinitions>
+
+                    <TextBlock Grid.Column="0" Text="Description" />
+                    <TextBox Grid.Column="1" Margin="20,0,0,0"
+                        Text="{Binding Description, UpdateSourceTrigger=PropertyChanged}" />
+                </Grid>
+
+
+                <Button Grid.Row="4" Margin="0,10" Width="100"
+                    HorizontalAlignment="Center"
+                    Command="{Binding AddCommand}"
+                    Content="Add"
+                    IsDefault="True" />
+
+                <TextBlock Grid.Row="6" Margin="0,10,0,0"
+                    HorizontalAlignment="Center"
+                    DataContext="{Binding MessageViewModel}"
+                    Foreground="DarkRed"
+                    Text="{Binding Message}"
+                    Visibility="{Binding HasMessage, Converter={StaticResource BooleanToVisibilityConverter}}" />
+            </Grid>
+        </Grid>
+    </Border>
+</UserControl>

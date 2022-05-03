@@ -7,11 +7,6 @@
 
     public class DeleteTourLogOperationExecuter : IOperationExecuter<int>
     {
-        // Test starts
-
-        private TourPlannerApi api = new TourPlannerApi(new TourLogService());
-
-        // Test ends
 
         private ObservableCollection<TourWrapper> _tours;
         public DeleteTourLogOperationExecuter(ObservableCollection<TourWrapper> tours)
