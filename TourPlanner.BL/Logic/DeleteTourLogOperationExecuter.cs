@@ -22,7 +22,7 @@
             {
                 for (int logIndex = 0; logIndex < this._tours[tourIndex].Logs.Count; logIndex++)
                 {
-                    if (this._tours[tourIndex].Logs[logIndex].PrimaryKey == parameter)
+                    if (this._tours[tourIndex].Logs[logIndex].Id == parameter)
                     {
                         this._tours[tourIndex].Logs.RemoveAt(logIndex);
                     }

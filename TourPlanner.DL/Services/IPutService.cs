@@ -3,11 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using TourPlanner.Client.DL.Responses;
 
 namespace TourPlanner.Client.DL.Services
 {
     public interface IPutService
     {
-        Task<(bool, string)> Update(object listOfUpdatedData);
+        Task<GenericApiResponse> Update(object listOfUpdatedData);
     }
 }

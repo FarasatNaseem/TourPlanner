@@ -1,9 +1,11 @@
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using TourPlanner.Server.BL;
 
 namespace TourPlanner.API.Controllers
 {
@@ -12,6 +14,13 @@ namespace TourPlanner.API.Controllers
     [Route("[controller]")]
     public class TourLogController : ControllerBase
     {
+        private readonly ServerOperationExecuter _serverOperationExecuter;
+
+        public TourLogController()
+        {
+            this._serverOperationExecuter = new ServerOperationExecuter();
+        }
+
         [HttpGet]
         public IEnumerable<WeatherForecast> Get()
         {
@@ -19,10 +28,28 @@ namespace TourPlanner.API.Controllers
         }
 
         [HttpPost]
-        public IEnumerable<WeatherForecast> Post(object tourData)
+        public ActionResult Post(object body)
         {
+            string jsonTourLogData = body.ToString();
 
-            throw new NotFiniteNumberException();
+            try
+            {
+                var response = this._serverOperationExecuter.AddTourLog(jsonTourLogData);
+
+                if (response.Item2 == null)
+                {
+                    return StatusCode(StatusCodes.Status400BadRequest,
+                 "Invalid data");
+                }
+
+                return StatusCode(StatusCodes.Status200OK,
+                  response.Item2);
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(StatusCodes.Status500InternalServerError,
+                  "Error creating new employee record");
+            }
         }
     }
 }

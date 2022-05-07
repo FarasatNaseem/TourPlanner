@@ -1,15 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Net.Http;
-namespace TourPlanner.Client.DL.Services
+﻿namespace TourPlanner.Client.DL.Services
 {
+    using System.Threading.Tasks;
+    using TourPlanner.Client.DL.Responses;
+
     public interface IGetService
     {
-        Task<(object, string)> Read(int idOfData);
-
-        Task<(object, string)> ReadAll();
+        Task<GenericApiResponse> Read(int id);
+        Task<GenericApiResponse> ReadAll();
     }
 }

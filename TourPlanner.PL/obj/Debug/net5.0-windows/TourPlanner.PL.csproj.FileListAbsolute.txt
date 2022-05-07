@@ -41,3 +41,15 @@ C:\Users\Privat\source\repos\TourPlanner\TourPlanner.PL\obj\Debug\net5.0-windows
 C:\Users\Privat\source\repos\TourPlanner\TourPlanner.PL\obj\Debug\net5.0-windows\View\AddTourView.g.cs
 C:\Users\Privat\source\repos\TourPlanner\TourPlanner.PL\obj\Debug\net5.0-windows\View\AddTourView.baml
 C:\Users\Privat\source\repos\TourPlanner\TourPlanner.PL\bin\Debug\net5.0-windows\Newtonsoft.Json.dll
+C:\Users\Privat\source\repos\TourPlanner\TourPlanner.PL\obj\Debug\net5.0-windows\View\AddTourLogView.g.cs
+C:\Users\Privat\source\repos\TourPlanner\TourPlanner.PL\obj\Debug\net5.0-windows\View\AddTourLogView.baml
+C:\Users\Privat\source\repos\TourPlanner\TourPlanner.PL\bin\Debug\net5.0-windows\Microsoft.Win32.SystemEvents.dll
+C:\Users\Privat\source\repos\TourPlanner\TourPlanner.PL\bin\Debug\net5.0-windows\System.Drawing.Common.dll
+C:\Users\Privat\source\repos\TourPlanner\TourPlanner.PL\bin\Debug\net5.0-windows\runtimes\win\lib\netcoreapp3.1\Microsoft.Win32.SystemEvents.dll
+C:\Users\Privat\source\repos\TourPlanner\TourPlanner.PL\bin\Debug\net5.0-windows\runtimes\unix\lib\netcoreapp3.1\System.Drawing.Common.dll
+C:\Users\Privat\source\repos\TourPlanner\TourPlanner.PL\bin\Debug\net5.0-windows\runtimes\win\lib\netcoreapp3.1\System.Drawing.Common.dll
+C:\Users\Privat\source\repos\TourPlanner\TourPlanner.PL\bin\Debug\net5.0-windows\Nito.AsyncEx.Context.dll
+C:\Users\Privat\source\repos\TourPlanner\TourPlanner.PL\bin\Debug\net5.0-windows\Nito.AsyncEx.Tasks.dll
+C:\Users\Privat\source\repos\TourPlanner\TourPlanner.PL\bin\Debug\net5.0-windows\Nito.Disposables.dll
+C:\Users\Privat\source\repos\TourPlanner\TourPlanner.PL\bin\Debug\net5.0-windows\MapQuestApi.dll
+C:\Users\Privat\source\repos\TourPlanner\TourPlanner.PL\bin\Debug\net5.0-windows\MapQuestApi.pdb

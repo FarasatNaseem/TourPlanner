@@ -26,6 +26,15 @@ C:\Users\Privat\source\repos\TourPlanner\TourPlanner.API\obj\Debug\net5.0\TourPl
 C:\Users\Privat\source\repos\TourPlanner\TourPlanner.API\obj\Debug\net5.0\ref\TourPlanner.API.dll
 C:\Users\Privat\source\repos\TourPlanner\TourPlanner.API\obj\Debug\net5.0\TourPlanner.API.pdb
 C:\Users\Privat\source\repos\TourPlanner\TourPlanner.API\obj\Debug\net5.0\TourPlanner.API.genruntimeconfig.cache
-C:\Users\Privat\source\repos\TourPlanner\TourPlanner.API\obj\Debug\net5.0\TourPlanner.API.csproj.AssemblyReference.cache
 C:\Users\Privat\source\repos\TourPlanner\TourPlanner.API\bin\Debug\net5.0\TourPlanner.Model.dll
 C:\Users\Privat\source\repos\TourPlanner\TourPlanner.API\bin\Debug\net5.0\TourPlanner.Model.pdb
+C:\Users\Privat\source\repos\TourPlanner\TourPlanner.API\obj\Debug\net5.0\TourPlanner.API.csproj.AssemblyReference.cache
+C:\Users\Privat\source\repos\TourPlanner\TourPlanner.API\bin\Debug\net5.0\Newtonsoft.Json.dll
+C:\Users\Privat\source\repos\TourPlanner\TourPlanner.API\bin\Debug\net5.0\Npgsql.dll
+C:\Users\Privat\source\repos\TourPlanner\TourPlanner.API\bin\Debug\net5.0\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\Privat\source\repos\TourPlanner\TourPlanner.API\bin\Debug\net5.0\TourPlanner.FileSystem.dll
+C:\Users\Privat\source\repos\TourPlanner\TourPlanner.API\bin\Debug\net5.0\TourPlanner.Server.BL.dll
+C:\Users\Privat\source\repos\TourPlanner\TourPlanner.API\bin\Debug\net5.0\TourPlanner.Server.DL.dll
+C:\Users\Privat\source\repos\TourPlanner\TourPlanner.API\bin\Debug\net5.0\TourPlanner.Server.BL.pdb
+C:\Users\Privat\source\repos\TourPlanner\TourPlanner.API\bin\Debug\net5.0\TourPlanner.FileSystem.pdb
+C:\Users\Privat\source\repos\TourPlanner\TourPlanner.API\bin\Debug\net5.0\TourPlanner.Server.DL.pdb

@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "QG6tvMtZg+7hMxPnsbyASl1/N/wfLH83erugk5NkIKnY6pxLfKyNjmG3efAyUf7rM+stl0K0Osp9hABgTdX/ug==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Privat\\source\\repos\\TourPlanner\\MapQuestApi\\MapQuestApi.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Privat\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512"
+  ],
+  "logs": []
+}

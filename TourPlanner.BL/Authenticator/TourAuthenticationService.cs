@@ -1,12 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using TourPlanner.Model;
-
-namespace TourPlanner.Client.BL.Authenticator
+﻿namespace TourPlanner.Client.BL.Authenticator
 {
+    using TourPlanner.Model;
     public enum TourAuthenticationServiceMessage
     {
         Success,
@@ -22,7 +16,7 @@ namespace TourPlanner.Client.BL.Authenticator
     {
         public TourAuthenticationServiceMessage Authenticate(Tour tour)
         {
-            if (!this.IsOK(tour))
+            if (!this.IsOK(tour) || !this.AreFromAndToDifferent(tour.From, tour.To))
             {
                 return TourAuthenticationServiceMessage.Error;
             }
@@ -33,6 +27,11 @@ namespace TourPlanner.Client.BL.Authenticator
         private bool IsOK(Tour tour)
         {
             return !(string.IsNullOrEmpty(tour.Name) && string.IsNullOrEmpty(tour.From) && string.IsNullOrEmpty(tour.To) && string.IsNullOrEmpty(tour.TourDescription));
+        }
+
+        private bool AreFromAndToDifferent(string from, string to)
+        {
+            return from != to ? true : false;
         }
     }
 }

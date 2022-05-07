@@ -9,3 +9,7 @@ C:\Users\Privat\source\repos\TourPlanner\TourPlanner.Server.DL\obj\Debug\net5.0\
 C:\Users\Privat\source\repos\TourPlanner\TourPlanner.Server.DL\obj\Debug\net5.0\TourPlanner.Server.DL.dll
 C:\Users\Privat\source\repos\TourPlanner\TourPlanner.Server.DL\obj\Debug\net5.0\ref\TourPlanner.Server.DL.dll
 C:\Users\Privat\source\repos\TourPlanner\TourPlanner.Server.DL\obj\Debug\net5.0\TourPlanner.Server.DL.pdb
+C:\Users\Privat\source\repos\TourPlanner\TourPlanner.Server.DL\obj\Debug\net5.0\TourPlanner.Server.DL.csproj.AssemblyReference.cache
+C:\Users\Privat\source\repos\TourPlanner\TourPlanner.Server.DL\bin\Debug\net5.0\TourPlanner.Model.dll
+C:\Users\Privat\source\repos\TourPlanner\TourPlanner.Server.DL\bin\Debug\net5.0\TourPlanner.Model.pdb
+C:\Users\Privat\source\repos\TourPlanner\TourPlanner.Server.DL\obj\Debug\net5.0\TourPlanner.Server.DL.csproj.CopyComplete

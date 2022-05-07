@@ -1,10 +1,9 @@
 ﻿namespace TourPlanner.Model
 {
+    using System;
     using System.Collections.Generic;
     public class Tour
     {
-       
-
         public Tour (string name,string from, string to, string tourDescription, TransportType transportType)
         {
             this.Name = name;
@@ -14,13 +13,15 @@
             this.TransportType = transportType;
         }
 
-        public Tour(int id, string name, string tourDescription, string from, string to, double distance, TransportType transportType, string routeImage, List<TourLog> logs) : this(name, from, to, tourDescription, transportType)
+        public Tour(int id, string name, string from, string to, string tourDescription, TransportType transportType, double distance, string routeImage, TimeSpan estimatedTime, List<TourLog> logs) : this(name, from, to, tourDescription, transportType)
         {
             this.Id = id;
             this.Distance = distance;
             this.RouteImage = routeImage;
+            this.EstimatedTime = estimatedTime;
             this.Logs = logs;
         }
+
 
         public int Id { get; }
 
@@ -32,11 +33,14 @@
 
         public string To { get; }
 
-        public double Distance { get; }
+        public double Distance { get; set; }
 
         public TransportType TransportType { get; }
-        public string RouteImage { get; }
 
-        public List<TourLog> Logs { get; }
+        public string RouteImage { get; set; }
+
+        public TimeSpan EstimatedTime { get; set; }
+
+        public List<TourLog> Logs { get; set; }
     }
 }

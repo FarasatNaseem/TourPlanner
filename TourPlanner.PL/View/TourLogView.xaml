@@ -40,14 +40,18 @@
                         <RowDefinition Height="1*"/>
                     </Grid.RowDefinitions>
 
-                    <Border BorderBrush="LightGray" Background="White" BorderThickness="1" Grid.ColumnSpan="4" Margin="2">
+                    <Border BorderBrush="LightGray" Background="White" BorderThickness="1" Grid.ColumnSpan="3" Margin="2">
                         <Label FontSize="15" >
                             <Bold>Log</Bold>
                         </Label>
                     </Border>
+                    <Border BorderBrush="LightGray" Background="White" BorderThickness="1" Grid.ColumnSpan="3" Grid.Column="4" Margin="2">
+                        <Button Command="{Binding DataContext.NavigateCommand, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type UserControl}}}" CommandParameter="{Binding Tours}" Content="Add Log"/>
+                    </Border>
                 </Grid>
             </DockPanel>
         </Border>
+       
         <!--4-->
 
         <!--5-->
@@ -66,7 +70,7 @@
                             <DataTemplate>
                                 <DataGrid ItemsSource="{Binding Logs}" AutoGenerateColumns="False" >
                                     <DataGrid.Columns>
-                                        <DataGridTextColumn Header="Id" Binding="{Binding ID}" Width="Auto"/>
+                                        <DataGridTextColumn Header="Id" Binding="{Binding Id}" Width="Auto"/>
                                         <DataGridTextColumn Header="Distance" Binding="{Binding Distance}" Width="Auto"/>
                                         <DataGridTextColumn Header="DateTime" Binding="{Binding DateTime}" Width="Auto"/>
                                         <DataGridTextColumn Header="Comment" Binding="{Binding Comment}" Width="Auto"/>
@@ -77,7 +81,7 @@
                                                 <DataTemplate>
                                                     <Grid>
                                                         <Border BorderBrush="LightGray" Background="White"  BorderThickness="1" Margin="2">
-                                                            <Button Command="{Binding DataContext.DeleteCommand, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type UserControl}}}" CommandParameter="{Binding Path=PrimaryKey}" Content="Remove"/>
+                                                            <Button Command="{Binding DataContext.DeleteCommand, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type UserControl}}}" CommandParameter="{Binding Path=Id}" Content="Remove"/>
                                                         </Border>
                                                     </Grid>
                                                 </DataTemplate>
@@ -88,7 +92,7 @@
                                                 <DataTemplate>
                                                     <Grid>
                                                         <Border BorderBrush="LightGray" Background="White"  BorderThickness="1" Margin="2">
-                                                            <Button Command="{Binding DataContext.UpdateCommand, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type UserControl}}}" CommandParameter="{Binding Path=PrimaryKey}" Content="Update"/>
+                                                            <Button Command="{Binding DataContext.UpdateCommand, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type UserControl}}}" CommandParameter="{Binding Path=Id}" Content="Update"/>
                                                         </Border>
                                                     </Grid>
                                                 </DataTemplate>
@@ -99,7 +103,7 @@
                                                 <DataTemplate>
                                                     <Grid>
                                                         <Border BorderBrush="LightGray" Background="White"  BorderThickness="1" Margin="2">
-                                                            <Button Command="{Binding DataContext.GenerateReportCommand, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type UserControl}}}" CommandParameter="{Binding Path=PrimaryKey}" Content="GenerateReport"/>
+                                                            <Button Command="{Binding DataContext.GenerateReportCommand, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type UserControl}}}" CommandParameter="{Binding Path=Id}" Content="GenerateReport"/>
                                                         </Border>
                                                     </Grid>
                                                 </DataTemplate>

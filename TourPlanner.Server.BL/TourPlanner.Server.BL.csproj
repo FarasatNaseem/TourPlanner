@@ -4,4 +4,10 @@
     <TargetFramework>net5.0</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\TourPlanner.FileSystem\TourPlanner.FileSystem.csproj" />
+    <ProjectReference Include="..\TourPlanner.Model\TourPlanner.Model.csproj" />
+    <ProjectReference Include="..\TourPlanner.Server.DL\TourPlanner.Server.DL.csproj" />
+  </ItemGroup>
+
 </Project>

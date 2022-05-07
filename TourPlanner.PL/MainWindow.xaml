@@ -10,7 +10,8 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="900">
     <DockPanel>
-        <!--<view:HomeView DockPanel.Dock="Top" DataContext="{Binding HomeVM}"/>-->
-        <view:AddTourView DockPanel.Dock="Top" DataContext="{Binding AddTourVM}"/>
+        <view:HomeView DockPanel.Dock="Top" DataContext="{Binding HomeVM}"/>
+        <!--<view:AddTourView DockPanel.Dock="Top" DataContext="{Binding AddTourVM}"/>-->
+        <!--<view:AddTourLogView DockPanel.Dock="Top" DataContext="{Binding AddTourLogVM}"/>-->
     </DockPanel>
 </Window>

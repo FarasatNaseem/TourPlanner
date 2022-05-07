@@ -89,7 +89,6 @@ C:\Users\Privat\source\repos\TourPlanner\TourPlanner.Client.DL.Test\bin\Debug\ne
 C:\Users\Privat\source\repos\TourPlanner\TourPlanner.Client.DL.Test\bin\Debug\net5.0\zh-Hant\Microsoft.TestPlatform.CommunicationUtilities.resources.dll
 C:\Users\Privat\source\repos\TourPlanner\TourPlanner.Client.DL.Test\bin\Debug\net5.0\zh-Hant\Microsoft.TestPlatform.CrossPlatEngine.resources.dll
 C:\Users\Privat\source\repos\TourPlanner\TourPlanner.Client.DL.Test\bin\Debug\net5.0\zh-Hant\Microsoft.VisualStudio.TestPlatform.Common.resources.dll
-C:\Users\Privat\source\repos\TourPlanner\TourPlanner.Client.DL.Test\obj\Debug\net5.0\TourPlanner.Client.DL.Test.csproj.AssemblyReference.cache
 C:\Users\Privat\source\repos\TourPlanner\TourPlanner.Client.DL.Test\obj\Debug\net5.0\TourPlanner.Client.DL.Test.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\Privat\source\repos\TourPlanner\TourPlanner.Client.DL.Test\obj\Debug\net5.0\TourPlanner.Client.DL.Test.AssemblyInfoInputs.cache
 C:\Users\Privat\source\repos\TourPlanner\TourPlanner.Client.DL.Test\obj\Debug\net5.0\TourPlanner.Client.DL.Test.AssemblyInfo.cs
@@ -99,3 +98,4 @@ C:\Users\Privat\source\repos\TourPlanner\TourPlanner.Client.DL.Test\obj\Debug\ne
 C:\Users\Privat\source\repos\TourPlanner\TourPlanner.Client.DL.Test\obj\Debug\net5.0\ref\TourPlanner.Client.DL.Test.dll
 C:\Users\Privat\source\repos\TourPlanner\TourPlanner.Client.DL.Test\obj\Debug\net5.0\TourPlanner.Client.DL.Test.pdb
 C:\Users\Privat\source\repos\TourPlanner\TourPlanner.Client.DL.Test\obj\Debug\net5.0\TourPlanner.Client.DL.Test.genruntimeconfig.cache
+C:\Users\Privat\source\repos\TourPlanner\TourPlanner.Client.DL.Test\obj\Debug\net5.0\TourPlanner.Client.DL.Test.csproj.AssemblyReference.cache

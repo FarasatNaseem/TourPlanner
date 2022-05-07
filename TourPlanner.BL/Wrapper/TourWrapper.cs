@@ -5,6 +5,8 @@
     using System.ComponentModel;
     using TourPlanner.Client.BL.ViewModel;
     using TourPlanner.Model;
+    using System;
+
     public class TourWrapper : BaseViewModel
     {
         private int _id;
@@ -12,7 +14,9 @@
         private string _description;
         private string _from;
         private string _to;
+        private TransportType _transportType;
         private double _distance;
+        private TimeSpan _estimatedTime;
         private string _routeImage;
         private ObservableCollection<TourLogWrapper> logs;
 
@@ -22,10 +26,16 @@
             this.Name = tour.Name;
             this.From = tour.From;
             this.To = tour.To;
+            this.TransportType = tour.TransportType;
             this.Distance = tour.Distance;
+            this.EstimatedTime = tour.EstimatedTime;
             this.Description = tour.TourDescription;
             this.RouteImage = tour.RouteImage;
-            this.logs = new ObservableCollection<TourLogWrapper>(tour.Logs.Select(WrapTourLog).ToList());
+
+            if (tour.Logs != null)
+            {
+                this.logs = new ObservableCollection<TourLogWrapper>(tour.Logs.Select(WrapTourLog).ToList());
+            }
         }
 
 
@@ -55,7 +65,6 @@
                 OnPropertyChanged();
             }
         }
-
         public string Description
         {
             get => _description;
@@ -71,7 +80,6 @@
                 OnPropertyChanged();
             }
         }
-
         public string From
         {
             get => _from;
@@ -88,7 +96,6 @@
             }
         }
 
-
         public string To
         {
             get => _to;
@@ -101,6 +108,21 @@
 
                 _to = value;
 
+                OnPropertyChanged();
+            }
+        }
+
+        public TransportType TransportType
+        {
+            get => _transportType;
+            set
+            {
+                if (_transportType == value)
+                {
+                    return;
+                }
+
+                this._transportType = value;
                 OnPropertyChanged();
             }
         }
@@ -121,6 +143,21 @@
             }
         }
 
+        public TimeSpan EstimatedTime
+        {
+            get => _estimatedTime;
+            set
+            {
+                if (_estimatedTime == value)
+                {
+                    return;
+                }
+
+                _estimatedTime = value;
+
+                OnPropertyChanged();
+            }
+        }
 
         public string RouteImage
         {
@@ -138,7 +175,6 @@
                 OnPropertyChanged();
             }
         }
-
         public ObservableCollection<TourLogWrapper> Logs
         {
             get => logs;

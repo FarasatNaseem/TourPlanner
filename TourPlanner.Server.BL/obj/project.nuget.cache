@@ -1,8 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "qJS5O4LPFwCDh0SrlyIhLoTIRhk32dv9XjPpaqCCAxhlgJExEi0hBucQpG9sEKU+CKe8Q+rx/3WUXDLoACLahA==",
+  "dgSpecHash": "3Iw5comTBucp7vuJEQvROIkC16hjmZEMaIVGOeTG5BgB81R5dZDa0ZDPHFhKTh1VYWH4+q6PdRnMHGTT7FhydA==",
   "success": true,
   "projectFilePath": "C:\\Users\\Privat\\source\\repos\\TourPlanner\\TourPlanner.Server.BL\\TourPlanner.Server.BL.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\Privat\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512",
+    "C:\\Users\\Privat\\.nuget\\packages\\npgsql\\6.0.4\\npgsql.6.0.4.nupkg.sha512",
+    "C:\\Users\\Privat\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\6.0.0\\system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512"
+  ],
   "logs": []
 }

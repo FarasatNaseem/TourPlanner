@@ -6,9 +6,8 @@
 
     public class TourLogWrapper : BaseViewModel
     {
+        private int _tourId;
         private int _id;
-        private int _primaryKey;
-        private double _distance;
         private DateTime _dateTime;
         private string _comment;
         private Difficulty _difficulty;
@@ -17,48 +16,36 @@
 
         public TourLogWrapper(TourLog log)
         {
-            this.ID = log.id;
-            this.PrimaryKey = log.PrimaryKey;
-            this.Distance = log.Distance;
+            this.TourID = log.TourId;
+            this.Id = log.Id;
             this.DateTime = log.DateTime;
             this.Comment = log.Comment;
             this.Difficulty = log.Difficulty;
-            this.Duration = log.Duration;
+            this.TotalDuration = log.TotalDuration;
             this.Rating = log.Rating;
         }
 
-        public int ID
+        public int TourID
+        {
+            get => _tourId;
+            set
+            {
+                if (_tourId == value) return;
+                _tourId = value;
+                OnPropertyChanged();
+            }
+        }
+
+        public int Id
         {
             get => _id;
             set
             {
-                if (_id == value) return;
-                _id = value;
-                OnPropertyChanged();
-            }
-        }
-
-        public int PrimaryKey
-        {
-            get => _primaryKey;
-            set
-            {
-                if (_primaryKey == value)
+                if (_id == value)
                 {
                     return;
                 }
-                _primaryKey = value;
-                OnPropertyChanged();
-            }
-        }
-
-        public double Distance
-        {
-            get => _distance;
-            set
-            {
-                if (_distance == value) return;
-                _distance = value;
+                _id = value;
                 OnPropertyChanged();
             }
         }
@@ -96,7 +83,7 @@
             }
         }
 
-        public TimeSpan Duration
+        public TimeSpan TotalDuration
         {
             get => _duration;
             set

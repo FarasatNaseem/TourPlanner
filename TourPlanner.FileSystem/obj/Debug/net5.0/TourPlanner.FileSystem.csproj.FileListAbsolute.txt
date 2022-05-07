@@ -1,0 +1,12 @@
+C:\Users\Privat\source\repos\TourPlanner\TourPlanner.FileSystem\bin\Debug\net5.0\TourPlanner.FileSystem.deps.json
+C:\Users\Privat\source\repos\TourPlanner\TourPlanner.FileSystem\bin\Debug\net5.0\TourPlanner.FileSystem.dll
+C:\Users\Privat\source\repos\TourPlanner\TourPlanner.FileSystem\bin\Debug\net5.0\ref\TourPlanner.FileSystem.dll
+C:\Users\Privat\source\repos\TourPlanner\TourPlanner.FileSystem\bin\Debug\net5.0\TourPlanner.FileSystem.pdb
+C:\Users\Privat\source\repos\TourPlanner\TourPlanner.FileSystem\obj\Debug\net5.0\TourPlanner.FileSystem.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Privat\source\repos\TourPlanner\TourPlanner.FileSystem\obj\Debug\net5.0\TourPlanner.FileSystem.AssemblyInfoInputs.cache
+C:\Users\Privat\source\repos\TourPlanner\TourPlanner.FileSystem\obj\Debug\net5.0\TourPlanner.FileSystem.AssemblyInfo.cs
+C:\Users\Privat\source\repos\TourPlanner\TourPlanner.FileSystem\obj\Debug\net5.0\TourPlanner.FileSystem.csproj.CoreCompileInputs.cache
+C:\Users\Privat\source\repos\TourPlanner\TourPlanner.FileSystem\obj\Debug\net5.0\TourPlanner.FileSystem.dll
+C:\Users\Privat\source\repos\TourPlanner\TourPlanner.FileSystem\obj\Debug\net5.0\ref\TourPlanner.FileSystem.dll
+C:\Users\Privat\source\repos\TourPlanner\TourPlanner.FileSystem\obj\Debug\net5.0\TourPlanner.FileSystem.pdb
+C:\Users\Privat\source\repos\TourPlanner\TourPlanner.FileSystem\obj\Debug\net5.0\TourPlanner.FileSystem.csproj.AssemblyReference.cache

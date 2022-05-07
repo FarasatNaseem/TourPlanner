@@ -1,10 +1,17 @@
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
+//using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text.Json.Serialization;
 using System.Threading.Tasks;
 using TourPlanner.Model;
+using TourPlanner.Server.BL;
+using System.Text.Json;
+using Newtonsoft.Json;
+using TourPlanner.Model.DbSchema;
 
 namespace TourPlanner.API.Controllers
 {
@@ -13,17 +20,46 @@ namespace TourPlanner.API.Controllers
     [Route("[controller]")]
     public class TourController : ControllerBase
     {
-        [HttpGet]
-        public IEnumerable<Tour> Get()
+        private readonly ServerOperationExecuter _serverOperationExecuter;
+
+        public TourController()
         {
-            throw new NotFiniteNumberException();
+            this._serverOperationExecuter = new ServerOperationExecuter();
         }
 
-        [HttpPost]
-        public IEnumerable<Tour> Post(object tourData)
+        [HttpGet]
+        public string Get()
         {
+            //var response = this._serverOperationExecuter.GetAllTourWithoutLogs();
+            var response = this._serverOperationExecuter.GetAllTourWithLogs();
 
-            throw new NotFiniteNumberException();
+            return JsonConvert.SerializeObject(response.Item1);
+        }
+
+
+        [HttpPost]
+        public ActionResult Post(object body)
+        {
+            string jsonTourData = body.ToString();
+
+            try
+            {
+                var response = this._serverOperationExecuter.AddTour(jsonTourData);
+
+                if (response.Item2 == null)
+                {
+                    return StatusCode(StatusCodes.Status400BadRequest,
+                 "Invalid data");
+                }
+
+                return StatusCode(StatusCodes.Status200OK,
+                  response.Item2);
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(StatusCodes.Status500InternalServerError,
+                  "Error creating new employee record");
+            }
         }
     }
 }

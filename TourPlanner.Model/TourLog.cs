@@ -3,23 +3,27 @@
     using System;
     public class TourLog
     {
-        public TourLog(int id, int primaryKey, TransportType type, double distance, DateTime dateTime, string comment, Difficulty difficulty, TimeSpan duration, Rating rating)
+        public TourLog(int tourId, DateTime datetime, string comment, Difficulty difficulty, TimeSpan duration, Rating rating)
         {
-            this.id = id;
-            this.PrimaryKey = primaryKey;
-            this.Distance = distance;
-            this.DateTime = dateTime;
+            this.TourId = tourId;
+            this.DateTime = datetime;
             this.Comment = comment;
             this.Difficulty = difficulty;
-            this.Duration = duration;
+            this.TotalDuration = duration;
             this.Rating = rating;
         }
 
-        public int id { get; }
+        public TourLog(int id, int tourId, DateTime datetime, string comment, Difficulty difficulty, TimeSpan duration, Rating rating) : this(tourId, datetime, comment, difficulty, duration, rating)
+        {
+            this.Id = id;
+        }
 
-        public int PrimaryKey { get; }
+        public int Id
+        {
+            get;
+        }
 
-        public double Distance { get; }
+        public int TourId { get; }
 
         public DateTime DateTime { get; }
 
@@ -27,7 +31,7 @@
 
         public Difficulty Difficulty { get; }
 
-        public TimeSpan Duration { get; }
+        public TimeSpan TotalDuration { get; }
 
         public Rating Rating { get; }
     }

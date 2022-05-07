@@ -9,7 +9,7 @@
             TourLogService = new TourLogService();
         }
 
-        public static IService TourService { get; }
-        public static IService TourLogService { get; }
+        public static AbstractService TourService { get; }
+        public static AbstractService TourLogService { get; }
     }
 }

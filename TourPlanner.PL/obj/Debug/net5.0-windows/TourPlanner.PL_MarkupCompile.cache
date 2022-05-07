@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET5_0;NETCOREAPP
 C:\Users\Privat\source\repos\TourPlanner\TourPlanner.PL\App.xaml
-7-1682551333
+8-480854014
 
-91033540517
-197-2048218597
-MainWindow.xaml;View\AddTourView.xaml;View\HeaderView.xaml;View\HomeView.xaml;View\SearchView.xaml;View\TourLogView.xaml;View\TourView.xaml;
+10807083578
+202-418542338
+MainWindow.xaml;View\AddTourLogView.xaml;View\AddTourView.xaml;View\HeaderView.xaml;View\HomeView.xaml;View\SearchView.xaml;View\TourLogView.xaml;View\TourView.xaml;
 
 False
 

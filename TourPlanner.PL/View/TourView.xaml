@@ -24,13 +24,14 @@
                     <RowDefinition Height="1*"/>
                 </Grid.RowDefinitions>
 
-                <Border BorderBrush="LightGray" Background="White" Grid.Column="0" Grid.Row="0" BorderThickness="1" Grid.ColumnSpan="3" Margin="2">
-                    <Label FontSize="20" >
+                <Border BorderBrush="LightGray" Background="White" Grid.Column="0" Grid.Row="0" BorderThickness="1" Grid.ColumnSpan="2" Margin="2">
+                    <Label FontSize="15" >
                         <Bold>Tours</Bold>
                     </Label>
                 </Border>
 
-                <Button FontSize="20" Grid.Column="3" Grid.Row="0"  Margin="2" Command="{Binding AddCommand}">+</Button>
+                <Button FontSize="20" Grid.Column="2" Grid.Row="0"  Margin="2" Command="{Binding NavigateCommand}">+</Button>
+                <Button FontSize="20" Grid.Column="3" Grid.Row="0"  Margin="2" Command="{Binding LoadCommand}">[]</Button>
 
 
                 <DataGrid Grid.ColumnSpan="10" Grid.Row="1"  Margin="1" ItemsSource="{Binding Tours}" AutoGenerateColumns="False" >
