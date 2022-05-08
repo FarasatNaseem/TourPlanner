@@ -22,8 +22,12 @@ namespace TourPlanner.Client.BL.Logic
         public void Execute(int parameter)
         {
             var tourLogViewModel = (TourLogViewModel)this._tourLogViewModel;
+            
             tourLogViewModel.Tours.Clear();
-            tourLogViewModel.Tours.Add(this._tours[parameter - 1]);
+
+            var tourIndex = this._tours.ToList().FindIndex(x => x.ID == parameter);
+            
+            tourLogViewModel.Tours.Add(this._tours[tourIndex]);
         }
     }
 }

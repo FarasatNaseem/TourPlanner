@@ -1,11 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Collections.ObjectModel;
+﻿using System.Collections.ObjectModel;
 using TourPlanner.Client.BL.Logic;
-using TourPlanner.Client.BL.ViewModel;
 using TourPlanner.Client.BL.Wrapper;
 
 namespace TourPlanner.Client.BL.Command

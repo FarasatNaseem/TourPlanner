@@ -65,6 +65,8 @@
                             <DataGridTextColumn Header="To" Binding="{Binding To}"  Width="Auto"/>
                             <DataGridTextColumn Header="Distance" Binding="{Binding Distance}"  Width="Auto"/>
                             <DataGridTextColumn Header="Description" Binding="{Binding Description}"  Width="Auto"/>
+                            <DataGridTextColumn Header="Transport type" Binding="{Binding TransportType}"  Width="Auto"/>
+                            <DataGridTextColumn Header="Estimated time" Binding="{Binding EstimatedTime}"  Width="Auto"/>
                         </DataGrid.Columns>
                         <DataGrid.RowDetailsTemplate>
                             <DataTemplate>
@@ -80,7 +82,7 @@
                                             <c1:DataGridTemplateColumn.CellTemplate>
                                                 <DataTemplate>
                                                     <Grid>
-                                                        <Border BorderBrush="LightGray" Background="White"  BorderThickness="1" Margin="2">
+                                                        <Border BorderBrush="LightGray" Background="White"  BorderThickness="1" Grid.ColumnSpan="3" Margin="2">
                                                             <Button Command="{Binding DataContext.DeleteCommand, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type UserControl}}}" CommandParameter="{Binding Path=Id}" Content="Remove"/>
                                                         </Border>
                                                     </Grid>

@@ -33,6 +33,7 @@ namespace TourPlanner.API.Controllers
             //var response = this._serverOperationExecuter.GetAllTourWithoutLogs();
             var response = this._serverOperationExecuter.GetAllTourWithLogs();
 
+
             return JsonConvert.SerializeObject(response.Item1);
         }
 
@@ -58,7 +59,30 @@ namespace TourPlanner.API.Controllers
             catch (Exception ex)
             {
                 return StatusCode(StatusCodes.Status500InternalServerError,
-                  "Error creating new employee record");
+                  "Error creating new tour");
+            }
+        }
+
+        [HttpDelete("{id}")]
+        public ActionResult Delete(int id)
+        {
+            try
+            {
+                var response = this._serverOperationExecuter.DeleteTourByID(id);
+
+                if (!response.Item1)
+                {
+                    return StatusCode(StatusCodes.Status400BadRequest,
+                response.Item2);
+                }
+
+                return StatusCode(StatusCodes.Status200OK,
+                  response.Item2);
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(StatusCodes.Status500InternalServerError,
+                  "Error deleting tour record");
             }
         }
     }

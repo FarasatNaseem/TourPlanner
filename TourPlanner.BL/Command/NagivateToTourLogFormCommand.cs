@@ -10,7 +10,7 @@ namespace TourPlanner.Client.BL.Command
     {
         public void Execute(object commandParameter)
         {
-            //throw new NotImplementedException();
+            throw new NotImplementedException();
         }
     }
 }

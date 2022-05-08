@@ -115,9 +115,9 @@ namespace TourPlanner.Server.DL.DB
                     double distance = Convert.ToDouble(reader[5]);
                     string transportType = reader[6].ToString();
                     string imgPath = reader[7].ToString();
-                    string timeSpan = reader[8].ToString();
+                    TimeSpan timeSpan = TimeSpan.Parse(reader[8].ToString());
 
-                    tours.Add(new TourSchemaWithoutLog(id, name, from, to, tourDescription, TransportType.Bike, distance, imgPath, new TimeSpan()));
+                    tours.Add(new TourSchemaWithoutLog(id, name, from, to, tourDescription, TransportType.Bike, distance, imgPath, timeSpan));
                 }
                 cmd.Dispose();
                 connection.Close();
@@ -189,6 +189,62 @@ namespace TourPlanner.Server.DL.DB
             }
         }
 
+        public (bool, string) DeleteTourById(int id)
+        {
+            using (IDbConnection connection = Connect())
+            {
+                try
+                {
+                    connection.Open();
+                    IDbCommand cmd = connection.CreateCommand();
+                    cmd.Connection = connection;
+                    cmd.CommandText = "DELETE FROM tour WHERE \"Id\"=@id;";
+                    cmd.CommandType = CommandType.Text;
+                    cmd.Parameters.Add(new NpgsqlParameter("@id", id));
+                    cmd.ExecuteNonQuery();
+                    cmd.Dispose();
+                }
+                catch (Exception ex)
+                {
+                    return (false, "Tour cant be deleted!");
+                }
+                finally
+                {
+                    connection.Close();
+                }
+            }
+
+            return (true, "Tour is deleted successfully");
+        }
+
+        public (bool, string) DeleteTourLogById(int id)
+        {
+            using (IDbConnection connection = Connect())
+            {
+                try
+                {
+                    connection.Open();
+                    IDbCommand cmd = connection.CreateCommand();
+                    cmd.Connection = connection;
+                    cmd.CommandText = "DELETE FROM tourlog WHERE \"Id\"=@id;";
+                    cmd.CommandType = CommandType.Text;
+                    cmd.Parameters.Add(new NpgsqlParameter("@id", id));
+                    cmd.ExecuteNonQuery();
+                    cmd.Dispose();
+                }
+                catch (Exception ex)
+                {
+                    return (false, "Tour log cant be deleted!");
+                }
+                finally
+                {
+                    connection.Close();
+                }
+            }
+
+            return (true, "Tour log is deleted successfully");
+        }
+
 
         private IDbConnection Connect()
         {
@@ -198,7 +254,6 @@ namespace TourPlanner.Server.DL.DB
         // Finished.
         private int AutoIncrement(string tableName)
         {
-
             return this.GetLastId(tableName) + 1;
         }
 

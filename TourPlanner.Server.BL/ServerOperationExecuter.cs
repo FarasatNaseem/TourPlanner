@@ -52,5 +52,15 @@ namespace TourPlanner.Server.BL
         {
             return this._tourPlannerDatabase.GetAllTourWithLogs();
         }
+
+        public (bool, string) DeleteTourByID(int tourId)
+        {
+            return this._tourPlannerDatabase.DeleteTourById(tourId);
+        }
+
+        public (bool, string) DeleteTourLogByID(int tourId)
+        {
+            return this._tourPlannerDatabase.DeleteTourLogById(tourId);
+        }
     }
 }

@@ -52,7 +52,7 @@
                                 <DataTemplate>
                                     <Grid Margin="1">
                                         <Border BorderBrush="LightGray" Background="White" Grid.Column="0" Grid.Row="0" BorderThickness="1" Grid.ColumnSpan="3" Margin="2">
-                                            <Button Command="{Binding DataContext.UpdateCommand, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type UserControl}}}" CommandParameter="{Binding Path=PrimaryKey}" Content="Update"/>
+                                            <Button Command="{Binding DataContext.UpdateCommand, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type UserControl}}}" CommandParameter="{Binding Path=ID}" Content="Update"/>
                                         </Border>
                                     </Grid>
                                 </DataTemplate>
@@ -63,7 +63,7 @@
                                 <DataTemplate>
                                     <Grid Margin="1">
                                         <Border BorderBrush="LightGray" Background="White" Grid.Column="0" Grid.Row="0" BorderThickness="1" Grid.ColumnSpan="3" Margin="2">
-                                            <Button Command="{Binding DataContext.DeleteCommand, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type UserControl}}}" CommandParameter="{Binding Path=PrimaryKey}" Content="Remove"/>
+                                            <Button Command="{Binding DataContext.DeleteCommand, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type UserControl}}}" CommandParameter="{Binding Path=ID}" Content="Remove"/>
                                         </Border>
                                     </Grid>
                                 </DataTemplate>
