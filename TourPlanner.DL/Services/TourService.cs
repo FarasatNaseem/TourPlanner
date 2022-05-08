@@ -53,7 +53,7 @@ namespace TourPlanner.Client.DL.Services
 
             tour.RouteImage = "Some path";
 
-            var apiResponse = await Task.Run(()=>this.HttpClient.PostAsync($"https://localhost:5001/Tour",
+            var apiResponse = await Task.Run(() => this.HttpClient.PostAsync($"https://localhost:5001/Tour",
                    new StringContent(
                        JsonConvert.SerializeObject(tour),
                        Encoding.Default,
@@ -63,11 +63,11 @@ namespace TourPlanner.Client.DL.Services
             if (apiResponse.IsSuccessStatusCode)
             {
                 var data = await Task.Run(() => apiResponse.Content.ReadAsStringAsync()).ConfigureAwait(false);
-                            
+
 
                 return new GenericApiResponse("New Tour is created", null, true);
             }
-         
+
             return new GenericApiResponse("New Tour cant be created", null, false);
         }
 
@@ -80,23 +80,32 @@ namespace TourPlanner.Client.DL.Services
                 var data = await Task.Run(() => apiResponse.Content.ReadAsStringAsync()).ConfigureAwait(false);
 
                 var tours = JsonConvert.DeserializeObject<List<TourSchemaWithLog>>(data.ToString());
-
+                Console.WriteLine(data.ToString());
                 return new GenericApiResponse("Data fetched", tours, true);
             }
 
             return new GenericApiResponse("Error", null, false);
         }
 
-        public override Task<GenericApiResponse> Delete(int idOfData)
+        public override async Task<GenericApiResponse> Delete(int idOfData)
         {
-            throw new NotImplementedException();
+            var apiResponse = await Task.Run(() => this.HttpClient.DeleteAsync("https://localhost:5001/Tour/" + idOfData)).ConfigureAwait(false);
+
+            if (apiResponse.IsSuccessStatusCode)
+            {
+                var data = await Task.Run(() => apiResponse.Content.ReadAsStringAsync()).ConfigureAwait(false);
+
+                return new GenericApiResponse("Tour is deleted", null, true);
+            }
+
+            return new GenericApiResponse("Error", null, false);
         }
 
         public override Task<GenericApiResponse> Read(int id)
         {
             throw new NotImplementedException();
         }
-        
+
         public override Task<GenericApiResponse> Update(object listOfUpdatedData)
         {
             throw new NotImplementedException();

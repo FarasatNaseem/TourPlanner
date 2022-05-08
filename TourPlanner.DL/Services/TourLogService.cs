@@ -48,9 +48,18 @@ namespace TourPlanner.Client.DL.Services
         }
 
 
-        public override Task<GenericApiResponse> Delete(int idOfData)
+        public override async Task<GenericApiResponse> Delete(int idOfData)
         {
-            throw new NotImplementedException();
+            var apiResponse = await Task.Run(() => this.HttpClient.DeleteAsync("https://localhost:5001/TourLog/" + idOfData)).ConfigureAwait(false);
+
+            if (apiResponse.IsSuccessStatusCode)
+            {
+                var data = await Task.Run(() => apiResponse.Content.ReadAsStringAsync()).ConfigureAwait(false);
+
+                return new GenericApiResponse("Tour log is deleted", null, true);
+            }
+
+            return new GenericApiResponse("Error", null, false);
         }
 
         public override Task<GenericApiResponse> Read(int id)
