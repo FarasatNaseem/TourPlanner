@@ -1,0 +1,12 @@
+C:\Users\Privat\source\repos\TourPlanner\Report\bin\Debug\net5.0\Report.deps.json
+C:\Users\Privat\source\repos\TourPlanner\Report\bin\Debug\net5.0\Report.dll
+C:\Users\Privat\source\repos\TourPlanner\Report\bin\Debug\net5.0\ref\Report.dll
+C:\Users\Privat\source\repos\TourPlanner\Report\bin\Debug\net5.0\Report.pdb
+C:\Users\Privat\source\repos\TourPlanner\Report\obj\Debug\net5.0\Report.csproj.AssemblyReference.cache
+C:\Users\Privat\source\repos\TourPlanner\Report\obj\Debug\net5.0\Report.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Privat\source\repos\TourPlanner\Report\obj\Debug\net5.0\Report.AssemblyInfoInputs.cache
+C:\Users\Privat\source\repos\TourPlanner\Report\obj\Debug\net5.0\Report.AssemblyInfo.cs
+C:\Users\Privat\source\repos\TourPlanner\Report\obj\Debug\net5.0\Report.csproj.CoreCompileInputs.cache
+C:\Users\Privat\source\repos\TourPlanner\Report\obj\Debug\net5.0\Report.dll
+C:\Users\Privat\source\repos\TourPlanner\Report\obj\Debug\net5.0\ref\Report.dll
+C:\Users\Privat\source\repos\TourPlanner\Report\obj\Debug\net5.0\Report.pdb

@@ -31,7 +31,7 @@
 
                 time = TimeSpan.Parse(parsedJSON["route"]["formattedTime"].ToString());
 
-                return new RouteApiResponse(distance, time);
+                return new RouteApiResponse(distance, time, true);
             }
 
             return null;

@@ -53,7 +53,7 @@ namespace TourPlanner.PL.View {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/TourPlanner.PL;V1.0.0.0;component/view/headerview.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/TourPlanner.PL;component/view/headerview.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\..\View\HeaderView.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

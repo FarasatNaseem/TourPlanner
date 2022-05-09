@@ -1,17 +1,10 @@
 ﻿using MapQuestApi;
+using MapQuestApi.Image;
 using MapQuestApi.Route;
-using Newtonsoft.Json;
 using Nito.AsyncEx;
-using System;
-using System.Collections.Generic;
-using System.Drawing.Imaging;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using TourPlanner.Client.BL.Authenticator;
 using TourPlanner.Client.BL.ViewModel;
 using TourPlanner.Client.DL.Responses;
-using TourPlanner.Client.DL.Services;
 using TourPlanner.Client.DL.SingletonPattern;
 using TourPlanner.Model;
 
@@ -20,7 +13,8 @@ namespace TourPlanner.Client.BL.Logic
     public class AddNewTourOperationExecuter : IOperationExecuter<Tour>
     {
         private readonly AddTourViewModel _addTourViewModel;
-        private AbstractMapQuestApiService<RouteApiResponse> _abstractMapQuestApiService;
+        private AbstractMapQuestApiService<RouteApiResponse> _abstractMapQuestRouteApiService;
+        private AbstractMapQuestApiService<RouteImageApiResponse> _abstractMapQuestImageApiService;
 
         private readonly ITourPlannerAuthenticationService<TourAuthenticationServiceMessage, Tour> _tourAuthenticationService;
 
@@ -39,10 +33,15 @@ namespace TourPlanner.Client.BL.Logic
                 case TourAuthenticationServiceMessage.Success:
 
                     // fetch distance and time.
-                    this._abstractMapQuestApiService = new RouteApiService(new RouteApiRequest(tour.From, tour.To));
-                    var mapQuestDirectionApiResponse = AsyncContext.Run(() => this._abstractMapQuestApiService.Get());
+                    this._abstractMapQuestRouteApiService = new RouteApiService(new RouteApiRequest(tour.From, tour.To));
+                    var mapQuestDirectionApiResponse = AsyncContext.Run(() => this._abstractMapQuestRouteApiService.Get());
                     tour.Distance = mapQuestDirectionApiResponse.Distance;
                     tour.EstimatedTime = mapQuestDirectionApiResponse.Time;
+
+                    // fetch image.
+                    this._abstractMapQuestImageApiService = new RouteImageApiService(new RouteImageApiRequest("400", "400", tour.From, tour.To));
+                    var mapQuestImageApiResponse = AsyncContext.Run(() => this._abstractMapQuestImageApiService.Get());
+                    tour.RouteImage = mapQuestImageApiResponse.Path;
 
                     // send data to database.
                     GenericApiResponse response = AsyncContext.Run(() => TourPlannerApiServiceProvider.TourService.Create(tour));
@@ -52,8 +51,10 @@ namespace TourPlanner.Client.BL.Logic
 
                     break;
                 case TourAuthenticationServiceMessage.Error:
-                    // show success message.
+
+                    // show error message.
                     this._addTourViewModel.Message = "Due to some error new tour cant be created!";
+                    
                     break;
                 case TourAuthenticationServiceMessage.None:
                     break;
