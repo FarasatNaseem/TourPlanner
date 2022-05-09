@@ -10,3 +10,6 @@ C:\Users\Privat\source\repos\TourPlanner\Report\obj\Debug\net5.0\Report.csproj.C
 C:\Users\Privat\source\repos\TourPlanner\Report\obj\Debug\net5.0\Report.dll
 C:\Users\Privat\source\repos\TourPlanner\Report\obj\Debug\net5.0\ref\Report.dll
 C:\Users\Privat\source\repos\TourPlanner\Report\obj\Debug\net5.0\Report.pdb
+C:\Users\Privat\source\repos\TourPlanner\Report\bin\Debug\net5.0\TourPlanner.Model.dll
+C:\Users\Privat\source\repos\TourPlanner\Report\bin\Debug\net5.0\TourPlanner.Model.pdb
+C:\Users\Privat\source\repos\TourPlanner\Report\obj\Debug\net5.0\Report.csproj.CopyComplete
