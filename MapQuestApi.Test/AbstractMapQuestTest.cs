@@ -1,7 +1,6 @@
-﻿using NUnit.Framework;
-
-namespace MapQuestApi.Test
+﻿namespace MapQuestApi.Test
 {
+    using NUnit.Framework;
     public abstract class AbstractMapQuestTest
     {
         [SetUp]

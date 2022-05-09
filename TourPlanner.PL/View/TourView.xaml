@@ -8,7 +8,7 @@
              xmlns:viewmodel="clr-namespace:TourPlanner.Client.BL.ViewModel;assembly=TourPlanner.Client.BL"
              d:DataContext="{d:DesignInstance Type=viewmodel:TourViewModel}"
              mc:Ignorable="d" 
-            d:DesignHeight="450" d:DesignWidth="200">
+            d:DesignHeight="450" d:DesignWidth="300">
     <Border CornerRadius="1" BorderBrush="LightGray" Background="White" BorderThickness="0" >
         <DockPanel>
             <Grid DockPanel.Dock="Top">

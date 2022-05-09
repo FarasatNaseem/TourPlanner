@@ -1,9 +1,4 @@
 ﻿using Nito.AsyncEx;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using TourPlanner.Client.BL.Authenticator;
 using TourPlanner.Client.BL.ViewModel;
 using TourPlanner.Client.DL.Responses;

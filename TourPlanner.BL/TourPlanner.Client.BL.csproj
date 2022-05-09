@@ -6,12 +6,13 @@
 
   <ItemGroup>
     <ProjectReference Include="..\MapQuestApi\MapQuestApi.csproj" />
+    <ProjectReference Include="..\Report\Report.csproj" />
     <ProjectReference Include="..\TourPlanner.DL\TourPlanner.Client.DL.csproj" />
     <ProjectReference Include="..\TourPlanner.Model\TourPlanner.Model.csproj" />
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Assets\" />
+    <Folder Include="Assets\Reports\" />
   </ItemGroup>
 
   <ItemGroup>

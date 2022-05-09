@@ -17,3 +17,5 @@ C:\Users\Privat\source\repos\TourPlanner\TourPlanner.BL\obj\Debug\net5.0\ref\Tou
 C:\Users\Privat\source\repos\TourPlanner\TourPlanner.BL\obj\Debug\net5.0\TourPlanner.Client.BL.pdb
 C:\Users\Privat\source\repos\TourPlanner\TourPlanner.BL\bin\Debug\net5.0\MapQuestApi.dll
 C:\Users\Privat\source\repos\TourPlanner\TourPlanner.BL\bin\Debug\net5.0\MapQuestApi.pdb
+C:\Users\Privat\source\repos\TourPlanner\TourPlanner.BL\bin\Debug\net5.0\Report.dll
+C:\Users\Privat\source\repos\TourPlanner\TourPlanner.BL\bin\Debug\net5.0\Report.pdb

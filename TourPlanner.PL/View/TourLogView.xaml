@@ -8,19 +8,19 @@
              xmlns:viewmodel="clr-namespace:TourPlanner.Client.BL.ViewModel;assembly=TourPlanner.Client.BL"
              d:DataContext="{d:DesignInstance Type=viewmodel:TourLogViewModel}"
              mc:Ignorable="d" 
-             d:DesignHeight="410" d:DesignWidth="600">
+             d:DesignHeight="410" d:DesignWidth="900">
     <DockPanel >
 
-        <Image Width="300" Height="410">
-            <Image.Source>
-                <BitmapImage  UriSource="C:\\Users\\Privat\\AppData\\Local\\Temp\\VillachKlagenfurt.png" />
-            </Image.Source>
-        </Image>
+        <Image Source="{Binding Tours[0].RouteImage}" 
+            HorizontalAlignment="Left" 
+     Stretch="Fill" 
+    Grid.Row="8" Width="300"/>
+
 
         <!--1-->
-        <Label FontSize="20" DockPanel.Dock="Top">
+        <!--<Label FontSize="20" DockPanel.Dock="Top">
             <Bold>Title</Bold>
-        </Label>
+        </Label>-->
         <!--1-->
         <!--2-->
         <!--2-->
@@ -72,6 +72,17 @@
                             <DataGridTextColumn Header="Description" Binding="{Binding Description}"  Width="Auto"/>
                             <DataGridTextColumn Header="Transport type" Binding="{Binding TransportType}"  Width="Auto"/>
                             <DataGridTextColumn Header="Estimated time" Binding="{Binding EstimatedTime}"  Width="Auto"/>
+                            <c1:DataGridTemplateColumn>
+                                <c1:DataGridTemplateColumn.CellTemplate>
+                                    <DataTemplate>
+                                        <Grid>
+                                            <Border BorderBrush="LightGray" Background="White"  BorderThickness="1" Grid.ColumnSpan="3" Margin="2">
+                                                <Button Command="{Binding DataContext.GenerateNormalReportCommand, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type UserControl}}}" CommandParameter="{Binding}" Content="Generate Report"/>
+                                            </Border>
+                                        </Grid>
+                                    </DataTemplate>
+                                </c1:DataGridTemplateColumn.CellTemplate>
+                            </c1:DataGridTemplateColumn>
                         </DataGrid.Columns>
                         <DataGrid.RowDetailsTemplate>
                             <DataTemplate>
@@ -100,17 +111,6 @@
                                                     <Grid>
                                                         <Border BorderBrush="LightGray" Background="White"  BorderThickness="1" Margin="2">
                                                             <Button Command="{Binding DataContext.UpdateCommand, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type UserControl}}}" CommandParameter="{Binding Path=Id}" Content="Update"/>
-                                                        </Border>
-                                                    </Grid>
-                                                </DataTemplate>
-                                            </c1:DataGridTemplateColumn.CellTemplate>
-                                        </c1:DataGridTemplateColumn>
-                                        <c1:DataGridTemplateColumn>
-                                            <c1:DataGridTemplateColumn.CellTemplate>
-                                                <DataTemplate>
-                                                    <Grid>
-                                                        <Border BorderBrush="LightGray" Background="White"  BorderThickness="1" Margin="2">
-                                                            <Button Command="{Binding DataContext.GenerateReportCommand, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type UserControl}}}" CommandParameter="{Binding Path=Id}" Content="GenerateReport"/>
                                                         </Border>
                                                     </Grid>
                                                 </DataTemplate>

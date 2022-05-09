@@ -17,41 +17,17 @@ namespace TourPlanner.Client.DL.Services
 {
     public class TourService : AbstractService
     {
-        /* Functions:
+        /* 
+         * Functions to implement:
          * 1) GetAllTours()
          * 2) DeleteTour(int id)
          * 3) UpdateTour(int id, list<Tour> updatedData)
          * 4) CreateTour()
          */
 
-
-        public void SaveImage(string imageUrl, string filename, ImageFormat format)
-        {
-            WebClient client = new WebClient();
-            Stream stream = client.OpenRead(imageUrl);
-            Bitmap bitmap; bitmap = new Bitmap(stream);
-
-            if (bitmap != null)
-            {
-                bitmap.Save(filename, format);
-            }
-
-            stream.Flush();
-            stream.Close();
-            client.Dispose();
-        }
-
-
         public override async Task<GenericApiResponse> Create(object dataToStoreInDB)
         {
             Tour tour = (Tour)dataToStoreInDB;
-
-            // Download Route image.
-            //string url = $"https://open.mapquestapi.com/staticmap/v5/map?start={tour.From}&end={tour.To}&size=600,400@2x&key=kmzagLUfOds5SBeFiVMOjG1wnCjXWVnm";
-            //string outputPath = @"C:\Users\Privat\source\repos\TourPlanner\TourPlanner.BL\Assets\" + tour.From + tour.To + ".png";
-            //this.SaveImage(url, outputPath, ImageFormat.Png);
-
-            tour.RouteImage = "Some path";
 
             var apiResponse = await Task.Run(() => this.HttpClient.PostAsync($"https://localhost:5001/Tour",
                    new StringContent(

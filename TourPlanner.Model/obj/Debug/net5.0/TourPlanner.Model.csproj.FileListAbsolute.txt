@@ -9,3 +9,4 @@ C:\Users\Privat\source\repos\TourPlanner\TourPlanner.Model\obj\Debug\net5.0\Tour
 C:\Users\Privat\source\repos\TourPlanner\TourPlanner.Model\obj\Debug\net5.0\TourPlanner.Model.dll
 C:\Users\Privat\source\repos\TourPlanner\TourPlanner.Model\obj\Debug\net5.0\ref\TourPlanner.Model.dll
 C:\Users\Privat\source\repos\TourPlanner\TourPlanner.Model\obj\Debug\net5.0\TourPlanner.Model.pdb
+C:\Users\Privat\source\repos\TourPlanner\TourPlanner.Model\obj\Debug\net5.0\TourPlanner.Model.csproj.AssemblyReference.cache

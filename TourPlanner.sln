@@ -38,7 +38,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MapQuestApi", "MapQuestApi\
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Report", "Report\Report.csproj", "{33B712A6-28B1-4B08-87E0-B00BD2FE2CFA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MapQuestApi.Test", "MapQuestApi.Test\MapQuestApi.Test.csproj", "{B0C97307-EE2C-463B-8F5C-347DAF69A12E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MapQuestApi.Test", "MapQuestApi.Test\MapQuestApi.Test.csproj", "{B0C97307-EE2C-463B-8F5C-347DAF69A12E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Report.Test", "Report.Test\Report.Test.csproj", "{2B700993-009D-42DE-A680-C6375A9E6F84}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -98,6 +100,10 @@ Global
 		{B0C97307-EE2C-463B-8F5C-347DAF69A12E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B0C97307-EE2C-463B-8F5C-347DAF69A12E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B0C97307-EE2C-463B-8F5C-347DAF69A12E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2B700993-009D-42DE-A680-C6375A9E6F84}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2B700993-009D-42DE-A680-C6375A9E6F84}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2B700993-009D-42DE-A680-C6375A9E6F84}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2B700993-009D-42DE-A680-C6375A9E6F84}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -116,6 +122,7 @@ Global
 		{D1376F1F-5E2E-469C-A1EA-BE3DC03348B3} = {61E34135-4E31-469B-9AEF-1FB1DBABDE1A}
 		{33B712A6-28B1-4B08-87E0-B00BD2FE2CFA} = {61E34135-4E31-469B-9AEF-1FB1DBABDE1A}
 		{B0C97307-EE2C-463B-8F5C-347DAF69A12E} = {61E34135-4E31-469B-9AEF-1FB1DBABDE1A}
+		{2B700993-009D-42DE-A680-C6375A9E6F84} = {61E34135-4E31-469B-9AEF-1FB1DBABDE1A}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {3B62392C-CCC2-428D-89CD-75603F943770}

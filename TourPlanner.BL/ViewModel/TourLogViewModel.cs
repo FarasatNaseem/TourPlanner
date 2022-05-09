@@ -11,20 +11,14 @@ namespace TourPlanner.Client.BL.ViewModel
 {
     public class TourLogViewModel : BaseViewModel
     {
-        //public ObservableCollection<TourWrapper> _tours = new ObservableCollection<TourWrapper>();
-        //public IEnumerable<TourWrapper> Tours => this._tours;
-
-        //public TourLogViewModel()
-        //{
-        
-        //}
-
 
         private BaseCommand deleteCommand;
         private BaseCommand navigateToTourLogFormCommand;
+        private BaseCommand generateNormalReportCommand;
 
         private ITourPlannerCommand _deleteLogCommand;
         private ITourPlannerCommand _navigateToTourLogFormCommand;
+        private ITourPlannerCommand _generateNormalReportCommand;
 
         public ObservableCollection<TourWrapper> Tours { get; }
 
@@ -33,9 +27,11 @@ namespace TourPlanner.Client.BL.ViewModel
             this.Tours = new ObservableCollection<TourWrapper>();
             this._deleteLogCommand = new DeleteTourLogCommand(this.Tours);
             this._navigateToTourLogFormCommand = new NagivateToTourLogFormCommand();
+            this._generateNormalReportCommand = new GenerateNormalReportCommand();
         }
 
         public ICommand DeleteCommand => deleteCommand ??= new BaseCommand(this._deleteLogCommand.Execute);
         public ICommand NavigateCommand => navigateToTourLogFormCommand ??= new BaseCommand(this._navigateToTourLogFormCommand.Execute);
+        public ICommand GenerateNormalReportCommand => generateNormalReportCommand ??= new BaseCommand(this._generateNormalReportCommand.Execute);
     }
 }
