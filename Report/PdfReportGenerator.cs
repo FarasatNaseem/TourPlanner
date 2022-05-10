@@ -103,7 +103,7 @@ namespace Report
 
         public override bool Generate(TourSchemaWithLog reportData)
         {
-            if (!File.Exists(this.FilePath))
+            try
             {
                 var mainHeader = this.CreateHeader("Tour planer Report");
 
@@ -127,8 +127,10 @@ namespace Report
 
                 return true;
             }
-
-            return false;
+            catch (System.Exception)
+            {
+                return false;
+            }
         }
     }
 }

@@ -28,11 +28,19 @@ namespace TourPlanner.API.Controllers
         }
 
         [HttpGet]
+
         public string Get()
         {
-            //var response = this._serverOperationExecuter.GetAllTourWithoutLogs();
             var response = this._serverOperationExecuter.GetAllTourWithLogs();
 
+
+            return JsonConvert.SerializeObject(response.Item1);
+        }
+
+        [HttpGet("{someText}")]
+        public string Get(string someText)
+        {
+            var response = this._serverOperationExecuter.FilterTours(someText);
 
             return JsonConvert.SerializeObject(response.Item1);
         }

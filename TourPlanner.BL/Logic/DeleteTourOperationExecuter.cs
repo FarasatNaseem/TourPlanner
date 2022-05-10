@@ -45,13 +45,6 @@ namespace TourPlanner.Client.BL.Logic
         private void DeleteTourLogLocally(int tourId)
         {
             var tourLogVM = (TourLogViewModel)this._tourLogViewModel;
-            //foreach (var tour in tourLogVM.Tours.ToList())
-            //{
-            //    if(tour.ID == tourId)
-            //    {
-            //        tourLogVM.Tours.Clear();
-            //    }
-            //}
 
             if (tourLogVM.Tours.Count != 0)
             {

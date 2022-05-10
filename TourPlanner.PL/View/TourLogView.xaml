@@ -18,11 +18,10 @@
 
 
         <!--1-->
-        <!--<Label FontSize="20" DockPanel.Dock="Top">
-            <Bold>Title</Bold>
-        </Label>-->
+        <Label FontSize="20" DockPanel.Dock="Top" Content="{Binding Tours[0].Name}"></Label>
         <!--1-->
         <!--2-->
+        <local:SearchView DockPanel.Dock="Top" VerticalAlignment="Center" FontSize="10" DataContext="{Binding SearchVM}"/>
         <!--2-->
 
         <!--3-->

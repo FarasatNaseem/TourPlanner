@@ -1,7 +1,9 @@
-﻿namespace TourPlanner.FileSystem.Handler
+﻿using System.Threading.Tasks;
+
+namespace TourPlanner.FileSystem.Handler
 {
-    public interface IFileWriter 
+    public interface IFileWriter
     {
-        void Write(string filePath);
+        Task<(bool, string)> Write(string filePath, string serializedData);
     }
 }

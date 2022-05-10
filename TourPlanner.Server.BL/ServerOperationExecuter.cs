@@ -1,5 +1,6 @@
 ﻿using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
+using Nito.AsyncEx;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -22,15 +23,16 @@ namespace TourPlanner.Server.BL
         public ServerOperationExecuter()
         {
             this._fileHandler = new JSONFileHandler();
-            this.connectionString = this._fileHandler.Read(this._fileHandler.Read(@"C:\Users\Privat\source\repos\TourPlanner\TourPlanner.Server.DL\Config\TourPlannerDbConfig.json"));
+            var fileHandlerResponse = AsyncContext.Run(() => this._fileHandler.Read(@"C:\Users\farha\Desktop\TourPlannerRepo2\TourPlanner\TourPlanner.Server.DL\Config\TourPlannerDbConfig.json"));
+            this.connectionString = fileHandlerResponse.Item1;
             this._tourPlannerDatabase = new Database(this.connectionString);
         }
 
         public (bool, string) AddTourLog(string jsonTourLogData)
         {
             var tourLog = JsonConvert.DeserializeObject<TourLogSchema>(jsonTourLogData);
-           
-            var duration= JObject.Parse(jsonTourLogData)["TotalDuration"];
+
+            var duration = JObject.Parse(jsonTourLogData)["TotalDuration"];
             tourLog.TotalDuration = TimeSpan.Parse(duration.ToString());
 
             return tourLog == null ? (false, null) : this._tourPlannerDatabase.AddTourLog(tourLog);
@@ -46,6 +48,16 @@ namespace TourPlanner.Server.BL
         public (List<TourSchemaWithoutLog>, string) GetAllTourWithoutLogs()
         {
             return this._tourPlannerDatabase.GetAllTour();
+        }
+
+        public (List<TourSchemaWithLog>, string) FilterTours(string someText)
+        {
+            return this._tourPlannerDatabase.FilterTours(someText);
+        }
+
+        public (List<TourLogSchema>, string) FilterTourLogs(string someText, int id)
+        {
+            return this._tourPlannerDatabase.FilterTourLogs(someText, id);
         }
 
         public (List<TourSchemaWithLog>, string) GetAllTourWithLogs()

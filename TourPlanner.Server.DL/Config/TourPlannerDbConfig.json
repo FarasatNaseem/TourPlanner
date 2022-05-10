@@ -1,6 +1,6 @@
 {
   "Host": "localhost",
-  "Username": "root",
-  "Password": "root",
+  "Username": "postgres",
+  "Password": "postgres",
   "Database":  "Tourplanner"
 }

@@ -4,6 +4,8 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:TourPlanner.PL.View"
+             xmlns:viewmodel="clr-namespace:TourPlanner.Client.BL.ViewModel;assembly=TourPlanner.Client.BL"
+             d:DataContext="{d:DesignInstance Type=viewmodel:SearchTourLogViewModel}"
              mc:Ignorable="d" 
              d:DesignHeight="40" d:DesignWidth="1190">
 
@@ -18,12 +20,14 @@
                 <Grid.RowDefinitions>
                     <RowDefinition Height="40"/>
                 </Grid.RowDefinitions>
-                <TextBox Grid.Column="0" Grid.Row="0"  FontSize="22" BorderThickness="0"/>
-                <Button Height="40"  Grid.Column="1" Grid.Row="1" VerticalAlignment="Stretch" BorderThickness="0">
+                <TextBox Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="0"  FontSize="22" BorderThickness="0" Text="{Binding Text, UpdateSourceTrigger=PropertyChanged}" />
+                        
+                <!--<Button Height="40"  Grid.Column="1" Grid.Row="1" VerticalAlignment="Stretch" BorderThickness="0" Command="{Binding SearchCommand}">
                     <Span FontSize="10">
                         Search
                     </Span>
-                </Button>
+                </Button>-->
+                
             </Grid>
         </DockPanel>
     </Border>

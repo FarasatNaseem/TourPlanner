@@ -8,6 +8,6 @@ namespace TourPlanner.FileSystem.Handler
 {
     public interface IFileHandler : IFileWriter, IFileReader
     {
-
+       
     }
 }

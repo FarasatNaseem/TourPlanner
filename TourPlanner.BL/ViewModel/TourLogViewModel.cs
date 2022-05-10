@@ -20,7 +20,8 @@ namespace TourPlanner.Client.BL.ViewModel
         private ITourPlannerCommand _navigateToTourLogFormCommand;
         private ITourPlannerCommand _generateNormalReportCommand;
 
-        public ObservableCollection<TourWrapper> Tours { get; }
+        public ObservableCollection<TourWrapper> Tours { get; set; }
+        public BaseViewModel SearchVM { get; set; }
 
         public TourLogViewModel()
         {
@@ -28,6 +29,7 @@ namespace TourPlanner.Client.BL.ViewModel
             this._deleteLogCommand = new DeleteTourLogCommand(this.Tours);
             this._navigateToTourLogFormCommand = new NagivateToTourLogFormCommand();
             this._generateNormalReportCommand = new GenerateNormalReportCommand();
+            this.SearchVM = new SearchTourLogViewModel(this.Tours.Count == 0 ? null : this.Tours[0].Logs);
         }
 
         public ICommand DeleteCommand => deleteCommand ??= new BaseCommand(this._deleteLogCommand.Execute);

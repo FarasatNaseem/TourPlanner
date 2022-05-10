@@ -8,19 +8,19 @@
     "net5.0": []
   },
   "packageFolders": {
-    "C:\\Users\\Privat\\.nuget\\packages\\": {}
+    "C:\\Users\\farha\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Privat\\source\\repos\\TourPlanner\\TourPlanner.Model\\TourPlanner.Model.csproj",
+      "projectUniqueName": "C:\\Users\\farha\\Desktop\\TourPlannerRepo2\\TourPlanner\\TourPlanner.Model\\TourPlanner.Model.csproj",
       "projectName": "TourPlanner.Model",
-      "projectPath": "C:\\Users\\Privat\\source\\repos\\TourPlanner\\TourPlanner.Model\\TourPlanner.Model.csproj",
-      "packagesPath": "C:\\Users\\Privat\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Privat\\source\\repos\\TourPlanner\\TourPlanner.Model\\obj\\",
+      "projectPath": "C:\\Users\\farha\\Desktop\\TourPlannerRepo2\\TourPlanner\\TourPlanner.Model\\TourPlanner.Model.csproj",
+      "packagesPath": "C:\\Users\\farha\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\farha\\Desktop\\TourPlannerRepo2\\TourPlanner\\TourPlanner.Model\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Privat\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\farha\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -60,7 +60,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.401\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.407\\RuntimeIdentifierGraph.json"
       }
     }
   }

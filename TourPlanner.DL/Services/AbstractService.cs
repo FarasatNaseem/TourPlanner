@@ -17,6 +17,10 @@
         public abstract Task<GenericApiResponse> Delete(int idOfData);
         public abstract Task<GenericApiResponse> Read(int id);
         public abstract Task<GenericApiResponse> ReadAll();
+        public abstract Task<GenericApiResponse> ReadLike(string someText);
+
+        public abstract Task<GenericApiResponse> ReadLike(string someText, int id = 0);
+
         public abstract Task<GenericApiResponse> Update(object listOfUpdatedData);
     }
 }

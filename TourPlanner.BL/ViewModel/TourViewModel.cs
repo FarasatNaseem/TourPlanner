@@ -16,6 +16,7 @@
         private BaseCommand loadCommand;
         private BaseCommand navigateToTourFormCommand;
 
+
         private readonly BaseViewModel _tourLogsVM;
         private ITourPlannerCommand _showLogCommand;
         private ITourPlannerCommand _loadTourCommand;
@@ -24,15 +25,22 @@
 
         public TourViewModel(BaseViewModel tourLogsVM)
         {
+
             this._tourLogsVM = tourLogsVM;
             this.Tours = new ObservableCollection<TourWrapper>();
             this._showLogCommand = new ShowTourLogCommand(this._tourLogsVM, this.Tours);
             this._loadTourCommand = new LoadTourCommand(this);
+
+            this._loadTourCommand.Execute(null); // Fetch tours from database.
+            
             this._navigateToTourFormCommand = new NavigateToTourFormCommand();
             this._deleteTourCommand = new DeleteTourCommand(this.Tours, this._tourLogsVM);
+            this.SearchVM = new SearchTourViewModel(this.Tours);
         }
 
         public ObservableCollection<TourWrapper> Tours { get; }
+
+        public BaseViewModel SearchVM { get; }
 
         public ICommand DeleteCommand => deleteCommand ??= new BaseCommand(this._deleteTourCommand.Execute);
 

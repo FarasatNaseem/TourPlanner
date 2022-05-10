@@ -11,12 +11,16 @@ using System.Threading.Tasks;
 using TourPlanner.Model;
 using TourPlanner.Model.DbSchema;
 using TourPlanner.Server.DL.Config;
+using Logging;
+using Microsoft.Extensions.Logging;
 
 namespace TourPlanner.Server.DL.DB
 {
     public class Database
     {
         private readonly DBConfigData _configData;
+        private readonly ILogger logger = Logger.CreateLogger<Database>();
+
         public Database(string connectionString)
         {
             this._configData = JsonConvert.DeserializeObject<DBConfigData>(connectionString);
@@ -42,10 +46,12 @@ namespace TourPlanner.Server.DL.DB
                     cmd.Parameters.Add(new NpgsqlParameter("@EstimatedTime", tourSchema.EstimatedTime));
                     cmd.ExecuteNonQuery();
                     cmd.Dispose();
+
+                    logger.Log(LogLevel.Information, $"Tour data with name {tourSchema.Name} has been added successfully");
                 }
                 catch (Exception ex)
                 {
-                    Console.WriteLine(ex.Message);
+                    logger.Log(LogLevel.Error, ex.StackTrace);
                     return (false, "Tour cant be added.");
                 }
                 finally
@@ -73,13 +79,15 @@ namespace TourPlanner.Server.DL.DB
                     cmd.Parameters.Add(new NpgsqlParameter("@Difficulty", tourLogSchema.Difficulty.ToString()));
                     cmd.Parameters.Add(new NpgsqlParameter("@TotalDuration", tourLogSchema.TotalDuration.ToString()));
                     cmd.Parameters.Add(new NpgsqlParameter("@Rating", tourLogSchema.Rating.ToString()));
-
                     cmd.ExecuteNonQuery();
                     cmd.Dispose();
+
+                    logger.Log(LogLevel.Information, $"Tour log data with tour id { tourLogSchema.TourId} has been added successfully");
                 }
                 catch (Exception ex)
                 {
-                    Console.WriteLine(ex.Message);
+                    logger.Log(LogLevel.Error, ex.StackTrace);
+
                     return (false, "Tour log cant be added.");
                 }
                 finally
@@ -97,30 +105,43 @@ namespace TourPlanner.Server.DL.DB
 
             using (IDbConnection connection = Connect())
             {
-                connection.Open();
-                IDbCommand cmd = connection.CreateCommand();
-
-                cmd.Connection = connection;
-                cmd.CommandText = "Select * from tour";
-                cmd.CommandType = CommandType.Text;
-                NpgsqlDataReader reader = (NpgsqlDataReader)cmd.ExecuteReader();
-
-                while (reader.Read())
+                try
                 {
-                    int id = Convert.ToInt32(reader[0].ToString());
-                    string name = reader[1].ToString();
-                    string from = reader[3].ToString();
-                    string to = reader[4].ToString();
-                    string tourDescription = reader[2].ToString();
-                    double distance = Convert.ToDouble(reader[5]);
-                    string transportType = reader[6].ToString();
-                    string imgPath = reader[7].ToString();
-                    TimeSpan timeSpan = TimeSpan.Parse(reader[8].ToString());
+                    connection.Open();
+                    IDbCommand cmd = connection.CreateCommand();
 
-                    tours.Add(new TourSchemaWithoutLog(id, name, from, to, tourDescription, TransportType.Bike, distance, imgPath, timeSpan));
+                    cmd.Connection = connection;
+                    cmd.CommandText = "Select * from tour";
+                    cmd.CommandType = CommandType.Text;
+                    NpgsqlDataReader reader = (NpgsqlDataReader)cmd.ExecuteReader();
+
+                    while (reader.Read())
+                    {
+                        int id = Convert.ToInt32(reader[0].ToString());
+                        string name = reader[1].ToString();
+                        string from = reader[3].ToString();
+                        string to = reader[4].ToString();
+                        string tourDescription = reader[2].ToString();
+                        double distance = Convert.ToDouble(reader[5]);
+                        string transportType = reader[6].ToString();
+                        string imgPath = reader[7].ToString();
+                        TimeSpan timeSpan = TimeSpan.Parse(reader[8].ToString());
+
+                        tours.Add(new TourSchemaWithoutLog(id, name, from, to, tourDescription, TransportType.Bike, distance, imgPath, timeSpan));
+                    }
+                    cmd.Dispose();
+
+                    logger.Log(LogLevel.Information, "Tours data has been fetched successfully");
                 }
-                cmd.Dispose();
-                connection.Close();
+                catch (Exception  ex)
+                {
+                    logger.Log(LogLevel.Error, ex.StackTrace);
+                    return (tours, "Tours data cant be fetched");
+                }
+                finally
+                {
+                    connection.Close();
+                }
             }
 
             return (tours, "Tours are fetched successfully");
@@ -137,6 +158,8 @@ namespace TourPlanner.Server.DL.DB
                 toursWithLog.Add(new TourSchemaWithLog(tour.Id, tour.Name, tour.From, tour.To, tour.TourDescription, tour.TransportType, tour.Distance, tour.RouteImage, tour.EstimatedTime, this.GetTourLogsByID(tour.Id).Item1));
             }
 
+            logger.Log(LogLevel.Information, $"Tours data with logs has been fetched successfully");
+
             return (toursWithLog, "Tours with logs are fetched successfully");
         }
 
@@ -146,28 +169,39 @@ namespace TourPlanner.Server.DL.DB
 
             using (IDbConnection connection = Connect())
             {
-                connection.Open();
-                IDbCommand cmd = connection.CreateCommand();
-
-                cmd.Connection = connection;
-                cmd.CommandText = "Select * from tourLog";
-                cmd.CommandType = CommandType.Text;
-                NpgsqlDataReader reader = (NpgsqlDataReader)cmd.ExecuteReader();
-
-                while (reader.Read())
+                try
                 {
-                    int id = Convert.ToInt32(reader[0].ToString());
-                    int tourId = Convert.ToInt32(reader[1].ToString());
-                    DateTime dateTime = Convert.ToDateTime(reader[2].ToString());
-                    string comment = reader[3].ToString();
-                    Difficulty difficulty = (Difficulty)Enum.Parse(typeof(Difficulty), reader[4].ToString());
-                    TimeSpan timespan = TimeSpan.Parse(reader[5].ToString());
-                    Rating rating = (Rating)Enum.Parse(typeof(Rating), reader[6].ToString());
+                    connection.Open();
+                    IDbCommand cmd = connection.CreateCommand();
 
-                    tourLogs.Add(new TourLogSchema(id, tourId, dateTime, comment, difficulty, timespan, rating));
+                    cmd.Connection = connection;
+                    cmd.CommandText = "Select * from tourLog";
+                    cmd.CommandType = CommandType.Text;
+                    NpgsqlDataReader reader = (NpgsqlDataReader)cmd.ExecuteReader();
+
+                    while (reader.Read())
+                    {
+                        int id = Convert.ToInt32(reader[0].ToString());
+                        int tourId = Convert.ToInt32(reader[1].ToString());
+                        DateTime dateTime = Convert.ToDateTime(reader[2].ToString());
+                        string comment = reader[3].ToString();
+                        Difficulty difficulty = (Difficulty)Enum.Parse(typeof(Difficulty), reader[4].ToString());
+                        TimeSpan timespan = TimeSpan.Parse(reader[5].ToString());
+                        Rating rating = (Rating)Enum.Parse(typeof(Rating), reader[6].ToString());
+
+                        tourLogs.Add(new TourLogSchema(id, tourId, dateTime, comment, difficulty, timespan, rating));
+                    }
+                    cmd.Dispose();
+                    logger.Log(LogLevel.Information, "Tour log data has been fetched successfully");
                 }
-                cmd.Dispose();
-                connection.Close();
+                catch (Exception ex)
+                {
+                    logger.Log(LogLevel.Error, ex.StackTrace);
+                }
+                finally
+                {
+                    connection.Close();
+                }
             }
 
             return (tourLogs, "Tours are fetched successfully");
@@ -186,6 +220,53 @@ namespace TourPlanner.Server.DL.DB
             catch (Exception ex)
             {
                 return (null, "Due to some error logs cant be fetched.");
+            }
+        }
+
+        public (List<TourSchemaWithLog>, string) FilterTours(string someText)
+        {
+            if (someText.Length == 0)
+            {
+                return this.GetAllTourWithLogs();
+            }
+
+            var toursWithLog = new List<TourSchemaWithLog>();
+
+            var tours = this.GetAllTour().Item1;
+
+            var filteredTours = tours.Where(x => x.Name.Contains(someText)).ToList();
+
+            if (filteredTours.Count != 0)
+            {
+                foreach (var tour in filteredTours)
+                {
+                    toursWithLog.Add(new TourSchemaWithLog(tour.Id, tour.Name, tour.From, tour.To, tour.TourDescription, tour.TransportType, tour.Distance, tour.RouteImage, tour.EstimatedTime, this.GetTourLogsByID(tour.Id).Item1));
+                }
+
+                return (toursWithLog, "Sorted Tours with logs are fetched successfully");
+            }
+
+            return (null, $"Nothing is found like {someText}");
+        }
+
+        public (List<TourLogSchema>, string) FilterTourLogs(string someText, int id)
+        {
+            try
+            {
+                var tourLogs = this.GetAllTourLogs().Item1;
+
+                if (someText.Length == 0 || someText == "empty")
+                {
+                    return (tourLogs.Where(x => x.TourId == id).ToList(), $"Sorted Tour logs of id {id} are fetched successfully");
+                }
+
+                var filteredTourLogs = tourLogs.Where(x => x.Comment.Contains(someText) && x.TourId == id).ToList();
+
+                return (filteredTourLogs, $"Sorted Tour logs of id {id} are fetched successfully");
+            }
+            catch
+            {
+                return (null, $"Nothing is found like {someText}");
             }
         }
 
@@ -244,7 +325,6 @@ namespace TourPlanner.Server.DL.DB
 
             return (true, "Tour log is deleted successfully");
         }
-
 
         private IDbConnection Connect()
         {

@@ -1,7 +1,9 @@
-﻿namespace TourPlanner.FileSystem.Handler
+﻿using System.Threading.Tasks;
+
+namespace TourPlanner.FileSystem.Handler
 {
     public interface IFileReader
     {
-        string Read(string filePath);
+        Task<(string, string)> Read(string filePath);
     }
 }

@@ -5,6 +5,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Nito.AsyncEx.Context" Version="5.1.2" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\TourPlanner.FileSystem\TourPlanner.FileSystem.csproj" />
     <ProjectReference Include="..\TourPlanner.Model\TourPlanner.Model.csproj" />
     <ProjectReference Include="..\TourPlanner.Server.DL\TourPlanner.Server.DL.csproj" />

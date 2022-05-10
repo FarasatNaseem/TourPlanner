@@ -1,6 +1,7 @@
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -21,11 +22,15 @@ namespace TourPlanner.API.Controllers
             this._serverOperationExecuter = new ServerOperationExecuter();
         }
 
-        [HttpGet]
-        public IEnumerable<WeatherForecast> Get()
+
+        [HttpGet("{someText}/{id}")]
+        public string Get(string someText, int id)
         {
-            throw new NotFiniteNumberException();
+            var response = this._serverOperationExecuter.FilterTourLogs(someText, id);
+
+            return JsonConvert.SerializeObject(response.Item1);
         }
+
 
         [HttpPost]
         public ActionResult Post(object body)

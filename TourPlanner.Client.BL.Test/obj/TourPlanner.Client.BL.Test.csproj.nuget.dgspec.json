@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Privat\\source\\repos\\TourPlanner\\TourPlanner.Client.BL.Test\\TourPlanner.Client.BL.Test.csproj": {}
+    "C:\\Users\\farha\\Desktop\\TourPlannerRepo2\\TourPlanner\\TourPlanner.Client.BL.Test\\TourPlanner.Client.BL.Test.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Privat\\source\\repos\\TourPlanner\\TourPlanner.Client.BL.Test\\TourPlanner.Client.BL.Test.csproj": {
+    "C:\\Users\\farha\\Desktop\\TourPlannerRepo2\\TourPlanner\\Logging\\Logging.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Privat\\source\\repos\\TourPlanner\\TourPlanner.Client.BL.Test\\TourPlanner.Client.BL.Test.csproj",
-        "projectName": "TourPlanner.Client.BL.Test",
-        "projectPath": "C:\\Users\\Privat\\source\\repos\\TourPlanner\\TourPlanner.Client.BL.Test\\TourPlanner.Client.BL.Test.csproj",
-        "packagesPath": "C:\\Users\\Privat\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Privat\\source\\repos\\TourPlanner\\TourPlanner.Client.BL.Test\\obj\\",
+        "projectUniqueName": "C:\\Users\\farha\\Desktop\\TourPlannerRepo2\\TourPlanner\\Logging\\Logging.csproj",
+        "projectName": "Logging",
+        "projectPath": "C:\\Users\\farha\\Desktop\\TourPlannerRepo2\\TourPlanner\\Logging\\Logging.csproj",
+        "packagesPath": "C:\\Users\\farha\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\farha\\Desktop\\TourPlannerRepo2\\TourPlanner\\Logging\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Privat\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\farha\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -28,6 +28,275 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "dependencies": {
+            "Microsoft.Extensions.Logging": {
+              "target": "Package",
+              "version": "[6.0.0, )"
+            },
+            "Microsoft.Extensions.Logging.Abstractions": {
+              "target": "Package",
+              "version": "[6.0.1, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.407\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\farha\\Desktop\\TourPlannerRepo2\\TourPlanner\\MapQuestApi\\MapQuestApi.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\farha\\Desktop\\TourPlannerRepo2\\TourPlanner\\MapQuestApi\\MapQuestApi.csproj",
+        "projectName": "MapQuestApi",
+        "projectPath": "C:\\Users\\farha\\Desktop\\TourPlannerRepo2\\TourPlanner\\MapQuestApi\\MapQuestApi.csproj",
+        "packagesPath": "C:\\Users\\farha\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\farha\\Desktop\\TourPlannerRepo2\\TourPlanner\\MapQuestApi\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\farha\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "dependencies": {
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.1, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.407\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\farha\\Desktop\\TourPlannerRepo2\\TourPlanner\\Report\\Report.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\farha\\Desktop\\TourPlannerRepo2\\TourPlanner\\Report\\Report.csproj",
+        "projectName": "Report",
+        "projectPath": "C:\\Users\\farha\\Desktop\\TourPlannerRepo2\\TourPlanner\\Report\\Report.csproj",
+        "packagesPath": "C:\\Users\\farha\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\farha\\Desktop\\TourPlannerRepo2\\TourPlanner\\Report\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\farha\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {
+              "C:\\Users\\farha\\Desktop\\TourPlannerRepo2\\TourPlanner\\TourPlanner.Model\\TourPlanner.Model.csproj": {
+                "projectPath": "C:\\Users\\farha\\Desktop\\TourPlannerRepo2\\TourPlanner\\TourPlanner.Model\\TourPlanner.Model.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "dependencies": {
+            "itext7": {
+              "target": "Package",
+              "version": "[7.2.2, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.407\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\farha\\Desktop\\TourPlannerRepo2\\TourPlanner\\TourPlanner.BL\\TourPlanner.Client.BL.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\farha\\Desktop\\TourPlannerRepo2\\TourPlanner\\TourPlanner.BL\\TourPlanner.Client.BL.csproj",
+        "projectName": "TourPlanner.Client.BL",
+        "projectPath": "C:\\Users\\farha\\Desktop\\TourPlannerRepo2\\TourPlanner\\TourPlanner.BL\\TourPlanner.Client.BL.csproj",
+        "packagesPath": "C:\\Users\\farha\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\farha\\Desktop\\TourPlannerRepo2\\TourPlanner\\TourPlanner.BL\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\farha\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {
+              "C:\\Users\\farha\\Desktop\\TourPlannerRepo2\\TourPlanner\\MapQuestApi\\MapQuestApi.csproj": {
+                "projectPath": "C:\\Users\\farha\\Desktop\\TourPlannerRepo2\\TourPlanner\\MapQuestApi\\MapQuestApi.csproj"
+              },
+              "C:\\Users\\farha\\Desktop\\TourPlannerRepo2\\TourPlanner\\Report\\Report.csproj": {
+                "projectPath": "C:\\Users\\farha\\Desktop\\TourPlannerRepo2\\TourPlanner\\Report\\Report.csproj"
+              },
+              "C:\\Users\\farha\\Desktop\\TourPlannerRepo2\\TourPlanner\\TourPlanner.DL\\TourPlanner.Client.DL.csproj": {
+                "projectPath": "C:\\Users\\farha\\Desktop\\TourPlannerRepo2\\TourPlanner\\TourPlanner.DL\\TourPlanner.Client.DL.csproj"
+              },
+              "C:\\Users\\farha\\Desktop\\TourPlannerRepo2\\TourPlanner\\TourPlanner.Model\\TourPlanner.Model.csproj": {
+                "projectPath": "C:\\Users\\farha\\Desktop\\TourPlannerRepo2\\TourPlanner\\TourPlanner.Model\\TourPlanner.Model.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "dependencies": {
+            "Nito.AsyncEx.Context": {
+              "target": "Package",
+              "version": "[5.1.2, )"
+            },
+            "System.Drawing.Common": {
+              "target": "Package",
+              "version": "[6.0.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.407\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\farha\\Desktop\\TourPlannerRepo2\\TourPlanner\\TourPlanner.Client.BL.Test\\TourPlanner.Client.BL.Test.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\farha\\Desktop\\TourPlannerRepo2\\TourPlanner\\TourPlanner.Client.BL.Test\\TourPlanner.Client.BL.Test.csproj",
+        "projectName": "TourPlanner.Client.BL.Test",
+        "projectPath": "C:\\Users\\farha\\Desktop\\TourPlannerRepo2\\TourPlanner\\TourPlanner.Client.BL.Test\\TourPlanner.Client.BL.Test.csproj",
+        "packagesPath": "C:\\Users\\farha\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\farha\\Desktop\\TourPlannerRepo2\\TourPlanner\\TourPlanner.Client.BL.Test\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\farha\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {
+              "C:\\Users\\farha\\Desktop\\TourPlannerRepo2\\TourPlanner\\TourPlanner.BL\\TourPlanner.Client.BL.csproj": {
+                "projectPath": "C:\\Users\\farha\\Desktop\\TourPlannerRepo2\\TourPlanner\\TourPlanner.BL\\TourPlanner.Client.BL.csproj"
+              }
+            }
           }
         },
         "warningProperties": {
@@ -72,7 +341,136 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.401\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.407\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\farha\\Desktop\\TourPlannerRepo2\\TourPlanner\\TourPlanner.DL\\TourPlanner.Client.DL.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\farha\\Desktop\\TourPlannerRepo2\\TourPlanner\\TourPlanner.DL\\TourPlanner.Client.DL.csproj",
+        "projectName": "TourPlanner.Client.DL",
+        "projectPath": "C:\\Users\\farha\\Desktop\\TourPlannerRepo2\\TourPlanner\\TourPlanner.DL\\TourPlanner.Client.DL.csproj",
+        "packagesPath": "C:\\Users\\farha\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\farha\\Desktop\\TourPlannerRepo2\\TourPlanner\\TourPlanner.DL\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\farha\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {
+              "C:\\Users\\farha\\Desktop\\TourPlannerRepo2\\TourPlanner\\Logging\\Logging.csproj": {
+                "projectPath": "C:\\Users\\farha\\Desktop\\TourPlannerRepo2\\TourPlanner\\Logging\\Logging.csproj"
+              },
+              "C:\\Users\\farha\\Desktop\\TourPlannerRepo2\\TourPlanner\\TourPlanner.Model\\TourPlanner.Model.csproj": {
+                "projectPath": "C:\\Users\\farha\\Desktop\\TourPlannerRepo2\\TourPlanner\\TourPlanner.Model\\TourPlanner.Model.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "dependencies": {
+            "Microsoft.Extensions.Logging.Abstractions": {
+              "target": "Package",
+              "version": "[6.0.1, )"
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.1, )"
+            },
+            "System.Drawing.Common": {
+              "target": "Package",
+              "version": "[6.0.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.407\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\farha\\Desktop\\TourPlannerRepo2\\TourPlanner\\TourPlanner.Model\\TourPlanner.Model.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\farha\\Desktop\\TourPlannerRepo2\\TourPlanner\\TourPlanner.Model\\TourPlanner.Model.csproj",
+        "projectName": "TourPlanner.Model",
+        "projectPath": "C:\\Users\\farha\\Desktop\\TourPlannerRepo2\\TourPlanner\\TourPlanner.Model\\TourPlanner.Model.csproj",
+        "packagesPath": "C:\\Users\\farha\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\farha\\Desktop\\TourPlannerRepo2\\TourPlanner\\TourPlanner.Model\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\farha\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.407\\RuntimeIdentifierGraph.json"
         }
       }
     }
