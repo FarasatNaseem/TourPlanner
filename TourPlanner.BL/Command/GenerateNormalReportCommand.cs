@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using TourPlanner.Client.BL.Wrapper;
+using TourPlanner.Model;
 using TourPlanner.Model.DbSchema;
 
 namespace TourPlanner.Client.BL.Command
@@ -28,7 +29,7 @@ namespace TourPlanner.Client.BL.Command
 
             var tour = new TourSchemaWithLog(tourWrapper.ID, tourWrapper.Name, tourWrapper.From, tourWrapper.To, tourWrapper.Description, tourWrapper.TransportType, tourWrapper.Distance, tourWrapper.RouteImage, tourWrapper.EstimatedTime, logsSchema);
 
-            this._abstractReportGenerator = new PdfReportGenerator($"C:\\Users\\Privat\\TourPlanner\\TourPlanner.BL\\Assets\\Reports\\{tour.Name}.pdf");
+            this._abstractReportGenerator = new PdfReportGenerator(Constraint.BASEURL + "TourPlanner.BL\\Assets\\Reports\\{tour.Name}.pdf");
 
             var isGenerated = this._abstractReportGenerator.Generate(tour);
         }

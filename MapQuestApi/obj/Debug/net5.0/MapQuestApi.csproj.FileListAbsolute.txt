@@ -34,3 +34,6 @@ C:\Users\Privat\TourPlanner\MapQuestApi\obj\Debug\net5.0\MapQuestApi.csproj.Core
 C:\Users\Privat\TourPlanner\MapQuestApi\obj\Debug\net5.0\MapQuestApi.dll
 C:\Users\Privat\TourPlanner\MapQuestApi\obj\Debug\net5.0\ref\MapQuestApi.dll
 C:\Users\Privat\TourPlanner\MapQuestApi\obj\Debug\net5.0\MapQuestApi.pdb
+C:\Users\Privat\TourPlanner\MapQuestApi\bin\Debug\net5.0\TourPlanner.Model.dll
+C:\Users\Privat\TourPlanner\MapQuestApi\bin\Debug\net5.0\TourPlanner.Model.pdb
+C:\Users\Privat\TourPlanner\MapQuestApi\obj\Debug\net5.0\MapQuestApi.csproj.CopyComplete

@@ -8,11 +8,8 @@ namespace TourPlanner.Client.BL.ViewModel
         public BaseViewModel TourVM { get; }
         public BaseViewModel TourLogVM { get; }
 
-
         private BaseViewModel _selectedViewModel;
         private MainViewModel mainViewModel;
-        private BaseCommand updateViewCommand;
-        private ITourPlannerCommand _updateViewCommand;
 
         public BaseViewModel SelectedViewModel
         {

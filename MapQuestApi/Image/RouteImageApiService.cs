@@ -4,6 +4,7 @@
     using System.IO;
     using System.Net.Http;
     using System.Threading.Tasks;
+    using TourPlanner.Model;
 
     public class RouteImageApiService : AbstractMapQuestApiService<RouteImageApiResponse>
     {
@@ -14,7 +15,7 @@
         {
             this._routeImageApiRequest = routeImageApiRequest;
             this._url = $"https://open.mapquestapi.com/staticmap/v5/map?start={this._routeImageApiRequest.From}&end={this._routeImageApiRequest.To}&size={this._routeImageApiRequest.ImageHeight},{this._routeImageApiRequest.ImageWidth}@2x&key={this._routeImageApiRequest.Key.ApiKey}";
-            this._filePath = @"C:\Users\Privat\TourPlanner\TourPlanner.BL\Assets\" + this._routeImageApiRequest.From + this._routeImageApiRequest.To + ".png";
+            this._filePath = Constraint.BASEURL + "TourPlanner.BL\\Assets\\" + this._routeImageApiRequest.From + this._routeImageApiRequest.To + ".png";
         }
 
         public override async Task<RouteImageApiResponse> Get()

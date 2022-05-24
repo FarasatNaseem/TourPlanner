@@ -13,6 +13,7 @@ using TourPlanner.Model.DbSchema;
 using TourPlanner.Server.DL.Config;
 using Logging;
 using Microsoft.Extensions.Logging;
+using Microsoft.Extensions.Configuration;
 
 namespace TourPlanner.Server.DL.DB
 {
@@ -21,9 +22,11 @@ namespace TourPlanner.Server.DL.DB
         private readonly DBConfigData _configData;
         private readonly ILogger logger = Logger.CreateLogger<Database>();
 
-        public Database(string connectionString)
+        public Database(IConfiguration config)
         {
-            this._configData = JsonConvert.DeserializeObject<DBConfigData>(connectionString);
+            var section = config.GetSection(nameof(DBConfigData));
+
+            this._configData = section.Get<DBConfigData>();
         }
 
         public (bool, string) AddTour(TourSchemaWithoutLog tourSchema)
@@ -220,7 +223,7 @@ namespace TourPlanner.Server.DL.DB
                     connection.Close();
                 }
 
-                return (true, "Tour data is updated");
+                return (true, "Tour log data is updated");
             }
         }
 

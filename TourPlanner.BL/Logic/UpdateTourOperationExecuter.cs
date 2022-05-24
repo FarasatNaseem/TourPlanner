@@ -94,7 +94,7 @@ namespace TourPlanner.Client.BL.Logic
 
         private bool DeleteOldRouteIfExist(string from, string to)
         {
-            string path = @"C:\Users\Privat\TourPlanner\TourPlanner.BL\Assets\";
+            string path = Constraint.BASEURL + "TourPlanner.BL\\Assets\\";
 
             string file = from + to + ".png";
             

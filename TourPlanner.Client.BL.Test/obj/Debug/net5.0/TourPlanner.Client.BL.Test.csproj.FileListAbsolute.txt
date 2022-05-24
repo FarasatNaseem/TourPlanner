@@ -427,3 +427,5 @@ C:\Users\Privat\TourPlanner\TourPlanner.Client.BL.Test\obj\Debug\net5.0\TourPlan
 C:\Users\Privat\TourPlanner\TourPlanner.Client.BL.Test\obj\Debug\net5.0\ref\TourPlanner.Client.BL.Test.dll
 C:\Users\Privat\TourPlanner\TourPlanner.Client.BL.Test\obj\Debug\net5.0\TourPlanner.Client.BL.Test.pdb
 C:\Users\Privat\TourPlanner\TourPlanner.Client.BL.Test\obj\Debug\net5.0\TourPlanner.Client.BL.Test.genruntimeconfig.cache
+C:\Users\Privat\TourPlanner\TourPlanner.Client.BL.Test\bin\Debug\net5.0\TourPlanner.FileSystem.dll
+C:\Users\Privat\TourPlanner\TourPlanner.Client.BL.Test\bin\Debug\net5.0\TourPlanner.FileSystem.pdb

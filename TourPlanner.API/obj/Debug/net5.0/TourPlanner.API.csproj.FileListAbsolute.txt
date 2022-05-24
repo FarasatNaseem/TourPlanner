@@ -154,3 +154,13 @@ C:\Users\Privat\TourPlanner\TourPlanner.API\obj\Debug\net5.0\TourPlanner.API.dll
 C:\Users\Privat\TourPlanner\TourPlanner.API\obj\Debug\net5.0\ref\TourPlanner.API.dll
 C:\Users\Privat\TourPlanner\TourPlanner.API\obj\Debug\net5.0\TourPlanner.API.pdb
 C:\Users\Privat\TourPlanner\TourPlanner.API\obj\Debug\net5.0\TourPlanner.API.genruntimeconfig.cache
+C:\Users\Privat\TourPlanner\TourPlanner.API\bin\Debug\net5.0\Microsoft.Extensions.Configuration.dll
+C:\Users\Privat\TourPlanner\TourPlanner.API\bin\Debug\net5.0\Microsoft.Extensions.Configuration.Abstractions.dll
+C:\Users\Privat\TourPlanner\TourPlanner.API\bin\Debug\net5.0\Microsoft.Extensions.Configuration.Binder.dll
+C:\Users\Privat\TourPlanner\TourPlanner.API\bin\Debug\net5.0\Microsoft.Extensions.Configuration.FileExtensions.dll
+C:\Users\Privat\TourPlanner\TourPlanner.API\bin\Debug\net5.0\Microsoft.Extensions.Configuration.Json.dll
+C:\Users\Privat\TourPlanner\TourPlanner.API\bin\Debug\net5.0\Microsoft.Extensions.FileProviders.Abstractions.dll
+C:\Users\Privat\TourPlanner\TourPlanner.API\bin\Debug\net5.0\Microsoft.Extensions.FileProviders.Physical.dll
+C:\Users\Privat\TourPlanner\TourPlanner.API\bin\Debug\net5.0\Microsoft.Extensions.FileSystemGlobbing.dll
+C:\Users\Privat\TourPlanner\TourPlanner.API\bin\Debug\net5.0\System.Text.Encodings.Web.dll
+C:\Users\Privat\TourPlanner\TourPlanner.API\bin\Debug\net5.0\System.Text.Json.dll

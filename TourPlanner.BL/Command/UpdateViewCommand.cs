@@ -1,13 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using TourPlanner.Client.BL.ViewModel;
-using TourPlanner.Client.BL.Wrapper;
-
-namespace TourPlanner.Client.BL.Command
+﻿namespace TourPlanner.Client.BL.Command
 {
+    using TourPlanner.Client.BL.ViewModel;
+    using TourPlanner.Client.BL.Wrapper;
+
     public class UpdateViewCommand : ITourPlannerCommand
     {
         private MainViewModel viewModel;
@@ -25,8 +20,13 @@ namespace TourPlanner.Client.BL.Command
             }
             else if (commandParameter is TourLogViewModel)
             {
-                int tourId = ((TourLogViewModel)commandParameter).Tours[0].ID;
-                viewModel.SelectedViewModel = new AddTourLogViewModel(viewModel, tourId);
+                var tours = ((TourLogViewModel)commandParameter).Tours;
+
+                if (tours.Count != 0)
+                {
+                    int tourId = tours[0].ID;
+                    viewModel.SelectedViewModel = new AddTourLogViewModel(viewModel, tourId);
+                }
             }
             else if (commandParameter is int)
             {
@@ -41,7 +41,10 @@ namespace TourPlanner.Client.BL.Command
                 var tourLog = (TourLogWrapper)commandParameter;
                 viewModel.SelectedViewModel = new UpdateTourLogViewModel(viewModel, tourLog.Id, tourLog.TourID);
             }
-            
+            else
+            {
+                viewModel.SelectedViewModel = new HomeViewModel(viewModel);
+            }
         }
     }
 }

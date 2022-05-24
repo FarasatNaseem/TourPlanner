@@ -1,4 +1,5 @@
-﻿using Newtonsoft.Json;
+﻿using Microsoft.Extensions.Configuration;
+using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using Nito.AsyncEx;
 using System;
@@ -23,9 +24,15 @@ namespace TourPlanner.Server.BL
         public ServerOperationExecuter()
         {
             this._fileHandler = new JSONFileHandler();
-            var fileHandlerResponse = AsyncContext.Run(() => this._fileHandler.Read(@"C:\Users\Privat\TourPlanner\TourPlanner.Server.DL\Config\TourPlannerDbConfig.json"));
-            this.connectionString = fileHandlerResponse.Item1;
-            this._tourPlannerDatabase = new Database(this.connectionString);
+
+            IConfiguration config = new ConfigurationBuilder()
+               .AddJsonFile(Constraint.BASEURL + "TourPlanner.Server.DL\\Config\\TourPlannerDbConfig.json", false, true)
+             .Build();
+
+
+            //var fileHandlerResponse = AsyncContext.Run(() => this._fileHandler.Read(Constraint.BASEURL + "TourPlanner.Server.DL\\Config\\TourPlannerDbConfig.json"));
+            //this.connectionString = fileHandlerResponse.Item1;
+            this._tourPlannerDatabase = new Database(config);
         }
 
         public (bool, string) AddTourLog(string jsonTourLogData)

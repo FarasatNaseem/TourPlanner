@@ -1,6 +1,15 @@
+//{
+//  "Host": "localhost",
+//  "Username": "postgres",
+//  "Password": "postgres",
+//  "Database": "Tourplanner"
+//}
+
 {
-  "Host": "localhost",
-  "Username": "postgres",
-  "Password": "postgres",
-  "Database":  "Tourplanner"
+  "DBConfigData": {
+    "Host": "localhost",
+    "Username": "postgres",
+    "Password": "postgres",
+    "Database": "Tourplanner"
+  }
 }

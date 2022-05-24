@@ -1265,6 +1265,7 @@
           "Report": "1.0.0",
           "System.Drawing.Common": "6.0.0",
           "TourPlanner.Client.DL": "1.0.0",
+          "TourPlanner.FileSystem": "1.0.0",
           "TourPlanner.Model": "1.0.0"
         },
         "runtime": {
@@ -1281,6 +1282,15 @@
         },
         "runtime": {
           "TourPlanner.Client.DL.dll": {}
+        }
+      },
+      "TourPlanner.FileSystem/1.0.0": {
+        "dependencies": {
+          "Logging": "1.0.0",
+          "Newtonsoft.Json": "13.0.1"
+        },
+        "runtime": {
+          "TourPlanner.FileSystem.dll": {}
         }
       },
       "TourPlanner.Model/1.0.0": {
@@ -2059,6 +2069,11 @@
       "sha512": ""
     },
     "TourPlanner.Client.DL/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "TourPlanner.FileSystem/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

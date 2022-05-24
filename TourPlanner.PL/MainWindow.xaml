@@ -13,9 +13,6 @@
         Width="930"
         >
     <DockPanel>
-        <!--<view:HomeView DockPanel.Dock="Top" DataContext="{Binding HomeVM}"/>-->
-        <!--<view:AddTourView DockPanel.Dock="Top" DataContext="{Binding AddTourVM}"/>-->
-        <!--<view:AddTourLogView DockPanel.Dock="Top" DataContext="{Binding AddTourLogVM}"/>-->
         <ContentControl Content="{Binding SelectedViewModel}"/>
     </DockPanel>
 </Window>

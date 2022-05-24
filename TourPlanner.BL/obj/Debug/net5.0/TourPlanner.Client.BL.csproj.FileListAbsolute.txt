@@ -67,3 +67,5 @@ C:\Users\Privat\TourPlanner\TourPlanner.BL\obj\Debug\net5.0\TourPlanner.Client.B
 C:\Users\Privat\TourPlanner\TourPlanner.BL\obj\Debug\net5.0\TourPlanner.Client.BL.dll
 C:\Users\Privat\TourPlanner\TourPlanner.BL\obj\Debug\net5.0\ref\TourPlanner.Client.BL.dll
 C:\Users\Privat\TourPlanner\TourPlanner.BL\obj\Debug\net5.0\TourPlanner.Client.BL.pdb
+C:\Users\Privat\TourPlanner\TourPlanner.BL\bin\Debug\net5.0\TourPlanner.FileSystem.dll
+C:\Users\Privat\TourPlanner\TourPlanner.BL\bin\Debug\net5.0\TourPlanner.FileSystem.pdb
