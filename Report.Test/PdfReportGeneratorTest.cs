@@ -14,7 +14,7 @@ namespace Report.Test
         [Test]
         public void GenerateResponseMustbeTrue()
         {
-            this._abstractReportGenerator = new PdfReportGenerator($"C:\\Users\\farha\\Desktop\\TourPlannerRepo2\\TourPlanner\\TourPlanner.BL\\Assets\\Reports\\tour2.pdf");
+            this._abstractReportGenerator = new PdfReportGenerator($"C:\\Users\\Privat\\TourPlanner\\TourPlanner.BL\\Assets\\Reports\\tour2.pdf");
 
             //var isGenerated = this._abstractReportGenerator.Generate(null);
             Assert.Pass();

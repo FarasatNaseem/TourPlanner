@@ -13,27 +13,38 @@ namespace TourPlanner.Client.BL.ViewModel
     {
 
         private BaseCommand deleteCommand;
-        private BaseCommand navigateToTourLogFormCommand;
         private BaseCommand generateNormalReportCommand;
+        private BaseCommand updateViewCommand;
+        private BaseViewModel selectedViewModel;
 
         private ITourPlannerCommand _deleteLogCommand;
-        private ITourPlannerCommand _navigateToTourLogFormCommand;
         private ITourPlannerCommand _generateNormalReportCommand;
+        private ITourPlannerCommand _updateViewCommand;
 
         public ObservableCollection<TourWrapper> Tours { get; set; }
         public BaseViewModel SearchVM { get; set; }
 
-        public TourLogViewModel()
+        public TourLogViewModel(MainViewModel mainViewModel)
         {
             this.Tours = new ObservableCollection<TourWrapper>();
             this._deleteLogCommand = new DeleteTourLogCommand(this.Tours);
-            this._navigateToTourLogFormCommand = new NagivateToTourLogFormCommand();
             this._generateNormalReportCommand = new GenerateNormalReportCommand();
             this.SearchVM = new SearchTourLogViewModel(this.Tours.Count == 0 ? null : this.Tours[0].Logs);
+            this._updateViewCommand = new UpdateViewCommand(mainViewModel);
+        }
+
+        public BaseViewModel SelectedViewModel
+        {
+            get { return selectedViewModel; }
+            set
+            {
+                selectedViewModel = value;
+                OnPropertyChanged(nameof(SelectedViewModel));
+            }
         }
 
         public ICommand DeleteCommand => deleteCommand ??= new BaseCommand(this._deleteLogCommand.Execute);
-        public ICommand NavigateCommand => navigateToTourLogFormCommand ??= new BaseCommand(this._navigateToTourLogFormCommand.Execute);
         public ICommand GenerateNormalReportCommand => generateNormalReportCommand ??= new BaseCommand(this._generateNormalReportCommand.Execute);
+        public ICommand UpdateViewCommand => updateViewCommand ??= new BaseCommand(this._updateViewCommand.Execute);
     }
 }

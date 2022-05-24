@@ -23,7 +23,7 @@ namespace TourPlanner.Server.BL
         public ServerOperationExecuter()
         {
             this._fileHandler = new JSONFileHandler();
-            var fileHandlerResponse = AsyncContext.Run(() => this._fileHandler.Read(@"C:\Users\farha\Desktop\TourPlannerRepo2\TourPlanner\TourPlanner.Server.DL\Config\TourPlannerDbConfig.json"));
+            var fileHandlerResponse = AsyncContext.Run(() => this._fileHandler.Read(@"C:\Users\Privat\TourPlanner\TourPlanner.Server.DL\Config\TourPlannerDbConfig.json"));
             this.connectionString = fileHandlerResponse.Item1;
             this._tourPlannerDatabase = new Database(this.connectionString);
         }
@@ -47,7 +47,26 @@ namespace TourPlanner.Server.BL
 
         public (List<TourSchemaWithoutLog>, string) GetAllTourWithoutLogs()
         {
-            return this._tourPlannerDatabase.GetAllTour();
+            return this._tourPlannerDatabase.GetAllTourWithoutLog();
+        }
+
+        public (TourSchemaWithoutLog, string) GetTourById(int id)
+        {
+            return this._tourPlannerDatabase.GetTourById(id);
+        }
+
+        public (bool, string) UpdateTour(string jsonTourData)
+        {
+            var tourSchema = JsonConvert.DeserializeObject<TourSchemaWithoutLog>(jsonTourData);
+
+            return this._tourPlannerDatabase.UpdateTour(tourSchema);
+        }
+
+        public (bool, string) UpdateTourLog(string jsonTourData)
+        {
+            var tourLogSchema = JsonConvert.DeserializeObject<TourLogSchema>(jsonTourData);
+
+            return this._tourPlannerDatabase.UpdateTourLog(tourLogSchema);
         }
 
         public (List<TourSchemaWithLog>, string) FilterTours(string someText)

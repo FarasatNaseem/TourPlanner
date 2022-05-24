@@ -22,3 +22,15 @@ C:\Users\farha\Desktop\TourPlannerRepo2\TourPlanner\MapQuestApi\obj\Debug\net5.0
 C:\Users\farha\Desktop\TourPlannerRepo2\TourPlanner\MapQuestApi\obj\Debug\net5.0\MapQuestApi.dll
 C:\Users\farha\Desktop\TourPlannerRepo2\TourPlanner\MapQuestApi\obj\Debug\net5.0\ref\MapQuestApi.dll
 C:\Users\farha\Desktop\TourPlannerRepo2\TourPlanner\MapQuestApi\obj\Debug\net5.0\MapQuestApi.pdb
+C:\Users\Privat\TourPlanner\MapQuestApi\bin\Debug\net5.0\MapQuestApi.deps.json
+C:\Users\Privat\TourPlanner\MapQuestApi\bin\Debug\net5.0\MapQuestApi.dll
+C:\Users\Privat\TourPlanner\MapQuestApi\bin\Debug\net5.0\ref\MapQuestApi.dll
+C:\Users\Privat\TourPlanner\MapQuestApi\bin\Debug\net5.0\MapQuestApi.pdb
+C:\Users\Privat\TourPlanner\MapQuestApi\obj\Debug\net5.0\MapQuestApi.csproj.AssemblyReference.cache
+C:\Users\Privat\TourPlanner\MapQuestApi\obj\Debug\net5.0\MapQuestApi.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Privat\TourPlanner\MapQuestApi\obj\Debug\net5.0\MapQuestApi.AssemblyInfoInputs.cache
+C:\Users\Privat\TourPlanner\MapQuestApi\obj\Debug\net5.0\MapQuestApi.AssemblyInfo.cs
+C:\Users\Privat\TourPlanner\MapQuestApi\obj\Debug\net5.0\MapQuestApi.csproj.CoreCompileInputs.cache
+C:\Users\Privat\TourPlanner\MapQuestApi\obj\Debug\net5.0\MapQuestApi.dll
+C:\Users\Privat\TourPlanner\MapQuestApi\obj\Debug\net5.0\ref\MapQuestApi.dll
+C:\Users\Privat\TourPlanner\MapQuestApi\obj\Debug\net5.0\MapQuestApi.pdb

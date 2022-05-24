@@ -10,6 +10,7 @@
     {
         private readonly AddTourViewModel _addTourViewModel;
         private IOperationExecuter<Tour> _addNewTourOperationExecuter;
+
         public AddTourCommand(AddTourViewModel addTourViewModel)
         {
             this._addTourViewModel = addTourViewModel;

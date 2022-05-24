@@ -31,7 +31,7 @@
                     </Label>
                 </Border>
 
-                <Button FontSize="20" Grid.Column="2" Grid.Row="0"  Margin="2" Command="{Binding NavigateCommand}">+</Button>
+                <Button FontSize="20" Grid.Column="2" Grid.Row="0"  Margin="2" Command="{Binding UpdateViewCommand}" CommandParameter="Add Tour">+</Button>
                 <Button FontSize="20" Grid.Column="3" Grid.Row="0"  Margin="2" Command="{Binding LoadCommand}">[]</Button>
 
                 <local:SearchView DockPanel.Dock="Top" VerticalAlignment="Center" Grid.Row="1" Grid.ColumnSpan="4" FontSize="10" DataContext="{Binding SearchVM}"/>
@@ -54,7 +54,7 @@
                                 <DataTemplate>
                                     <Grid Margin="1">
                                         <Border BorderBrush="LightGray" Background="White" Grid.Column="0" Grid.Row="0" BorderThickness="1" Grid.ColumnSpan="3" Margin="2">
-                                            <Button Command="{Binding DataContext.UpdateCommand, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type UserControl}}}" CommandParameter="{Binding Path=ID}" Content="Update"/>
+                                            <Button Command="{Binding DataContext.UpdateViewCommand, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type UserControl}}}" CommandParameter="{Binding Path=ID}" Content="Update"/>
                                         </Border>
                                     </Grid>
                                 </DataTemplate>
@@ -78,4 +78,8 @@
             </Grid>
         </DockPanel>
     </Border>
+
+
+  
+
 </UserControl>

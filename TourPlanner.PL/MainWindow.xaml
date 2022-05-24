@@ -8,10 +8,14 @@
         xmlns:viewmodel="clr-namespace:TourPlanner.Client.BL.ViewModel;assembly=TourPlanner.Client.BL" 
         d:DataContext="{d:DesignInstance Type=viewmodel:MainViewModel}"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="1200">
+        Title="MainWindow" 
+        Height="580" 
+        Width="930"
+        >
     <DockPanel>
-        <view:HomeView DockPanel.Dock="Top" DataContext="{Binding HomeVM}"/>
+        <!--<view:HomeView DockPanel.Dock="Top" DataContext="{Binding HomeVM}"/>-->
         <!--<view:AddTourView DockPanel.Dock="Top" DataContext="{Binding AddTourVM}"/>-->
         <!--<view:AddTourLogView DockPanel.Dock="Top" DataContext="{Binding AddTourLogVM}"/>-->
+        <ContentControl Content="{Binding SelectedViewModel}"/>
     </DockPanel>
 </Window>

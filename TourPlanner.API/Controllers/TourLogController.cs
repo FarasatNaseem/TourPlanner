@@ -79,5 +79,31 @@ namespace TourPlanner.API.Controllers
                   "Error deleting tour record");
             }
         }
+
+        [HttpPut]
+        public ActionResult Put(object body)
+        {
+            string jsonTourData = body.ToString();
+
+            try
+            {
+                var response = this._serverOperationExecuter.UpdateTourLog(jsonTourData);
+
+                if (response.Item2 == null)
+                {
+                    return StatusCode(StatusCodes.Status400BadRequest,
+                 "Invalid data");
+                }
+
+                return StatusCode(StatusCodes.Status200OK,
+                  response.Item2);
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(StatusCodes.Status500InternalServerError,
+                  "Error updating tour log");
+            }
+
+        }
     }
 }

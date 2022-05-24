@@ -20,10 +20,17 @@ namespace TourPlanner.Client.BL.ViewModel
 
         private BaseCommand _addCommand;
         private ITourPlannerCommand _addTourCommand;
-        public AddTourViewModel()
+        private readonly MainViewModel mainViewModel;
+
+        private BaseCommand updateViewCommand;
+        private ITourPlannerCommand _updateViewCommand;
+
+        public AddTourViewModel(MainViewModel mainViewModel)
         {
+            this.mainViewModel = mainViewModel;
             this.MessageViewModel = new MessageViewModel();
             this._addTourCommand = new AddTourCommand(this);
+            this._updateViewCommand = new UpdateViewCommand(mainViewModel);
         }
 
         public string Name
@@ -124,5 +131,6 @@ namespace TourPlanner.Client.BL.ViewModel
            !string.IsNullOrEmpty(Description);
 
         public ICommand AddCommand => _addCommand ??= new BaseCommand(this._addTourCommand.Execute);
+        public ICommand UpdateViewCommand => updateViewCommand ??= new BaseCommand(this._updateViewCommand.Execute);
     }
 }

@@ -93,9 +93,29 @@ namespace TourPlanner.Client.DL.Services
             throw new NotImplementedException();
         }
 
-        public override Task<GenericApiResponse> Update(object listOfUpdatedData)
+        public override async Task<GenericApiResponse> Update(object listOfUpdatedData)
         {
-            throw new NotImplementedException();
+            TourLog tourLog = (TourLog)listOfUpdatedData;
+
+            var apiResponse = await Task.Run(() => this.HttpClient.PutAsync($"https://localhost:5001/TourLog",
+                   new StringContent(
+                       JsonConvert.SerializeObject(tourLog),
+                       Encoding.Default,
+                       "application/json"
+                   ))).ConfigureAwait(false);
+
+            if (apiResponse.IsSuccessStatusCode)
+            {
+                var data = await Task.Run(() => apiResponse.Content.ReadAsStringAsync()).ConfigureAwait(false);
+
+                //logger.Log(LogLevel.Information, "Tour is updated successfully");
+
+                return new GenericApiResponse("Tour Log is updated", null, true);
+            }
+
+            //logger.Log(LogLevel.Error, "Due to some error new tour cant be updated.");
+
+            return new GenericApiResponse("Tour Log cant be updated", null, false);
         }
     }
 }

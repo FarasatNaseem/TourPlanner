@@ -4,13 +4,130 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:c1="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-             xmlns:local="clr-namespace:TourPlanner.PL.View"
-             xmlns:viewmodel="clr-namespace:TourPlanner.Client.BL.ViewModel;assembly=TourPlanner.Client.BL"
+             xmlns:local="clr-namespace:TourPlanner.PL"
+             xmlns:view="clr-namespace:TourPlanner.PL.View"
+             xmlns:viewmodel="clr-namespace:TourPlanner.Client.BL.ViewModel;assembly=TourPlanner.Client.BL" 
              d:DataContext="{d:DesignInstance Type=viewmodel:TourLogViewModel}"
              mc:Ignorable="d" 
              d:DesignHeight="410" d:DesignWidth="900">
+    
     <DockPanel >
 
+        <!--<ItemsControl ItemsSource="{Binding Tours}">
+            <ItemsControl.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel>
+                        --><!--1--><!--
+                        <Label FontSize="20" DockPanel.Dock="Top" Content="{Binding Tours[0].Name}"></Label>
+                        --><!--1-->
+                        <!--2--><!--
+                        <local:SearchView DockPanel.Dock="Top" VerticalAlignment="Center" FontSize="10" DataContext="{Binding SearchVM}"/>
+                        --><!--2-->
+
+                        <!--3-->
+                        <!--3-->
+
+                        <!--4--><!--
+
+                        <Border DockPanel.Dock="Top" CornerRadius="1" BorderBrush="LightGray" Background="White" BorderThickness="0" >
+                            <DockPanel >
+                                <Grid DockPanel.Dock="Top">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="3*"/>
+                                        <ColumnDefinition Width="1*"/>
+                                        <ColumnDefinition Width="1*"/>
+                                        <ColumnDefinition Width="1*"/>
+                                    </Grid.ColumnDefinitions>
+
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="40"/>
+                                        <RowDefinition Height="1*"/>
+                                    </Grid.RowDefinitions>
+
+                                    <Border BorderBrush="LightGray" Background="White" BorderThickness="1" Grid.ColumnSpan="3" Margin="2">
+                                        <Label FontSize="15" >
+                                            <Bold>Log</Bold>
+                                        </Label>
+                                    </Border>
+                                    <Border BorderBrush="LightGray" Background="White" BorderThickness="1" Grid.ColumnSpan="3" Grid.Column="4" Margin="2">
+                                        <Button Command="{Binding DataContext.NavigateCommand, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type UserControl}}}" CommandParameter="{Binding Tours}" Content="Add Log"/>
+                                    </Border>
+                                </Grid>
+                            </DockPanel>
+                        </Border>
+
+                        --><!--4-->
+
+                        <!--5--><!--
+                        <Border BorderBrush="LightGray" Background="White" BorderThickness="1" >
+                            <Grid Margin="2" DockPanel.Dock="Top" Grid.ColumnSpan="4" >
+                                <Border BorderBrush="LightGray" Background="White"  BorderThickness="1" Margin="2">
+                                    <DataGrid ItemsSource="{Binding Tours}" RowDetailsVisibilityMode="Visible" AutoGenerateColumns="False">
+                                        <DataGrid.Columns>
+                                            <DataGridTextColumn Header="Name" Binding="{Binding Name}"  Width="Auto"/>
+                                            <DataGridTextColumn Header="From" Binding="{Binding From}"  Width="Auto"/>
+                                            <DataGridTextColumn Header="To" Binding="{Binding To}"  Width="Auto"/>
+                                            <DataGridTextColumn Header="Distance" Binding="{Binding Distance}"  Width="Auto"/>
+                                            <DataGridTextColumn Header="Description" Binding="{Binding Description}"  Width="Auto"/>
+                                            <DataGridTextColumn Header="Transport type" Binding="{Binding TransportType}"  Width="Auto"/>
+                                            <DataGridTextColumn Header="Estimated time" Binding="{Binding EstimatedTime}"  Width="Auto"/>
+                                            <c1:DataGridTemplateColumn>
+                                                <c1:DataGridTemplateColumn.CellTemplate>
+                                                    <DataTemplate>
+                                                        <Grid>
+                                                            <Border BorderBrush="LightGray" Background="White"  BorderThickness="1" Grid.ColumnSpan="3" Margin="2">
+                                                                <Button Command="{Binding DataContext.GenerateNormalReportCommand, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type UserControl}}}" CommandParameter="{Binding}" Content="Generate Report"/>
+                                                            </Border>
+                                                        </Grid>
+                                                    </DataTemplate>
+                                                </c1:DataGridTemplateColumn.CellTemplate>
+                                            </c1:DataGridTemplateColumn>
+                                        </DataGrid.Columns>
+                                        <DataGrid.RowDetailsTemplate>
+                                            <DataTemplate>
+                                                <DataGrid ItemsSource="{Binding Logs}" AutoGenerateColumns="False" >
+                                                    <DataGrid.Columns>
+                                                        <DataGridTextColumn Header="Id" Binding="{Binding Id}" Width="Auto"/>
+                                                        <DataGridTextColumn Header="Distance" Binding="{Binding Distance}" Width="Auto"/>
+                                                        <DataGridTextColumn Header="DateTime" Binding="{Binding DateTime}" Width="Auto"/>
+                                                        <DataGridTextColumn Header="Comment" Binding="{Binding Comment}" Width="Auto"/>
+                                                        <DataGridTextColumn Header="Difficulty" Binding="{Binding Difficulty}" Width="Auto"/>
+                                                        <DataGridTextColumn Header="Duration" Binding="{Binding Duration}" Width="Auto"/>
+                                                        <c1:DataGridTemplateColumn>
+                                                            <c1:DataGridTemplateColumn.CellTemplate>
+                                                                <DataTemplate>
+                                                                    <Grid>
+                                                                        <Border BorderBrush="LightGray" Background="White"  BorderThickness="1" Grid.ColumnSpan="3" Margin="2">
+                                                                            <Button Command="{Binding DataContext.DeleteCommand, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type UserControl}}}" CommandParameter="{Binding Path=Id}" Content="Remove"/>
+                                                                        </Border>
+                                                                    </Grid>
+                                                                </DataTemplate>
+                                                            </c1:DataGridTemplateColumn.CellTemplate>
+                                                        </c1:DataGridTemplateColumn>
+                                                        <c1:DataGridTemplateColumn>
+                                                            <c1:DataGridTemplateColumn.CellTemplate>
+                                                                <DataTemplate>
+                                                                    <Grid>
+                                                                        <Border BorderBrush="LightGray" Background="White"  BorderThickness="1" Margin="2">
+                                                                            <Button Command="{Binding DataContext.UpdateCommand, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type UserControl}}}" CommandParameter="{Binding Path=Id}" Content="Update"/>
+                                                                        </Border>
+                                                                    </Grid>
+                                                                </DataTemplate>
+                                                            </c1:DataGridTemplateColumn.CellTemplate>
+                                                        </c1:DataGridTemplateColumn>
+                                                    </DataGrid.Columns>
+                                                </DataGrid>
+                                            </DataTemplate>
+                                        </DataGrid.RowDetailsTemplate>
+                                    </DataGrid>
+                                </Border>
+                            </Grid>
+                        </Border>
+
+                    </StackPanel>
+                </DataTemplate>
+            </ItemsControl.ItemTemplate>
+        </ItemsControl>-->
         <Image Source="{Binding Tours[0].RouteImage}" 
             HorizontalAlignment="Left" 
      Stretch="Fill" 
@@ -18,16 +135,21 @@
 
 
         <!--1-->
+        
         <Label FontSize="20" DockPanel.Dock="Top" Content="{Binding Tours[0].Name}"></Label>
+        
         <!--1-->
         <!--2-->
-        <local:SearchView DockPanel.Dock="Top" VerticalAlignment="Center" FontSize="10" DataContext="{Binding SearchVM}"/>
+        
+        <view:SearchView DockPanel.Dock="Top" VerticalAlignment="Center" FontSize="10" DataContext="{Binding SearchVM}"/>
+        
         <!--2-->
 
         <!--3-->
         <!--3-->
 
         <!--4-->
+        
 
         <Border DockPanel.Dock="Top" CornerRadius="1" BorderBrush="LightGray" Background="White" BorderThickness="0" >
             <DockPanel >
@@ -50,15 +172,17 @@
                         </Label>
                     </Border>
                     <Border BorderBrush="LightGray" Background="White" BorderThickness="1" Grid.ColumnSpan="3" Grid.Column="4" Margin="2">
-                        <Button Command="{Binding DataContext.NavigateCommand, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type UserControl}}}" CommandParameter="{Binding Tours}" Content="Add Log"/>
+                        <Button Command="{Binding DataContext.UpdateViewCommand, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type UserControl}}}" CommandParameter="{Binding}" Content="Add Log"/>
                     </Border>
                 </Grid>
             </DockPanel>
         </Border>
 
+        
         <!--4-->
 
         <!--5-->
+        
         <Border BorderBrush="LightGray" Background="White" BorderThickness="1" >
             <Grid Margin="2" DockPanel.Dock="Top" Grid.ColumnSpan="4" >
                 <Border BorderBrush="LightGray" Background="White"  BorderThickness="1" Margin="2">
@@ -109,7 +233,8 @@
                                                 <DataTemplate>
                                                     <Grid>
                                                         <Border BorderBrush="LightGray" Background="White"  BorderThickness="1" Margin="2">
-                                                            <Button Command="{Binding DataContext.UpdateCommand, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type UserControl}}}" CommandParameter="{Binding Path=Id}" Content="Update"/>
+                                                            <Button Command="{Binding DataContext.UpdateViewCommand, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type UserControl}}}" CommandParameter="{Binding}"  Content="Update">
+                                                            </Button>
                                                         </Border>
                                                     </Grid>
                                                 </DataTemplate>
@@ -126,4 +251,6 @@
         <!--5-->
 
     </DockPanel>
+
+
 </UserControl>

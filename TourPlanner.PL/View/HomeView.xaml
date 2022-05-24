@@ -9,9 +9,12 @@
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="1200">
     <DockPanel>
-        <local:HeaderView DockPanel.Dock="Top" VerticalAlignment="Center"/>
+        <!--<local:HeaderView DockPanel.Dock="Top" VerticalAlignment="Center"/>-->
         <!--<local:SearchView DockPanel.Dock="Top" VerticalAlignment="Center" DataContext="{Binding SearchVM}"/>-->
         <local:TourView HorizontalAlignment="Left" DataContext="{Binding TourVM}"/>
         <local:TourLogView HorizontalAlignment="Left" DataContext="{Binding TourLogVM}"/>
     </DockPanel>
+
+  
+
 </UserControl>

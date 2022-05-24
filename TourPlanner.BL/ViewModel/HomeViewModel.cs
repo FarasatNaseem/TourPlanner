@@ -1,14 +1,35 @@
-﻿namespace TourPlanner.Client.BL.ViewModel
+﻿using System.Windows.Input;
+using TourPlanner.Client.BL.Command;
+
+namespace TourPlanner.Client.BL.ViewModel
 {
     public class HomeViewModel : BaseViewModel
     {
         public BaseViewModel TourVM { get; }
         public BaseViewModel TourLogVM { get; }
 
-        public HomeViewModel()
+
+        private BaseViewModel _selectedViewModel;
+        private MainViewModel mainViewModel;
+        private BaseCommand updateViewCommand;
+        private ITourPlannerCommand _updateViewCommand;
+
+        public BaseViewModel SelectedViewModel
         {
-            this.TourLogVM = new TourLogViewModel();
-            this.TourVM = new TourViewModel(this.TourLogVM);
+            get { return _selectedViewModel; }
+            set
+            {
+                _selectedViewModel = value;
+                OnPropertyChanged(nameof(SelectedViewModel));
+            }
+        }
+
+        
+        public HomeViewModel(MainViewModel mainViewModel)
+        {
+            this.mainViewModel = mainViewModel;
+            this.TourLogVM = new TourLogViewModel(mainViewModel);
+            this.TourVM = new TourViewModel(this.TourLogVM, mainViewModel);
         }
     }
 }

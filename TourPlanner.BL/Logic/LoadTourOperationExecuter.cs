@@ -27,22 +27,28 @@ namespace TourPlanner.Client.BL.Logic
 
         public void Execute(object parameter)
         {
-            GenericApiResponse response = AsyncContext.Run(() => TourPlannerApiServiceProvider.TourService.ReadAll());
-
-            this._tourViewModel.Tours.Clear();
-
-            var logs = new List<TourLog>();
-            
-            foreach (var tour in (List<TourSchemaWithLog>)response.Data)
+            try
             {
-                logs.Clear();
+                GenericApiResponse response = AsyncContext.Run(() => TourPlannerApiServiceProvider.TourService.ReadAll());
 
-                foreach (var log in tour.Logs)
+                this._tourViewModel.Tours.Clear();
+
+                var logs = new List<TourLog>();
+
+                foreach (var tour in (List<TourSchemaWithLog>)response.Data)
                 {
-                    logs.Add(new TourLog(log.Id, log.TourId, log.DateTime, log.Comment, log.Difficulty, log.TotalDuration, log.Rating));
-                }
+                    logs.Clear();
 
-                this._tourViewModel.Tours.Add(new TourWrapper(new Tour(tour.Id, tour.Name, tour.From, tour.To, tour.TourDescription, tour.TransportType, tour.Distance, tour.RouteImage, tour.EstimatedTime, logs)));
+                    foreach (var log in tour.Logs)
+                    {
+                        logs.Add(new TourLog(log.Id, log.TourId, log.DateTime, log.Comment, log.Difficulty, log.TotalDuration, log.Rating));
+                    }
+
+                    this._tourViewModel.Tours.Add(new TourWrapper(new Tour(tour.Id, tour.Name, tour.From, tour.To, tour.TourDescription, tour.TransportType, tour.Distance, tour.RouteImage, tour.EstimatedTime, logs)));
+                }
+            }
+            catch (Exception)
+            {
             }
         }
     }

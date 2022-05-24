@@ -11,8 +11,17 @@
     <Compile Update="View\HomeView.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="View\UpdateTourLogView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\UpdateTourView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Page Update="Styles.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="View\AddTourLogView.xaml">
       <SubType>Designer</SubType>
     </Page>
@@ -20,6 +29,12 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="View\HomeView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\UpdateTourLogView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\UpdateTourView.xaml">
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>

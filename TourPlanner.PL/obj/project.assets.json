@@ -5014,19 +5014,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\farha\\.nuget\\packages\\": {}
+    "C:\\Users\\Privat\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\farha\\Desktop\\TourPlannerRepo2\\TourPlanner\\TourPlanner.PL\\TourPlanner.PL.csproj",
+      "projectUniqueName": "C:\\Users\\Privat\\TourPlanner\\TourPlanner.PL\\TourPlanner.PL.csproj",
       "projectName": "TourPlanner.PL",
-      "projectPath": "C:\\Users\\farha\\Desktop\\TourPlannerRepo2\\TourPlanner\\TourPlanner.PL\\TourPlanner.PL.csproj",
-      "packagesPath": "C:\\Users\\farha\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\farha\\Desktop\\TourPlannerRepo2\\TourPlanner\\TourPlanner.PL\\obj\\",
+      "projectPath": "C:\\Users\\Privat\\TourPlanner\\TourPlanner.PL\\TourPlanner.PL.csproj",
+      "packagesPath": "C:\\Users\\Privat\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Privat\\TourPlanner\\TourPlanner.PL\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\farha\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Privat\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -5040,8 +5040,8 @@
         "net5.0-windows7.0": {
           "targetAlias": "net5.0-windows",
           "projectReferences": {
-            "C:\\Users\\farha\\Desktop\\TourPlannerRepo2\\TourPlanner\\TourPlanner.BL\\TourPlanner.Client.BL.csproj": {
-              "projectPath": "C:\\Users\\farha\\Desktop\\TourPlannerRepo2\\TourPlanner\\TourPlanner.BL\\TourPlanner.Client.BL.csproj"
+            "C:\\Users\\Privat\\TourPlanner\\TourPlanner.BL\\TourPlanner.Client.BL.csproj": {
+              "projectPath": "C:\\Users\\Privat\\TourPlanner\\TourPlanner.BL\\TourPlanner.Client.BL.csproj"
             }
           }
         }
@@ -5073,7 +5073,7 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.407\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.401\\RuntimeIdentifierGraph.json"
       }
     }
   }

@@ -17,14 +17,21 @@ namespace TourPlanner.Client.BL.ViewModel
         private Difficulty _difficulty = Difficulty.None;
         private TimeSpan _duration;
         private Rating _rating = Rating.None;
+        
 
         private BaseCommand _addCommand;
         private readonly ITourPlannerCommand _addTourLogCommand;
+        private readonly MainViewModel mainViewModel;
+        private BaseCommand updateViewCommand;
+        private ITourPlannerCommand _updateViewCommand;
 
-        public AddTourLogViewModel()
+        public AddTourLogViewModel(MainViewModel mainViewModel, int tourId)
         {
+            this.TourId = tourId;
+            this.mainViewModel = mainViewModel;
             this.MessageViewModel = new MessageViewModel();
             this._addTourLogCommand = new AddTourLogCommand(this);
+            this._updateViewCommand = new UpdateViewCommand(mainViewModel);
         }
 
         public int TourId
@@ -32,7 +39,6 @@ namespace TourPlanner.Client.BL.ViewModel
             get => _id;
             set
             {
-
                 if (_id == value)
                     return;
                 _id = value;
@@ -126,5 +132,6 @@ namespace TourPlanner.Client.BL.ViewModel
            (this.TotalDuration != default(TimeSpan));
 
         public ICommand AddCommand => _addCommand ??= new BaseCommand(this._addTourLogCommand.Execute);
+        public ICommand UpdateViewCommand => updateViewCommand ??= new BaseCommand(this._updateViewCommand.Execute);
     }
 }

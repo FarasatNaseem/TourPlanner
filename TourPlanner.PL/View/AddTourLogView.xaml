@@ -14,113 +14,121 @@
     <UserControl.Resources>
         <BooleanToVisibilityConverter x:Key="BooleanToVisibilityConverter" />
     </UserControl.Resources>
-    <!--<UserControl.Background>
-        <ImageBrush
-            ImageSource="/Resources/login-background.jpg"
-            Opacity="0.5"
-            Stretch="UniformToFill" />
-    </UserControl.Background>-->
-    <Border Margin="10" Padding="10"
+  
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="auto"/>
+        </Grid.RowDefinitions>
+
+        <Border Margin="10" Padding="10" Grid.Row="0"
         HorizontalAlignment="Center"
         VerticalAlignment="Center"
         Background="White"
         BorderThickness="3"
         CornerRadius="10">
-        <Border.Effect>
-            <DropShadowEffect BlurRadius="10" Color="Gray" />
-        </Border.Effect>
-        <Grid Grid.IsSharedSizeScope="True">
-            <Grid.RowDefinitions>
-                <RowDefinition Height="auto" />
-                <RowDefinition Height="auto" />
-            </Grid.RowDefinitions>
-
-            <TextBlock Grid.Row="0"
-                HorizontalAlignment="Center"
-                FontSize="48"
-                Text="Tour Planner" />
-
-            <Grid Grid.Row="1" Margin="0,20">
+            <Border.Effect>
+                <DropShadowEffect BlurRadius="10" Color="Gray" />
+            </Border.Effect>
+            <Grid Grid.IsSharedSizeScope="True">
                 <Grid.RowDefinitions>
-                    <RowDefinition Height="auto" />
-                    <RowDefinition Height="auto" />
-                    <RowDefinition Height="auto" />
-                    <RowDefinition Height="auto" />
-                    <RowDefinition Height="auto" />
                     <RowDefinition Height="auto" />
                     <RowDefinition Height="auto" />
                 </Grid.RowDefinitions>
 
-                <Grid Grid.Row="0" Margin="0,10">
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="auto" SharedSizeGroup="Label" />
-                        <ColumnDefinition Width="300" />
-                    </Grid.ColumnDefinitions>
+                <TextBlock Grid.Row="0"
+                HorizontalAlignment="Center"
+                FontSize="48"
+                Text="Tour Planner" />
 
-                    <TextBlock Grid.Column="0" Text="Difficulty" />
-                    <TextBox Grid.Column="1" Margin="20,0,0,0"
+                <Grid Grid.Row="1" Margin="0,20">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="auto" />
+                        <RowDefinition Height="auto" />
+                        <RowDefinition Height="auto" />
+                        <RowDefinition Height="auto" />
+                        <RowDefinition Height="auto" />
+                        <RowDefinition Height="auto" />
+                        <RowDefinition Height="auto" />
+                    </Grid.RowDefinitions>
+
+                    <Grid Grid.Row="0" Margin="0,10">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="auto" SharedSizeGroup="Label" />
+                            <ColumnDefinition Width="300" />
+                        </Grid.ColumnDefinitions>
+
+                        <TextBlock Grid.Column="0" Text="Difficulty" />
+                        <TextBox Grid.Column="1" Margin="20,0,0,0"
                         Text="{Binding Difficulty, UpdateSourceTrigger=PropertyChanged}" />
-                </Grid>
+                    </Grid>
 
-                <Grid Grid.Row="1" Margin="0,10">
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="auto" SharedSizeGroup="Label" />
-                        <ColumnDefinition Width="300" />
-                    </Grid.ColumnDefinitions>
+                    <Grid Grid.Row="1" Margin="0,10">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="auto" SharedSizeGroup="Label" />
+                            <ColumnDefinition Width="300" />
+                        </Grid.ColumnDefinitions>
 
-                    <TextBlock Grid.Column="0" Text="Datatime" />
-                    <TextBox Grid.Column="1" Margin="20,0,0,0"
+                        <TextBlock Grid.Column="0" Text="Datatime" />
+                        <TextBox Grid.Column="1" Margin="20,0,0,0"
                         Text="{Binding DateTime, UpdateSourceTrigger=PropertyChanged}" />
-                </Grid>
-                
-                <Grid Grid.Row="2" Margin="0,10">
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="auto" SharedSizeGroup="Label" />
-                        <ColumnDefinition Width="300" />
-                    </Grid.ColumnDefinitions>
+                    </Grid>
 
-                    <TextBlock Grid.Column="0" Text="Comment" />
-                    <TextBox Grid.Column="1" Margin="20,0,0,0"
+                    <Grid Grid.Row="2" Margin="0,10">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="auto" SharedSizeGroup="Label" />
+                            <ColumnDefinition Width="300" />
+                        </Grid.ColumnDefinitions>
+
+                        <TextBlock Grid.Column="0" Text="Comment" />
+                        <TextBox Grid.Column="1" Margin="20,0,0,0"
                         Text="{Binding Comment, UpdateSourceTrigger=PropertyChanged}" />
-                </Grid>
+                    </Grid>
 
-                <Grid Grid.Row="3" Margin="0,10">
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="auto" SharedSizeGroup="Label" />
-                        <ColumnDefinition Width="300" />
-                    </Grid.ColumnDefinitions>
+                    <Grid Grid.Row="3" Margin="0,10">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="auto" SharedSizeGroup="Label" />
+                            <ColumnDefinition Width="300" />
+                        </Grid.ColumnDefinitions>
 
-                    <TextBlock Grid.Column="0" Text="Rating" />
-                    <TextBox Grid.Column="1" Margin="20,0,0,0"
+                        <TextBlock Grid.Column="0" Text="Rating" />
+                        <TextBox Grid.Column="1" Margin="20,0,0,0"
                         Text="{Binding Rating, UpdateSourceTrigger=PropertyChanged}" />
-                </Grid>
+                    </Grid>
 
-                <Grid Grid.Row="4" Margin="0,10">
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="auto" SharedSizeGroup="Label" />
-                        <ColumnDefinition Width="300" />
-                    </Grid.ColumnDefinitions>
+                    <Grid Grid.Row="4" Margin="0,10">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="auto" SharedSizeGroup="Label" />
+                            <ColumnDefinition Width="300" />
+                        </Grid.ColumnDefinitions>
 
-                    <TextBlock Grid.Column="0" Text="Duration" />
-                    <TextBox Grid.Column="1" Margin="20,0,0,0"
+                        <TextBlock Grid.Column="0" Text="Duration" />
+                        <TextBox Grid.Column="1" Margin="20,0,0,0"
                         Text="{Binding TotalDuration, UpdateSourceTrigger=PropertyChanged}" />
-                </Grid>
+                    </Grid>
 
 
-                <Button Grid.Row="5" Margin="0,10" Width="100"
+                    <Button Grid.Row="5" Margin="0,10" Width="100"
                     HorizontalAlignment="Center"
                     Command="{Binding DataContext.AddCommand, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type UserControl}}}" 
                     CommandParameter="{Binding}"
                     Content="Add"
                     IsDefault="True" />
 
-                <TextBlock Grid.Row="6" Margin="0,10,0,0"
+                    <TextBlock Grid.Row="6" Margin="0,10,0,0"
                     HorizontalAlignment="Center"
                     DataContext="{Binding MessageViewModel}"
                     Foreground="DarkRed"
                     Text="{Binding Message}"
                     Visibility="{Binding HasMessage, Converter={StaticResource BooleanToVisibilityConverter}}" />
+                </Grid>
             </Grid>
-        </Grid>
-    </Border>
+        </Border>
+
+        <StackPanel Grid.Row="1" Orientation="Horizontal" HorizontalAlignment="Center">
+            <Button Margin="10" Width="200" Content="Go Home" Command="{Binding UpdateViewCommand}" CommandParameter="Go Home"/>
+        </StackPanel>
+    </Grid>
+
+
 </UserControl>

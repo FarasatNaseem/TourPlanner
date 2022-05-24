@@ -99,7 +99,7 @@ namespace TourPlanner.Server.DL.DB
             }
         }
 
-        public (List<TourSchemaWithoutLog>, string) GetAllTour()
+        public (List<TourSchemaWithoutLog>, string) GetAllTourWithoutLog()
         {
             var tours = new List<TourSchemaWithoutLog>();
 
@@ -133,7 +133,7 @@ namespace TourPlanner.Server.DL.DB
 
                     logger.Log(LogLevel.Information, "Tours data has been fetched successfully");
                 }
-                catch (Exception  ex)
+                catch (Exception ex)
                 {
                     logger.Log(LogLevel.Error, ex.StackTrace);
                     return (tours, "Tours data cant be fetched");
@@ -147,11 +147,89 @@ namespace TourPlanner.Server.DL.DB
             return (tours, "Tours are fetched successfully");
         }
 
+
+
+        public (TourSchemaWithoutLog, string) GetTourById(int id)
+        {
+            var tour = this.GetAllTourWithoutLog().Item1.Where(x => x.Id == id).First();
+            return (tour, "Tour data is fetched successfully");
+        }
+
+
+        public (bool, string) UpdateTour(TourSchemaWithoutLog tourSchema)
+        {
+            using (IDbConnection connection = Connect())
+            {
+                try
+                {
+                    connection.Open();
+                    IDbCommand cmd = connection.CreateCommand();
+                    cmd.CommandText = "update tour set \"Name\"=@name, \"TourDescription\"=@tourDescription, \"From\"=@from, \"To\"=@to, \"Distance\"=@distance, \"TransportType\"=@transportType, \"RouteImagePath\"=@routeImagePath, \"EstimatedTime\"=@estimatedTime  WHERE \"Id\"=@id;";
+                    cmd.CommandType = CommandType.Text;
+                    cmd.Parameters.Add(new NpgsqlParameter("@id", tourSchema.Id));
+                    cmd.Parameters.Add(new NpgsqlParameter("@name", tourSchema.Name));
+                    cmd.Parameters.Add(new NpgsqlParameter("@tourDescription", tourSchema.TourDescription));
+                    cmd.Parameters.Add(new NpgsqlParameter("@from", tourSchema.From));
+                    cmd.Parameters.Add(new NpgsqlParameter("@to", tourSchema.To));
+                    cmd.Parameters.Add(new NpgsqlParameter("@distance", tourSchema.Distance));
+                    cmd.Parameters.Add(new NpgsqlParameter("@transportType", tourSchema.TransportType.ToString()));
+                    cmd.Parameters.Add(new NpgsqlParameter("@routeImagePath", tourSchema.RouteImage));
+                    cmd.Parameters.Add(new NpgsqlParameter("@estimatedTime", tourSchema.EstimatedTime));
+                    cmd.ExecuteNonQuery();
+                    cmd.Dispose();
+                }
+                catch (Exception ex)
+                {
+                    return (false, ex.Message);
+                }
+                finally
+                {
+                    connection.Close();
+                }
+
+                return (true, "Tour data is updated");
+            }
+        }
+
+
+        public (bool, string) UpdateTourLog(TourLogSchema tourLogSchema)
+        {
+            using (IDbConnection connection = Connect())
+            {
+                try
+                {
+                    connection.Open();
+                    IDbCommand cmd = connection.CreateCommand();
+                    cmd.CommandText = "update tourlog set \"Datetime\"=@datatime, \"Comment\"=@comment, \"Difficulty\"=@difficulty, \"TotalDuration\"=@totalDuration, \"Rating\"=@rating WHERE \"Id\"=@id;";
+                    cmd.CommandType = CommandType.Text;
+                    cmd.Parameters.Add(new NpgsqlParameter("@id", tourLogSchema.Id));
+                    cmd.Parameters.Add(new NpgsqlParameter("@datatime", tourLogSchema.DateTime.ToString()));
+                    cmd.Parameters.Add(new NpgsqlParameter("@comment", tourLogSchema.Comment));
+                    cmd.Parameters.Add(new NpgsqlParameter("@difficulty", tourLogSchema.Difficulty.ToString()));
+                    cmd.Parameters.Add(new NpgsqlParameter("@totalDuration", tourLogSchema.TotalDuration.ToString()));
+                    cmd.Parameters.Add(new NpgsqlParameter("@rating", tourLogSchema.Rating.ToString()));
+                    cmd.ExecuteNonQuery();
+                    cmd.Dispose();
+                }
+                catch (Exception ex)
+                {
+                    return (false, ex.Message);
+                }
+                finally
+                {
+                    connection.Close();
+                }
+
+                return (true, "Tour data is updated");
+            }
+        }
+
+
         public (List<TourSchemaWithLog>, string) GetAllTourWithLogs()
         {
             var toursWithLog = new List<TourSchemaWithLog>();
 
-            var tours = this.GetAllTour().Item1;
+            var tours = this.GetAllTourWithoutLog().Item1;
 
             foreach (var tour in tours)
             {
@@ -232,7 +310,7 @@ namespace TourPlanner.Server.DL.DB
 
             var toursWithLog = new List<TourSchemaWithLog>();
 
-            var tours = this.GetAllTour().Item1;
+            var tours = this.GetAllTourWithoutLog().Item1;
 
             var filteredTours = tours.Where(x => x.Name.Contains(someText)).ToList();
 

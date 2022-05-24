@@ -48,19 +48,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\farha\\.nuget\\packages\\": {}
+    "C:\\Users\\Privat\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\farha\\Desktop\\TourPlannerRepo2\\TourPlanner\\MapQuestApi\\MapQuestApi.csproj",
+      "projectUniqueName": "C:\\Users\\Privat\\TourPlanner\\MapQuestApi\\MapQuestApi.csproj",
       "projectName": "MapQuestApi",
-      "projectPath": "C:\\Users\\farha\\Desktop\\TourPlannerRepo2\\TourPlanner\\MapQuestApi\\MapQuestApi.csproj",
-      "packagesPath": "C:\\Users\\farha\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\farha\\Desktop\\TourPlannerRepo2\\TourPlanner\\MapQuestApi\\obj\\",
+      "projectPath": "C:\\Users\\Privat\\TourPlanner\\MapQuestApi\\MapQuestApi.csproj",
+      "packagesPath": "C:\\Users\\Privat\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Privat\\TourPlanner\\MapQuestApi\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\farha\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Privat\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -106,7 +106,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.407\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.401\\RuntimeIdentifierGraph.json"
       }
     }
   }

@@ -1,7 +1,7 @@
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
-//using Newtonsoft.Json;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -37,12 +37,61 @@ namespace TourPlanner.API.Controllers
             return JsonConvert.SerializeObject(response.Item1);
         }
 
+        [HttpGet("{id:int}")]
+        public ActionResult Get(int id)
+        {
+            try
+            {
+                var response = this._serverOperationExecuter.GetTourById(id);
+
+                if (response.Item1 is null)
+                {
+                    return StatusCode(StatusCodes.Status400BadRequest,
+                response.Item2);
+                }
+
+                return StatusCode(StatusCodes.Status200OK,
+                  JsonConvert.SerializeObject(response.Item1));
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(StatusCodes.Status500InternalServerError,
+                  "Error deleting tour record");
+            }
+        }
+
         [HttpGet("{someText}")]
         public string Get(string someText)
         {
             var response = this._serverOperationExecuter.FilterTours(someText);
 
             return JsonConvert.SerializeObject(response.Item1);
+        }
+
+        [HttpPut]
+        public ActionResult Put(object body)
+        {
+            string jsonTourData = body.ToString();
+
+            try
+            {
+                var response = this._serverOperationExecuter.UpdateTour(jsonTourData);
+
+                if (response.Item2 == null)
+                {
+                    return StatusCode(StatusCodes.Status400BadRequest,
+                 "Invalid data");
+                }
+
+                return StatusCode(StatusCodes.Status200OK,
+                  response.Item2);
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(StatusCodes.Status500InternalServerError,
+                  "Error creating new tour");
+            }
+
         }
 
 

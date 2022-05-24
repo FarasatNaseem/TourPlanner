@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\farha\\Desktop\\TourPlannerRepo2\\TourPlanner\\Logging\\Logging.csproj": {}
+    "C:\\Users\\Privat\\TourPlanner\\Logging\\Logging.csproj": {}
   },
   "projects": {
-    "C:\\Users\\farha\\Desktop\\TourPlannerRepo2\\TourPlanner\\Logging\\Logging.csproj": {
+    "C:\\Users\\Privat\\TourPlanner\\Logging\\Logging.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\farha\\Desktop\\TourPlannerRepo2\\TourPlanner\\Logging\\Logging.csproj",
+        "projectUniqueName": "C:\\Users\\Privat\\TourPlanner\\Logging\\Logging.csproj",
         "projectName": "Logging",
-        "projectPath": "C:\\Users\\farha\\Desktop\\TourPlannerRepo2\\TourPlanner\\Logging\\Logging.csproj",
-        "packagesPath": "C:\\Users\\farha\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\farha\\Desktop\\TourPlannerRepo2\\TourPlanner\\Logging\\obj\\",
+        "projectPath": "C:\\Users\\Privat\\TourPlanner\\Logging\\Logging.csproj",
+        "packagesPath": "C:\\Users\\Privat\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Privat\\TourPlanner\\Logging\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\farha\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Privat\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -64,7 +64,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.407\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.401\\RuntimeIdentifierGraph.json"
         }
       }
     }
