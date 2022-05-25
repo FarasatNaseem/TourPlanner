@@ -97,13 +97,21 @@ namespace TourPlanner.Client.BL.Logic
             string path = Constraint.BASEURL + "TourPlanner.BL\\Assets\\";
 
             string file = from + to + ".png";
+
+            string filePath = path + file;
             
             try
             {
-                if (File.Exists(Path.Combine(path, file)))
-                {
-                    File.Delete(Path.Combine(path, file));
+                //if (File.Exists(Path.Combine(path, file)))
+                //{
+                //    File.Delete(Path.Combine(path, file));
 
+                //    return true;
+                //}
+
+                if (File.Exists(filePath))
+                {
+                    File.Delete(filePath);
                     return true;
                 }
 

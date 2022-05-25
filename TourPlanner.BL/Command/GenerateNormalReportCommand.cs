@@ -29,7 +29,7 @@ namespace TourPlanner.Client.BL.Command
 
             var tour = new TourSchemaWithLog(tourWrapper.ID, tourWrapper.Name, tourWrapper.From, tourWrapper.To, tourWrapper.Description, tourWrapper.TransportType, tourWrapper.Distance, tourWrapper.RouteImage, tourWrapper.EstimatedTime, logsSchema);
 
-            this._abstractReportGenerator = new PdfReportGenerator(Constraint.BASEURL + "TourPlanner.BL\\Assets\\Reports\\{tour.Name}.pdf");
+            this._abstractReportGenerator = new PdfReportGenerator(Constraint.BASEURL + "TourPlanner.BL\\Assets\\Reports\\" + tour.Name + ".pdf");
 
             var isGenerated = this._abstractReportGenerator.Generate(tour);
         }

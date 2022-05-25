@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Privat\\TourPlanner\\MapQuestApi.Test\\MapQuestApi.Test.csproj": {}
+    "C:\\Users\\farha\\Desktop\\TourPlannerRepo3\\TourPlanner\\MapQuestApi.Test\\MapQuestApi.Test.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Privat\\TourPlanner\\MapQuestApi.Test\\MapQuestApi.Test.csproj": {
+    "C:\\Users\\farha\\Desktop\\TourPlannerRepo3\\TourPlanner\\MapQuestApi.Test\\MapQuestApi.Test.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Privat\\TourPlanner\\MapQuestApi.Test\\MapQuestApi.Test.csproj",
+        "projectUniqueName": "C:\\Users\\farha\\Desktop\\TourPlannerRepo3\\TourPlanner\\MapQuestApi.Test\\MapQuestApi.Test.csproj",
         "projectName": "MapQuestApi.Test",
-        "projectPath": "C:\\Users\\Privat\\TourPlanner\\MapQuestApi.Test\\MapQuestApi.Test.csproj",
-        "packagesPath": "C:\\Users\\Privat\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Privat\\TourPlanner\\MapQuestApi.Test\\obj\\",
+        "projectPath": "C:\\Users\\farha\\Desktop\\TourPlannerRepo3\\TourPlanner\\MapQuestApi.Test\\MapQuestApi.Test.csproj",
+        "packagesPath": "C:\\Users\\farha\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\farha\\Desktop\\TourPlannerRepo3\\TourPlanner\\MapQuestApi.Test\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Privat\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\farha\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -28,8 +28,8 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "C:\\Users\\Privat\\TourPlanner\\MapQuestApi\\MapQuestApi.csproj": {
-                "projectPath": "C:\\Users\\Privat\\TourPlanner\\MapQuestApi\\MapQuestApi.csproj"
+              "C:\\Users\\farha\\Desktop\\TourPlannerRepo3\\TourPlanner\\MapQuestApi\\MapQuestApi.csproj": {
+                "projectPath": "C:\\Users\\farha\\Desktop\\TourPlannerRepo3\\TourPlanner\\MapQuestApi\\MapQuestApi.csproj"
               }
             }
           }
@@ -88,21 +88,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.401\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.407\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\Privat\\TourPlanner\\MapQuestApi\\MapQuestApi.csproj": {
+    "C:\\Users\\farha\\Desktop\\TourPlannerRepo3\\TourPlanner\\MapQuestApi\\MapQuestApi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Privat\\TourPlanner\\MapQuestApi\\MapQuestApi.csproj",
+        "projectUniqueName": "C:\\Users\\farha\\Desktop\\TourPlannerRepo3\\TourPlanner\\MapQuestApi\\MapQuestApi.csproj",
         "projectName": "MapQuestApi",
-        "projectPath": "C:\\Users\\Privat\\TourPlanner\\MapQuestApi\\MapQuestApi.csproj",
-        "packagesPath": "C:\\Users\\Privat\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Privat\\TourPlanner\\MapQuestApi\\obj\\",
+        "projectPath": "C:\\Users\\farha\\Desktop\\TourPlannerRepo3\\TourPlanner\\MapQuestApi\\MapQuestApi.csproj",
+        "packagesPath": "C:\\Users\\farha\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\farha\\Desktop\\TourPlannerRepo3\\TourPlanner\\MapQuestApi\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Privat\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\farha\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -116,8 +116,8 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "C:\\Users\\Privat\\TourPlanner\\TourPlanner.Model\\TourPlanner.Model.csproj": {
-                "projectPath": "C:\\Users\\Privat\\TourPlanner\\TourPlanner.Model\\TourPlanner.Model.csproj"
+              "C:\\Users\\farha\\Desktop\\TourPlannerRepo3\\TourPlanner\\TourPlanner.Model\\TourPlanner.Model.csproj": {
+                "projectPath": "C:\\Users\\farha\\Desktop\\TourPlannerRepo3\\TourPlanner\\TourPlanner.Model\\TourPlanner.Model.csproj"
               }
             }
           }
@@ -160,21 +160,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.401\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.407\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\Privat\\TourPlanner\\TourPlanner.Model\\TourPlanner.Model.csproj": {
+    "C:\\Users\\farha\\Desktop\\TourPlannerRepo3\\TourPlanner\\TourPlanner.Model\\TourPlanner.Model.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Privat\\TourPlanner\\TourPlanner.Model\\TourPlanner.Model.csproj",
+        "projectUniqueName": "C:\\Users\\farha\\Desktop\\TourPlannerRepo3\\TourPlanner\\TourPlanner.Model\\TourPlanner.Model.csproj",
         "projectName": "TourPlanner.Model",
-        "projectPath": "C:\\Users\\Privat\\TourPlanner\\TourPlanner.Model\\TourPlanner.Model.csproj",
-        "packagesPath": "C:\\Users\\Privat\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Privat\\TourPlanner\\TourPlanner.Model\\obj\\",
+        "projectPath": "C:\\Users\\farha\\Desktop\\TourPlannerRepo3\\TourPlanner\\TourPlanner.Model\\TourPlanner.Model.csproj",
+        "packagesPath": "C:\\Users\\farha\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\farha\\Desktop\\TourPlannerRepo3\\TourPlanner\\TourPlanner.Model\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Privat\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\farha\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -224,7 +224,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.401\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.407\\RuntimeIdentifierGraph.json"
         }
       }
     }
