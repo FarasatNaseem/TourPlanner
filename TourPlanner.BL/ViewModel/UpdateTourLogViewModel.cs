@@ -11,23 +11,13 @@ namespace TourPlanner.Client.BL.ViewModel
 {
     public class UpdateTourLogViewModel : BaseViewModel
     {
-        public UpdateTourLogViewModel(MainViewModel mainViewModel, int tourLogId, int tourId)
-        {
-            this.mainViewModel = mainViewModel;
-            this.TourLogId = tourLogId;
-            this.TourId = tourId;
-            this.mainViewModel = mainViewModel;
-            this.MessageViewModel = new MessageViewModel();
-            this._updateTourLogCommand = new UpdateTourLogCommand(this);
-            this._updateViewCommand = new UpdateViewCommand(mainViewModel);
-        }
-
         private int _id;
         private DateTime _dateTime;
         private string _comment = null;
         private Difficulty _difficulty = Difficulty.None;
         private TimeSpan _duration;
         private Rating _rating = Rating.None;
+        private ITourPlannerCommand _fetchSpecificTourLogCommand;
 
 
         private BaseCommand _updateCommand;
@@ -36,6 +26,21 @@ namespace TourPlanner.Client.BL.ViewModel
         private BaseCommand updateViewCommand;
         private ITourPlannerCommand _updateViewCommand;
 
+        public UpdateTourLogViewModel(MainViewModel mainViewModel, int tourLogId, int tourId)
+        {
+            this.mainViewModel = mainViewModel;
+            this.TourLogId = tourLogId;
+            this.TourId = tourId;
+
+            this._fetchSpecificTourLogCommand = new FetchSpecificTourLogCommand(this);
+            this._fetchSpecificTourLogCommand.Execute(this.TourLogId);
+
+            this.mainViewModel = mainViewModel;
+            this.MessageViewModel = new MessageViewModel();
+            this._updateTourLogCommand = new UpdateTourLogCommand(this);
+            this._updateViewCommand = new UpdateViewCommand(mainViewModel);
+
+        }
 
         public int TourLogId
         {

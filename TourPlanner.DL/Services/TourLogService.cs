@@ -49,9 +49,24 @@ namespace TourPlanner.Client.DL.Services
             return new GenericApiResponse("Error", null, false);
         }
 
-        public override Task<GenericApiResponse> Read(int id)
+        public override async Task<GenericApiResponse> Read(int id)
         {
-            throw new NotImplementedException();
+            var apiResponse = await Task.Run(() => this.HttpClient.GetAsync($"https://localhost:5001/TourLog/{id}")).ConfigureAwait(false);
+
+            if (apiResponse.IsSuccessStatusCode)
+            {
+                var data = await Task.Run(() => apiResponse.Content.ReadAsStringAsync()).ConfigureAwait(false);
+
+                var tour = JsonConvert.DeserializeObject<TourLogSchema>(data.ToString());
+
+                //logger.Log(LogLevel.Information, "Tours data are successfully fetched");
+
+                return new GenericApiResponse("Data fetched", tour, true);
+            }
+
+            //logger.Log(LogLevel.Error, $"Due to some error tour data with id {id} can't be fetched.");
+
+            return new GenericApiResponse("Error", null, false);
         }
 
         public override Task<GenericApiResponse> ReadAll()

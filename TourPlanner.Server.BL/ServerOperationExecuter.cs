@@ -62,6 +62,11 @@ namespace TourPlanner.Server.BL
             return this._tourPlannerDatabase.GetTourById(id);
         }
 
+        public (TourLogSchema, string) GetTourLogById(int id)
+        {
+            return this._tourPlannerDatabase.GetTourLogByID(id);
+        }
+
         public (bool, string) UpdateTour(string jsonTourData)
         {
             var tourSchema = JsonConvert.DeserializeObject<TourSchemaWithoutLog>(jsonTourData);

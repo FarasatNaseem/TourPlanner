@@ -236,7 +236,7 @@ namespace TourPlanner.Server.DL.DB
 
             foreach (var tour in tours)
             {
-                toursWithLog.Add(new TourSchemaWithLog(tour.Id, tour.Name, tour.From, tour.To, tour.TourDescription, tour.TransportType, tour.Distance, tour.RouteImage, tour.EstimatedTime, this.GetTourLogsByID(tour.Id).Item1));
+                toursWithLog.Add(new TourSchemaWithLog(tour.Id, tour.Name, tour.From, tour.To, tour.TourDescription, tour.TransportType, tour.Distance, tour.RouteImage, tour.EstimatedTime, this.GetTourLogsByTourID(tour.Id).Item1));
             }
 
             logger.Log(LogLevel.Information, $"Tours data with logs has been fetched successfully");
@@ -288,7 +288,7 @@ namespace TourPlanner.Server.DL.DB
             return (tourLogs, "Tours are fetched successfully");
         }
 
-        public (List<TourLogSchema>, string) GetTourLogsByID(int id)
+        public (List<TourLogSchema>, string) GetTourLogsByTourID(int id)
         {
             try
             {
@@ -301,6 +301,27 @@ namespace TourPlanner.Server.DL.DB
             catch (Exception ex)
             {
                 return (null, "Due to some error logs cant be fetched.");
+            }
+        }
+
+        public (TourLogSchema, string) GetTourLogByID(int id)
+        {
+            try
+            {
+                var tourLog = this.GetAllTourLogs().Item1.Where(x => x.Id == id).ToList();
+
+                TourLogSchema tourLogSchema = null;
+
+                foreach (var item in tourLog)
+                {
+                    tourLogSchema = new TourLogSchema(item.Id, item.TourId, item.DateTime, item.Comment, item.Difficulty, item.TotalDuration, item.Rating);
+                }
+
+                return (tourLogSchema, "Tour log is fetched successfully");
+            }
+            catch (Exception ex)
+            {
+                return (null, "Due to some error log cant be fetched.");
             }
         }
 
@@ -321,7 +342,7 @@ namespace TourPlanner.Server.DL.DB
             {
                 foreach (var tour in filteredTours)
                 {
-                    toursWithLog.Add(new TourSchemaWithLog(tour.Id, tour.Name, tour.From, tour.To, tour.TourDescription, tour.TransportType, tour.Distance, tour.RouteImage, tour.EstimatedTime, this.GetTourLogsByID(tour.Id).Item1));
+                    toursWithLog.Add(new TourSchemaWithLog(tour.Id, tour.Name, tour.From, tour.To, tour.TourDescription, tour.TransportType, tour.Distance, tour.RouteImage, tour.EstimatedTime, this.GetTourLogsByTourID(tour.Id).Item1));
                 }
 
                 return (toursWithLog, "Sorted Tours with logs are fetched successfully");
@@ -435,7 +456,10 @@ namespace TourPlanner.Server.DL.DB
 
                     while (reader.Read())
                     {
-                        id = Convert.ToInt32((reader[0].ToString()));
+                        if (Convert.ToInt32((reader[0].ToString())) > id)
+                        {
+                            id = Convert.ToInt32((reader[0].ToString()));
+                        }
                     }
                     cmd.Dispose();
 

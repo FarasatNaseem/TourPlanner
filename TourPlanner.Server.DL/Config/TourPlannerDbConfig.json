@@ -8,8 +8,8 @@
 {
   "DBConfigData": {
     "Host": "localhost",
-    "Username": "postgres",
-    "Password": "postgres",
+    "Username": "root",
+    "Password": "root",
     "Database": "Tourplanner"
   }
 }

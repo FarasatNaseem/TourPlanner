@@ -46,7 +46,7 @@ namespace TourPlanner.Client.BL.ViewModel
                 _name = value;
 
                 OnPropertyChanged();
-                OnPropertyChanged(nameof(CanAddTour));
+                //OnPropertyChanged(nameof(CanAddTour));
             }
         }
 
@@ -63,7 +63,7 @@ namespace TourPlanner.Client.BL.ViewModel
                 _description = value;
 
                 OnPropertyChanged();
-                OnPropertyChanged(nameof(CanAddTour));
+                //OnPropertyChanged(nameof(CanAddTour));
             }
         }
 
@@ -80,7 +80,7 @@ namespace TourPlanner.Client.BL.ViewModel
                 _from = value;
 
                 OnPropertyChanged();
-                OnPropertyChanged(nameof(CanAddTour));
+                //OnPropertyChanged(nameof(CanAddTour));
             }
         }
 
@@ -97,7 +97,7 @@ namespace TourPlanner.Client.BL.ViewModel
                 _to = value;
 
                 OnPropertyChanged();
-                OnPropertyChanged(nameof(CanAddTour));
+                //OnPropertyChanged(nameof(CanAddTour));
             }
         }
 
@@ -114,7 +114,7 @@ namespace TourPlanner.Client.BL.ViewModel
                 _transportType = value;
 
                 OnPropertyChanged();
-                OnPropertyChanged(nameof(CanAddTour));
+                //OnPropertyChanged(nameof(CanAddTour));
             }
         }
 
@@ -125,10 +125,10 @@ namespace TourPlanner.Client.BL.ViewModel
             set => MessageViewModel.Message = value;
         }
 
-        public bool CanAddTour => !string.IsNullOrEmpty(Name) &&
-           !string.IsNullOrEmpty(From) &&
-           !string.IsNullOrEmpty(To) &&
-           !string.IsNullOrEmpty(Description);
+        //public bool CanAddTour => !string.IsNullOrEmpty(Name) &&
+        //   !string.IsNullOrEmpty(From) &&
+        //   !string.IsNullOrEmpty(To) &&
+        //   !string.IsNullOrEmpty(Description);
 
         public ICommand AddCommand => _addCommand ??= new BaseCommand(this._addTourCommand.Execute);
         public ICommand UpdateViewCommand => updateViewCommand ??= new BaseCommand(this._updateViewCommand.Execute);

@@ -25,10 +25,15 @@ namespace TourPlanner.Client.BL.ViewModel
         private BaseCommand updateViewCommand;
         private ITourPlannerCommand _updateViewCommand;
 
+        private ITourPlannerCommand _fetchSpecificTourCommand;
+
         public UpdateTourViewModel(MainViewModel mainViewModel, int id)
         {
             this.mainViewModel = mainViewModel;
             this.TourId = id;
+            this._fetchSpecificTourCommand = new FetchSpecificTourCommand(this);
+            this._fetchSpecificTourCommand.Execute(this.TourId);
+          
             this.MessageViewModel = new MessageViewModel();
             this._updateTourCommand = new UpdateTourCommand(this);
             this._updateViewCommand = new UpdateViewCommand(mainViewModel);

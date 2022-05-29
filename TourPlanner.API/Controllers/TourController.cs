@@ -63,7 +63,8 @@ namespace TourPlanner.API.Controllers
         [HttpGet("{someText}")]
         public string Get(string someText)
         {
-            var response = this._serverOperationExecuter.FilterTours(someText);
+            string[] splittedText = someText.Split("=");
+            var response = this._serverOperationExecuter.FilterTours(splittedText[1]);
 
             return JsonConvert.SerializeObject(response.Item1);
         }

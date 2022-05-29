@@ -77,7 +77,7 @@ namespace TourPlanner.Client.DL.Services
 
         public override async Task<GenericApiResponse> ReadLike(string someText)
         {
-            var apiResponse = await Task.Run(() => this.HttpClient.GetAsync($"https://localhost:5001/Tour/{someText}")).ConfigureAwait(false);
+            var apiResponse = await Task.Run(() => this.HttpClient.GetAsync($"https://localhost:5001/Tour/search={someText}")).ConfigureAwait(false);
 
             if (apiResponse.IsSuccessStatusCode)
             {

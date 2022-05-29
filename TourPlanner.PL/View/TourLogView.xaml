@@ -81,7 +81,6 @@
                             <DataTemplate>
                                 <DataGrid ItemsSource="{Binding Logs}" AutoGenerateColumns="False" >
                                     <DataGrid.Columns>
-                                        <DataGridTextColumn Header="Id" Binding="{Binding Id}" Width="Auto"/>
                                         <DataGridTextColumn Header="Distance" Binding="{Binding Distance}" Width="Auto"/>
                                         <DataGridTextColumn Header="DateTime" Binding="{Binding DateTime}" Width="Auto"/>
                                         <DataGridTextColumn Header="Comment" Binding="{Binding Comment}" Width="Auto"/>

@@ -32,6 +32,29 @@ namespace TourPlanner.API.Controllers
         }
 
 
+        [HttpGet("{id:int}")]
+        public ActionResult Get(int id)
+        {
+            try
+            {
+                var response = this._serverOperationExecuter.GetTourLogById(id); 
+
+                if (response.Item1 is null)
+                {
+                    return StatusCode(StatusCodes.Status400BadRequest,
+                response.Item2);
+                }
+
+                return StatusCode(StatusCodes.Status200OK,
+                  JsonConvert.SerializeObject(response.Item1));
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(StatusCodes.Status500InternalServerError,
+                  "Error deleting tour record");
+            }
+        }
+
         [HttpPost]
         public ActionResult Post(object body)
         {
