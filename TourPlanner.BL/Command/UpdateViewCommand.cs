@@ -36,6 +36,14 @@
             {
                 viewModel.SelectedViewModel = new HomeViewModel(viewModel);
             }
+            else if (commandParameter.ToString() == "Add Review")
+            {
+                viewModel.SelectedViewModel = new AddReviewViewModel(viewModel);
+            }
+            else if (commandParameter.ToString() == "Reviews")
+            {
+                viewModel.SelectedViewModel = new ReviewsViewModel(viewModel);
+            }
             else if (commandParameter is TourLogWrapper)
             {
                 var tourLog = (TourLogWrapper)commandParameter;

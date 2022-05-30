@@ -8,6 +8,8 @@ namespace TourPlanner.Client.BL.ViewModel
         public BaseViewModel TourVM { get; }
         public BaseViewModel TourLogVM { get; }
 
+        public BaseViewModel HeaderVM { get; }
+
         private BaseViewModel _selectedViewModel;
         private MainViewModel mainViewModel;
 
@@ -27,6 +29,7 @@ namespace TourPlanner.Client.BL.ViewModel
             this.mainViewModel = mainViewModel;
             this.TourLogVM = new TourLogViewModel(mainViewModel);
             this.TourVM = new TourViewModel(this.TourLogVM, mainViewModel);
+            this.HeaderVM = new HeaderViewModel(mainViewModel);
         }
     }
 }

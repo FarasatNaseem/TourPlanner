@@ -9,10 +9,12 @@
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="1200">
     <DockPanel>
-        <local:TourView HorizontalAlignment="Left" DataContext="{Binding TourVM}"/>
-        <local:TourLogView HorizontalAlignment="Left" DataContext="{Binding TourLogVM}"/>
+
+            <local:HeaderView DockPanel.Dock="Top"  DataContext="{Binding HeaderVM}"/>
+            <local:TourView HorizontalAlignment="Left" DataContext="{Binding TourVM}"/>
+            <local:TourLogView HorizontalAlignment="Left" DataContext="{Binding TourLogVM}"/>
     </DockPanel>
 
-  
+
 
 </UserControl>

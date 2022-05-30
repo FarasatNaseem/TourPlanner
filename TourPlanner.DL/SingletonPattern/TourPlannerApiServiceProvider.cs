@@ -7,9 +7,11 @@
         {
             TourService = new TourService();
             TourLogService = new TourLogService();
+            ReviewService = new ReviewService();
         }
 
         public static AbstractService TourService { get; }
         public static AbstractService TourLogService { get; }
+        public static AbstractService ReviewService { get; }
     }
 }

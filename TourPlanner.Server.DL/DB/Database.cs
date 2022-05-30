@@ -102,6 +102,80 @@ namespace TourPlanner.Server.DL.DB
             }
         }
 
+
+        public (bool, string) AddReview(ReviewSchema reviewSchema)
+        {
+            using (IDbConnection connection = this.Connect())
+            {
+                try
+                {
+                    connection.Open();
+                    IDbCommand cmd = connection.CreateCommand();
+                    cmd.CommandText = "Insert into review values(@id, @name, @feedback)";
+                    cmd.Parameters.Add(new NpgsqlParameter("@id", this.AutoIncrement("review")));
+                    cmd.Parameters.Add(new NpgsqlParameter("@name", reviewSchema.Name));
+                    cmd.Parameters.Add(new NpgsqlParameter("@feedback", reviewSchema.Feedback));
+                    cmd.ExecuteNonQuery();
+                    cmd.Dispose();
+
+                    logger.Log(LogLevel.Information, $"Review has been added successfully");
+                }
+                catch (Exception ex)
+                {
+                    logger.Log(LogLevel.Error, ex.StackTrace);
+
+                    return (false, "Review cant be added.");
+                }
+                finally
+                {
+                    connection.Close();
+                }
+
+                return (true, "Review has been added.");
+            }
+        }
+
+        public (List<ReviewSchema>, string) GetAllReview()
+        {
+            var reviews = new List<ReviewSchema>();
+
+            using (IDbConnection connection = Connect())
+            {
+                try
+                {
+                    connection.Open();
+                    IDbCommand cmd = connection.CreateCommand();
+
+                    cmd.Connection = connection;
+                    cmd.CommandText = "Select * from review";
+                    cmd.CommandType = CommandType.Text;
+                    NpgsqlDataReader reader = (NpgsqlDataReader)cmd.ExecuteReader();
+
+                    while (reader.Read())
+                    {
+                        string name = reader[1].ToString();
+                        string feedback = reader[2].ToString();
+
+                        reviews.Add(new ReviewSchema(name, feedback));
+                    }
+                    cmd.Dispose();
+
+                    logger.Log(LogLevel.Information, "Reviews been fetched successfully");
+                }
+                catch (Exception ex)
+                {
+                    logger.Log(LogLevel.Error, ex.StackTrace);
+                    return (reviews, "reviews cant be fetched");
+                }
+                finally
+                {
+                    connection.Close();
+                }
+            }
+
+            return (reviews, "Tours are fetched successfully");
+        }
+
         public (List<TourSchemaWithoutLog>, string) GetAllTourWithoutLog()
         {
             var tours = new List<TourSchemaWithoutLog>();

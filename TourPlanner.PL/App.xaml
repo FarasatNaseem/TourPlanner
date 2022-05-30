@@ -29,6 +29,14 @@
             <view:UpdateTourLogView/>
         </DataTemplate>
 
+        <DataTemplate DataType="{x:Type viewmodel:AddReviewViewModel}">
+            <view:AddReviewView/>
+        </DataTemplate>
+
+        <DataTemplate DataType="{x:Type viewmodel:ReviewsViewModel}">
+            <view:ReviewsView/>
+        </DataTemplate>
+
     </Application.Resources>
 
 </Application>

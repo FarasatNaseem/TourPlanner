@@ -2,13 +2,22 @@
 <Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup />
   <ItemGroup>
+    <Compile Update="View\AddReviewView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="View\AddTourLogView.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="View\AddTourView.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="View\HeaderView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="View\HomeView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\ReviewsView.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="View\UpdateTourLogView.xaml.cs">
@@ -22,13 +31,22 @@
     <Page Update="Styles.xaml">
       <SubType>Designer</SubType>
     </Page>
+    <Page Update="View\AddReviewView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="View\AddTourLogView.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="View\AddTourView.xaml">
       <SubType>Designer</SubType>
     </Page>
+    <Page Update="View\HeaderView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="View\HomeView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\ReviewsView.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="View\UpdateTourLogView.xaml">

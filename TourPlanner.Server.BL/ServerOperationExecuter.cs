@@ -30,8 +30,6 @@ namespace TourPlanner.Server.BL
              .Build();
 
 
-            //var fileHandlerResponse = AsyncContext.Run(() => this._fileHandler.Read(Constraint.BASEURL + "TourPlanner.Server.DL\\Config\\TourPlannerDbConfig.json"));
-            //this.connectionString = fileHandlerResponse.Item1;
             this._tourPlannerDatabase = new Database(config);
         }
 
@@ -50,6 +48,19 @@ namespace TourPlanner.Server.BL
             var tour = JsonConvert.DeserializeObject<TourSchemaWithoutLog>(jsonTourData);
 
             return tour == null ? (false, null) : this._tourPlannerDatabase.AddTour(tour);
+        }
+
+
+        public (bool, string) AddReview(string jsonTourData)
+        {
+            var review = JsonConvert.DeserializeObject<ReviewSchema>(jsonTourData);
+
+            return review == null ? (false, null) : this._tourPlannerDatabase.AddReview(review);
+        }
+
+        public (List<ReviewSchema>, string) GetAllReview()
+        {
+            return this._tourPlannerDatabase.GetAllReview();
         }
 
         public (List<TourSchemaWithoutLog>, string) GetAllTourWithoutLogs()

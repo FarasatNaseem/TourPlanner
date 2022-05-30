@@ -23,14 +23,6 @@
         private ITourPlannerCommand _loadTourCommand;
         private ITourPlannerCommand _deleteTourCommand;
         private ITourPlannerCommand _updateViewCommand;
-
-
-        private BaseCommand _importCommand;
-        private BaseCommand _exportCommand;
-
-        private ITourPlannerCommand _importTourCommand;
-        private ITourPlannerCommand _exportTourCommnad;
-
         
 
         public TourViewModel(BaseViewModel tourLogsVM, MainViewModel mainViewModel)
@@ -46,10 +38,6 @@
             this._updateViewCommand = new UpdateViewCommand(mainViewModel);
 
             this.SearchVM = new SearchTourViewModel(this.Tours);
-
-            this._importTourCommand = new ImportTourCommand();
-
-            this._exportTourCommnad = new ExportTourCommand();
         }
 
         public ObservableCollection<TourWrapper> Tours { get; }
@@ -70,7 +58,5 @@
         public ICommand ShowLogCommand => showLogCommand ??= new BaseCommand(this._showLogCommand.Execute);
         public ICommand LoadCommand => loadCommand ??= new BaseCommand(this._loadTourCommand.Execute);
         public ICommand UpdateViewCommand => updateViewCommand ??= new BaseCommand(this._updateViewCommand.Execute);
-        public ICommand ImportCommand => _importCommand ??= new BaseCommand(this._importTourCommand.Execute);
-        public ICommand ExportCommand => _exportCommand ??= new BaseCommand(this._exportTourCommnad.Execute);
     }
 }
