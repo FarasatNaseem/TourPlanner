@@ -813,19 +813,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Privat\\.nuget\\packages\\": {}
+    "C:\\Users\\user\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Privat\\TourPlanner\\Logging\\Logging.csproj",
+      "projectUniqueName": "C:\\Users\\user\\Desktop\\TourplannerRepo2\\TourPlanner\\Logging\\Logging.csproj",
       "projectName": "Logging",
-      "projectPath": "C:\\Users\\Privat\\TourPlanner\\Logging\\Logging.csproj",
-      "packagesPath": "C:\\Users\\Privat\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Privat\\TourPlanner\\Logging\\obj\\",
+      "projectPath": "C:\\Users\\user\\Desktop\\TourplannerRepo2\\TourPlanner\\Logging\\Logging.csproj",
+      "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\user\\Desktop\\TourplannerRepo2\\TourPlanner\\Logging\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Privat\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [

@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Privat\\TourPlanner\\TourPlanner.FileSystem.Test\\TourPlanner.FileSystem.Test.csproj": {}
+    "C:\\Users\\user\\Desktop\\TourplannerRepo2\\TourPlanner\\TourPlanner.FileSystem.Test\\TourPlanner.FileSystem.Test.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Privat\\TourPlanner\\Logging\\Logging.csproj": {
+    "C:\\Users\\user\\Desktop\\TourplannerRepo2\\TourPlanner\\Logging\\Logging.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Privat\\TourPlanner\\Logging\\Logging.csproj",
+        "projectUniqueName": "C:\\Users\\user\\Desktop\\TourplannerRepo2\\TourPlanner\\Logging\\Logging.csproj",
         "projectName": "Logging",
-        "projectPath": "C:\\Users\\Privat\\TourPlanner\\Logging\\Logging.csproj",
-        "packagesPath": "C:\\Users\\Privat\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Privat\\TourPlanner\\Logging\\obj\\",
+        "projectPath": "C:\\Users\\user\\Desktop\\TourplannerRepo2\\TourPlanner\\Logging\\Logging.csproj",
+        "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\user\\Desktop\\TourplannerRepo2\\TourPlanner\\Logging\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Privat\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -76,17 +76,17 @@
         }
       }
     },
-    "C:\\Users\\Privat\\TourPlanner\\TourPlanner.FileSystem.Test\\TourPlanner.FileSystem.Test.csproj": {
+    "C:\\Users\\user\\Desktop\\TourplannerRepo2\\TourPlanner\\TourPlanner.FileSystem.Test\\TourPlanner.FileSystem.Test.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Privat\\TourPlanner\\TourPlanner.FileSystem.Test\\TourPlanner.FileSystem.Test.csproj",
+        "projectUniqueName": "C:\\Users\\user\\Desktop\\TourplannerRepo2\\TourPlanner\\TourPlanner.FileSystem.Test\\TourPlanner.FileSystem.Test.csproj",
         "projectName": "TourPlanner.FileSystem.Test",
-        "projectPath": "C:\\Users\\Privat\\TourPlanner\\TourPlanner.FileSystem.Test\\TourPlanner.FileSystem.Test.csproj",
-        "packagesPath": "C:\\Users\\Privat\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Privat\\TourPlanner\\TourPlanner.FileSystem.Test\\obj\\",
+        "projectPath": "C:\\Users\\user\\Desktop\\TourplannerRepo2\\TourPlanner\\TourPlanner.FileSystem.Test\\TourPlanner.FileSystem.Test.csproj",
+        "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\user\\Desktop\\TourplannerRepo2\\TourPlanner\\TourPlanner.FileSystem.Test\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Privat\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -100,8 +100,8 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "C:\\Users\\Privat\\TourPlanner\\TourPlanner.FileSystem\\TourPlanner.FileSystem.csproj": {
-                "projectPath": "C:\\Users\\Privat\\TourPlanner\\TourPlanner.FileSystem\\TourPlanner.FileSystem.csproj"
+              "C:\\Users\\user\\Desktop\\TourplannerRepo2\\TourPlanner\\TourPlanner.FileSystem\\TourPlanner.FileSystem.csproj": {
+                "projectPath": "C:\\Users\\user\\Desktop\\TourplannerRepo2\\TourPlanner\\TourPlanner.FileSystem\\TourPlanner.FileSystem.csproj"
               }
             }
           }
@@ -164,17 +164,17 @@
         }
       }
     },
-    "C:\\Users\\Privat\\TourPlanner\\TourPlanner.FileSystem\\TourPlanner.FileSystem.csproj": {
+    "C:\\Users\\user\\Desktop\\TourplannerRepo2\\TourPlanner\\TourPlanner.FileSystem\\TourPlanner.FileSystem.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Privat\\TourPlanner\\TourPlanner.FileSystem\\TourPlanner.FileSystem.csproj",
+        "projectUniqueName": "C:\\Users\\user\\Desktop\\TourplannerRepo2\\TourPlanner\\TourPlanner.FileSystem\\TourPlanner.FileSystem.csproj",
         "projectName": "TourPlanner.FileSystem",
-        "projectPath": "C:\\Users\\Privat\\TourPlanner\\TourPlanner.FileSystem\\TourPlanner.FileSystem.csproj",
-        "packagesPath": "C:\\Users\\Privat\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Privat\\TourPlanner\\TourPlanner.FileSystem\\obj\\",
+        "projectPath": "C:\\Users\\user\\Desktop\\TourplannerRepo2\\TourPlanner\\TourPlanner.FileSystem\\TourPlanner.FileSystem.csproj",
+        "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\user\\Desktop\\TourplannerRepo2\\TourPlanner\\TourPlanner.FileSystem\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Privat\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -188,8 +188,8 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "C:\\Users\\Privat\\TourPlanner\\Logging\\Logging.csproj": {
-                "projectPath": "C:\\Users\\Privat\\TourPlanner\\Logging\\Logging.csproj"
+              "C:\\Users\\user\\Desktop\\TourplannerRepo2\\TourPlanner\\Logging\\Logging.csproj": {
+                "projectPath": "C:\\Users\\user\\Desktop\\TourplannerRepo2\\TourPlanner\\Logging\\Logging.csproj"
               }
             }
           }

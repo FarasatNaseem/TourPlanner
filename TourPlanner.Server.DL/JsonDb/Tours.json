@@ -1,1 +1,54 @@
-[{"Logs":[{"Id":1,"TourId":1,"DateTime":"2002-11-11T00:00:00","Comment":"This is my comment","Difficulty":2,"TotalDuration":"11:11:00","Rating":2},{"Id":2,"TourId":1,"DateTime":"2020-11-01T00:00:00","Comment":"second comment","Difficulty":2,"TotalDuration":"12:12:00","Rating":2}],"Id":1,"Name":"Tour 1","TourDescription":"I am travelling to klagenfurt from vienna","From":"Vienna","To":"Klagenfurt","Distance":184.243,"TransportType":0,"RouteImage":"C:\\Users\\Privat\\TourPlanner\\TourPlanner.BL\\Assets\\ViennaKlagenfurt.png","EstimatedTime":"03:13:14"}]
+[
+  {
+    "Logs": [
+      {
+        "Comment": "Test",
+        "DateTime": "2022-01-01T00:00:00",
+        "Difficulty": 2,
+        "Id": 1,
+        "Rating": 2,
+        "TotalDuration": "00:30:00",
+        "TourId": 1
+      },
+      {
+        "Id": 2,
+        "TourId": 1,
+        "DateTime": "2022-11-04T00:00:00",
+        "Comment": "TestCommmmment",
+        "Difficulty": 2,
+        "TotalDuration": "30.00:00:00",
+        "Rating": 3
+      },
+      {
+        "Id": 3,
+        "TourId": 1,
+        "DateTime": "2022-11-04T00:00:00",
+        "Comment": "TestCommmmment",
+        "Difficulty": 0,
+        "TotalDuration": "30.00:00:00",
+        "Rating": 3
+      }
+    ],
+    "Id": 1,
+    "Name": "Ljfoi",
+    "TourDescription": "Hi",
+    "From": "Vienna",
+    "To": "Graz",
+    "Distance": 120.009,
+    "TransportType": 0,
+    "RouteImage": "C:\\Users\\user\\Desktop\\TourplannerRepo2\\TourPlanner\\TourPlanner.BL\\Assets\\ViennaGraz.png",
+    "EstimatedTime": "01:59:52"
+  },
+  {
+    "Logs": [],
+    "Id": 2,
+    "Name": "fdef",
+    "TourDescription": "jffeffwf",
+    "From": "Vienna",
+    "To": "München",
+    "Distance": 270.14,
+    "TransportType": 0,
+    "RouteImage": "C:\\Users\\user\\Desktop\\TourplannerRepo2\\TourPlanner\\TourPlanner.BL\\Assets\\ViennaMünchen.png",
+    "EstimatedTime": "04:01:36"
+  }
+]

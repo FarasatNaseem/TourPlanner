@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Privat\\TourPlanner\\MapQuestApi\\MapQuestApi.csproj": {}
+    "C:\\Users\\user\\Desktop\\TourplannerRepo2\\TourPlanner\\MapQuestApi\\MapQuestApi.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Privat\\TourPlanner\\MapQuestApi\\MapQuestApi.csproj": {
+    "C:\\Users\\user\\Desktop\\TourplannerRepo2\\TourPlanner\\MapQuestApi\\MapQuestApi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Privat\\TourPlanner\\MapQuestApi\\MapQuestApi.csproj",
+        "projectUniqueName": "C:\\Users\\user\\Desktop\\TourplannerRepo2\\TourPlanner\\MapQuestApi\\MapQuestApi.csproj",
         "projectName": "MapQuestApi",
-        "projectPath": "C:\\Users\\Privat\\TourPlanner\\MapQuestApi\\MapQuestApi.csproj",
-        "packagesPath": "C:\\Users\\Privat\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Privat\\TourPlanner\\MapQuestApi\\obj\\",
+        "projectPath": "C:\\Users\\user\\Desktop\\TourplannerRepo2\\TourPlanner\\MapQuestApi\\MapQuestApi.csproj",
+        "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\user\\Desktop\\TourplannerRepo2\\TourPlanner\\MapQuestApi\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Privat\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -28,8 +28,8 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "C:\\Users\\Privat\\TourPlanner\\TourPlanner.Model\\TourPlanner.Model.csproj": {
-                "projectPath": "C:\\Users\\Privat\\TourPlanner\\TourPlanner.Model\\TourPlanner.Model.csproj"
+              "C:\\Users\\user\\Desktop\\TourplannerRepo2\\TourPlanner\\TourPlanner.Model\\TourPlanner.Model.csproj": {
+                "projectPath": "C:\\Users\\user\\Desktop\\TourplannerRepo2\\TourPlanner\\TourPlanner.Model\\TourPlanner.Model.csproj"
               }
             }
           }
@@ -76,17 +76,17 @@
         }
       }
     },
-    "C:\\Users\\Privat\\TourPlanner\\TourPlanner.Model\\TourPlanner.Model.csproj": {
+    "C:\\Users\\user\\Desktop\\TourplannerRepo2\\TourPlanner\\TourPlanner.Model\\TourPlanner.Model.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Privat\\TourPlanner\\TourPlanner.Model\\TourPlanner.Model.csproj",
+        "projectUniqueName": "C:\\Users\\user\\Desktop\\TourplannerRepo2\\TourPlanner\\TourPlanner.Model\\TourPlanner.Model.csproj",
         "projectName": "TourPlanner.Model",
-        "projectPath": "C:\\Users\\Privat\\TourPlanner\\TourPlanner.Model\\TourPlanner.Model.csproj",
-        "packagesPath": "C:\\Users\\Privat\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Privat\\TourPlanner\\TourPlanner.Model\\obj\\",
+        "projectPath": "C:\\Users\\user\\Desktop\\TourplannerRepo2\\TourPlanner\\TourPlanner.Model\\TourPlanner.Model.csproj",
+        "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\user\\Desktop\\TourplannerRepo2\\TourPlanner\\TourPlanner.Model\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Privat\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
