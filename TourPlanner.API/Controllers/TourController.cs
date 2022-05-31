@@ -69,6 +69,7 @@ namespace TourPlanner.API.Controllers
             return JsonConvert.SerializeObject(response.Item1);
         }
 
+      
         [HttpPut]
         public ActionResult Put(object body)
         {
@@ -95,6 +96,30 @@ namespace TourPlanner.API.Controllers
 
         }
 
+        [HttpPost("{import}")]
+        public ActionResult Post(object body, string optionalParam)
+        {
+            string jsonTourData = body.ToString();
+
+            try
+            {
+                var response = this._serverOperationExecuter.StoreBackup(jsonTourData);
+
+                if (response.Item2 == null)
+                {
+                    return StatusCode(StatusCodes.Status400BadRequest,
+                 "Invalid data");
+                }
+
+                return StatusCode(StatusCodes.Status200OK,
+                  response.Item2);
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(StatusCodes.Status500InternalServerError,
+                  "Error importing tours");
+            }
+        }
 
         [HttpPost]
         public ActionResult Post(object body)

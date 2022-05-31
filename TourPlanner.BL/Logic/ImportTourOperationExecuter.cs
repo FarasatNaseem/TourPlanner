@@ -11,28 +11,28 @@ using TourPlanner.FileSystem.Handler;
 using TourPlanner.FileSystem.JSON;
 using TourPlanner.Model;
 using TourPlanner.Model.DbSchema;
-using Xceed.Wpf.Toolkit;
 
 namespace TourPlanner.Client.BL.Logic
 {
-    public class ExportTourCommandExecuter : IOperationExecuter<object>
+    public class ImportTourOperationExecuter : IOperationExecuter<object>
     {
-        private IFileWriter _jsonFileWriter;
+        private IFileReader _jsonFileReader;
 
-        public ExportTourCommandExecuter()
+        public ImportTourOperationExecuter()
         {
-            this._jsonFileWriter = new JSONFileHandler();
+            this._jsonFileReader = new JSONFileHandler();
         }
 
         public void Execute(object parameter)
         {
             try
             {
-                GenericApiResponse response = AsyncContext.Run(() => TourPlannerApiServiceProvider.TourService.ReadAll());
+                var jsonFileReaderResponse = AsyncContext.Run(() => this._jsonFileReader.Read(Constraint.BASEURL + "TourPlanner.Server.DL\\JsonDb\\Tours.json"));
+                var tours = JsonConvert.DeserializeObject<List<TourSchemaWithLog>>(jsonFileReaderResponse.Item1);
+                GenericApiResponse response = AsyncContext.Run(() => TourPlannerApiServiceProvider.TourService.Import(tours));
 
                 if (response.IsCorrectlyResponded)
                 {
-                    var jsonFileWriterResponse = AsyncContext.Run(() => this._jsonFileWriter.Write(Constraint.BASEURL + "TourPlanner.Server.DL\\JsonDb\\Tours.json", JsonConvert.SerializeObject((List<TourSchemaWithLog>)response.Data)));
                 }
             }
             catch (Exception ex)

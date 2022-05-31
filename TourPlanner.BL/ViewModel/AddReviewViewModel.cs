@@ -66,6 +66,7 @@ namespace TourPlanner.Client.BL.ViewModel
             set => MessageViewModel.Message = value;
         }
 
+
         public ICommand AddCommand => _addCommand ??= new BaseCommand(this._addReviewCommand.Execute);
         public ICommand UpdateViewCommand => updateViewCommand ??= new BaseCommand(this._updateViewCommand.Execute);
     }

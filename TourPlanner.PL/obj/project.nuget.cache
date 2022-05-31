@@ -1,10 +1,9 @@
 {
   "version": 2,
-  "dgSpecHash": "BIyiCOrgwHHeMh0W0yPyeBwJIiazhWNrwJebXmcyxvdrp8pUUPwLdQI7FnAkaOuTdyAzgA/4Exp/avKm9lnHQg==",
+  "dgSpecHash": "7QatZCoZNp8reU+uB/KjHvsRYnBvHD8owLky9C1ZB6gXK2hrfCu6renbxQPslbybTBwXR9XF6bPwxn96J6N8tw==",
   "success": true,
   "projectFilePath": "C:\\Users\\Privat\\TourPlanner\\TourPlanner.PL\\TourPlanner.PL.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\Privat\\.nuget\\packages\\extended.wpf.toolkit\\4.3.0\\extended.wpf.toolkit.4.3.0.nupkg.sha512",
     "C:\\Users\\Privat\\.nuget\\packages\\itext7\\7.2.2\\itext7.7.2.2.nupkg.sha512",
     "C:\\Users\\Privat\\.nuget\\packages\\itext7.commons\\7.2.2\\itext7.commons.7.2.2.nupkg.sha512",
     "C:\\Users\\Privat\\.nuget\\packages\\microsoft.dotnet.platformabstractions\\1.1.0\\microsoft.dotnet.platformabstractions.1.1.0.nupkg.sha512",
@@ -104,16 +103,5 @@
     "C:\\Users\\Privat\\.nuget\\packages\\system.xml.readerwriter\\4.3.0\\system.xml.readerwriter.4.3.0.nupkg.sha512",
     "C:\\Users\\Privat\\.nuget\\packages\\system.xml.xmldocument\\4.3.0\\system.xml.xmldocument.4.3.0.nupkg.sha512"
   ],
-  "logs": [
-    {
-      "code": "NU1701",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Package 'Extended.Wpf.Toolkit 4.3.0' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' instead of the project target framework 'net5.0-windows7.0'. This package may not be fully compatible with your project.",
-      "libraryId": "Extended.Wpf.Toolkit",
-      "targetGraphs": [
-        "net5.0-windows7.0"
-      ]
-    }
-  ]
+  "logs": []
 }

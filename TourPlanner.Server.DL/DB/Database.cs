@@ -102,6 +102,94 @@ namespace TourPlanner.Server.DL.DB
             }
         }
 
+        public (bool, string) StoreBackup(List<TourSchemaWithLog> tours)
+        {
+            try
+            {
+                var storeTourResult = this.StoreTours(tours);
+                var storeTourLogResult = this.StoreTourLogs(tours);
+
+                return (true, "Tours data has been imported.");
+            }
+            catch (Exception ex)
+            {
+                // log.
+            }
+
+            return (false, "Tours data cant be imported.");
+        }
+
+
+        private (bool, string) StoreTours(List<TourSchemaWithLog> tours)
+        {
+            bool isFound = false;
+
+            var oldToursFromDB = this.GetAllTourWithLogs();
+
+            try
+            {
+                foreach (var newTour in tours)
+                {
+                    if (oldToursFromDB.Item1.Count > 0)
+                    {
+                        isFound = oldToursFromDB.Item1.All(x => x.Name == newTour.Name);
+                    }
+
+                    if (!isFound)
+                    {
+                        var tourRes = this.AddTour(newTour);
+                    }
+
+                    isFound = false;
+                }
+
+                return (true, "Tours data has been imported.");
+            }
+            catch (Exception ex)
+            {
+                // log.
+            }
+
+            return (false, "Tours data cant be imported.");
+        }
+
+        private (bool, string) StoreTourLogs(List<TourSchemaWithLog> tours)
+        {
+            bool isFound = false;
+
+            var oldTourLogsFromDB = this.GetAllTourLogs();
+
+            try
+            {
+                for (int i = 0; i < tours.Count; i++)
+                {
+                    foreach (var log in tours[i].Logs)
+                    {
+                        if (oldTourLogsFromDB.Item1.Count > 0)
+                        {
+                            isFound = oldTourLogsFromDB.Item1.All(x => x.Id == log.Id && x.TourId == log.TourId);
+                        }
+
+                        if (!isFound)
+                        {
+                            var tourLogResult = this.AddTourLog(log);
+                        }
+
+                        isFound = false;
+                    }
+                }
+
+
+                return (true, "Tour log data has been imported.");
+            }
+            catch (Exception ex)
+            {
+                // log.
+            }
+
+            return (false, "Tour log data cant be imported.");
+        }
+
 
         public (bool, string) AddReview(ReviewSchema reviewSchema)
         {
@@ -224,14 +312,11 @@ namespace TourPlanner.Server.DL.DB
             return (tours, "Tours are fetched successfully");
         }
 
-
-
         public (TourSchemaWithoutLog, string) GetTourById(int id)
         {
             var tour = this.GetAllTourWithoutLog().Item1.Where(x => x.Id == id).First();
             return (tour, "Tour data is fetched successfully");
         }
-
 
         public (bool, string) UpdateTour(TourSchemaWithoutLog tourSchema)
         {
@@ -267,8 +352,6 @@ namespace TourPlanner.Server.DL.DB
                 return (true, "Tour data is updated");
             }
         }
-
-
         public (bool, string) UpdateTourLog(TourLogSchema tourLogSchema)
         {
             using (IDbConnection connection = Connect())
@@ -300,7 +383,6 @@ namespace TourPlanner.Server.DL.DB
                 return (true, "Tour log data is updated");
             }
         }
-
 
         public (List<TourSchemaWithLog>, string) GetAllTourWithLogs()
         {

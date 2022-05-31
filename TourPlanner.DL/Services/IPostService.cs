@@ -10,5 +10,6 @@ namespace TourPlanner.Client.DL.Services
     public interface IPostService
     {
         Task<GenericApiResponse> Create(object dataToStoreInDB);
+        Task<GenericApiResponse> Import(object dataToStoreInDB);
     }
 }

@@ -49,6 +49,11 @@ namespace TourPlanner.Client.DL.Services
             return new GenericApiResponse("Error", null, false);
         }
 
+        public override Task<GenericApiResponse> Import(object dataToStoreInDB)
+        {
+            throw new NotImplementedException();
+        }
+
         public override async Task<GenericApiResponse> Read(int id)
         {
             var apiResponse = await Task.Run(() => this.HttpClient.GetAsync($"https://localhost:5001/TourLog/{id}")).ConfigureAwait(false);

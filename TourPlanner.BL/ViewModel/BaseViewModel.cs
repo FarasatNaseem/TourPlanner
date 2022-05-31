@@ -11,5 +11,6 @@
         {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(name));
         }
+        //public MessageBox MessageBox { get; set; }
     }
 }

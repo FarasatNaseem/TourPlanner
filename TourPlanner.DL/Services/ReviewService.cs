@@ -43,6 +43,11 @@ namespace TourPlanner.Client.DL.Services
             throw new NotImplementedException();
         }
 
+        public override Task<GenericApiResponse> Import(object dataToStoreInDB)
+        {
+            throw new NotImplementedException();
+        }
+
         public override Task<GenericApiResponse> Read(int id)
         {
             throw new NotImplementedException();

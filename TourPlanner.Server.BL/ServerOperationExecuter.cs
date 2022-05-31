@@ -58,6 +58,12 @@ namespace TourPlanner.Server.BL
             return review == null ? (false, null) : this._tourPlannerDatabase.AddReview(review);
         }
 
+        public(bool, string) StoreBackup(string jsonToursWithLogs)
+        {
+            var tours = JsonConvert.DeserializeObject<List<TourSchemaWithLog>>(jsonToursWithLogs);
+            return this._tourPlannerDatabase.StoreBackup(tours);
+        }
+
         public (List<ReviewSchema>, string) GetAllReview()
         {
             return this._tourPlannerDatabase.GetAllReview();

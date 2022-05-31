@@ -15,6 +15,7 @@
 
         public abstract Task<GenericApiResponse> Create(object dataToStoreInDB);
         public abstract Task<GenericApiResponse> Delete(int idOfData);
+        public abstract Task<GenericApiResponse> Import(object dataToStoreInDB);
         public abstract Task<GenericApiResponse> Read(int id);
         public abstract Task<GenericApiResponse> ReadAll();
         public abstract Task<GenericApiResponse> ReadLike(string someText);

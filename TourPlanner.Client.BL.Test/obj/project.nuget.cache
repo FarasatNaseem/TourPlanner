@@ -1,11 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "3i2/NYyR2/+t2L1XML8aSD5JvaMSR24dwbGQRxJMr1Bqmyg7bRm7HmF8V+oifAP3nAk+Aacg/Ic5l32AVshpSw==",
+  "dgSpecHash": "pCYLmbXeBY0Dd4n8qcj8LTKY9fG2hEKcjBrm99y86P6jZtqtQn6ZPdVAV2A70FPkIuYZkHaP2y/mNp/Gu871Hg==",
   "success": true,
   "projectFilePath": "C:\\Users\\Privat\\TourPlanner\\TourPlanner.Client.BL.Test\\TourPlanner.Client.BL.Test.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Privat\\.nuget\\packages\\coverlet.collector\\3.0.2\\coverlet.collector.3.0.2.nupkg.sha512",
-    "C:\\Users\\Privat\\.nuget\\packages\\extended.wpf.toolkit\\4.3.0\\extended.wpf.toolkit.4.3.0.nupkg.sha512",
     "C:\\Users\\Privat\\.nuget\\packages\\itext7\\7.2.2\\itext7.7.2.2.nupkg.sha512",
     "C:\\Users\\Privat\\.nuget\\packages\\itext7.commons\\7.2.2\\itext7.commons.7.2.2.nupkg.sha512",
     "C:\\Users\\Privat\\.nuget\\packages\\microsoft.codecoverage\\16.9.4\\microsoft.codecoverage.16.9.4.nupkg.sha512",
@@ -122,16 +121,5 @@
     "C:\\Users\\Privat\\.nuget\\packages\\system.xml.xpath\\4.3.0\\system.xml.xpath.4.3.0.nupkg.sha512",
     "C:\\Users\\Privat\\.nuget\\packages\\system.xml.xpath.xmldocument\\4.3.0\\system.xml.xpath.xmldocument.4.3.0.nupkg.sha512"
   ],
-  "logs": [
-    {
-      "code": "NU1701",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Package 'Extended.Wpf.Toolkit 4.3.0' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' instead of the project target framework 'net5.0'. This package may not be fully compatible with your project.",
-      "libraryId": "Extended.Wpf.Toolkit",
-      "targetGraphs": [
-        "net5.0"
-      ]
-    }
-  ]
+  "logs": []
 }

@@ -272,10 +272,6 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "dependencies": {
-            "Extended.Wpf.Toolkit": {
-              "target": "Package",
-              "version": "[4.3.0, )"
-            },
             "Microsoft.Extensions.Configuration.Binder": {
               "target": "Package",
               "version": "[6.0.0, )"

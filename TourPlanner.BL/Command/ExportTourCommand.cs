@@ -14,7 +14,7 @@ namespace TourPlanner.Client.BL.Command
 
         public ExportTourCommand()
         {
-            this._exportTourOperationExecuter = new ExportTourCommandExecuter();
+            this._exportTourOperationExecuter = new ExportTourOperationExecuter();
         }
 
         public void Execute(object commandParameter)
