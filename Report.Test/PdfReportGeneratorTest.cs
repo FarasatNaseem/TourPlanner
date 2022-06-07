@@ -1,3 +1,4 @@
+using Moq;
 using NUnit.Framework;
 using TourPlanner.Model;
 using TourPlanner.Model.DbSchema;
@@ -13,12 +14,17 @@ namespace Report.Test
         }
 
         [Test]
-        public void GenerateResponseMustbeTrue()
+        public void GenerateResponseMustbeFalse_Test()
         {
-            this._abstractReportGenerator = new PdfReportGenerator(Constraint.BASEURL + "\\TourPlanner.BL\\Assets\\Reports\\tour2.pdf");
+            this._abstractReportGenerator = new PdfReportGenerator(Constraint.BASEURL + "\\TourPlanner.BL\\Assets\\Reports\\mocktour.pdf");
 
-            //var isGenerated = this._abstractReportGenerator.Generate(null);
-            Assert.Pass();
+            //var tourSchemaMock = new Mock<TourSchemaWithLog>();
+
+            var tourSchemaMock = new TourSchemaWithLog(10, "Test", "Test", "Test", "Test", TransportType.Bike, 2.56, "Test", new System.TimeSpan(), null);
+
+            var isGenerated = this._abstractReportGenerator.Generate(tourSchemaMock);
+
+            Assert.IsFalse(isGenerated);
         }
     }
 }

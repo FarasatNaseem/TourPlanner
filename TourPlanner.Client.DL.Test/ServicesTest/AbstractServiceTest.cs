@@ -54,7 +54,7 @@ namespace TourPlanner.Client.DL.Test.ServicesTest
         [Test]
         public void DeleteMustReturn_True()
         {
-            int id = 1;
+            int id = 10;
 
             var handlerMock = new Mock<HttpMessageHandler>();
 
