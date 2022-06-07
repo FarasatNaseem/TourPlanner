@@ -8,7 +8,7 @@
         xmlns:viewmodel="clr-namespace:TourPlanner.Client.BL.ViewModel;assembly=TourPlanner.Client.BL" 
         d:DataContext="{d:DesignInstance Type=viewmodel:MainViewModel}"
         mc:Ignorable="d"
-        Title="MainWindow" 
+        Title="TourPlanner" 
         Height="580" 
         Width="930"
         >

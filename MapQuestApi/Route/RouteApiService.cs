@@ -1,11 +1,14 @@
 ﻿namespace MapQuestApi.Route
 {
+    using Logging;
+    using Microsoft.Extensions.Logging;
     using Newtonsoft.Json.Linq;
     using System;
     using System.Threading.Tasks;
 
     public class RouteApiService : AbstractMapQuestApiService<RouteApiResponse>
     {
+        private readonly ILogger logger = Logger.CreateLogger<AbstractMapQuestApiService<RouteApiResponse>>();
         private RouteApiRequest _routeApiRequest;
         private string _url;
         public RouteApiService(RouteApiRequest routeApiRequest)
@@ -30,6 +33,8 @@
                 distance = Convert.ToDouble(parsedJSON["route"]["distance"].ToString());
 
                 time = TimeSpan.Parse(parsedJSON["route"]["formattedTime"].ToString());
+
+                logger.Log(LogLevel.Information, "Distance and Time have been fetched.");
 
                 return new RouteApiResponse(distance, time, true);
             }

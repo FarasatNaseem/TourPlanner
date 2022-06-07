@@ -1,14 +1,1 @@
-[
-  {
-    "Logs": [],
-    "Id": 1,
-    "Name": "Tour 1",
-    "TourDescription": "VIE-VIL",
-    "From": "Vienna",
-    "To": "Villach",
-    "Distance": 204.388,
-    "TransportType": 0,
-    "RouteImage": "C:\\Users\\Privat\\SWEN2_PROJECT\\TourPlanner\\TourPlanner.BL\\Assets\\ViennaVillach.png",
-    "EstimatedTime": "03:40:05"
-  }
-]
+[{"Logs":[{"Id":1,"TourId":1,"DateTime":"2022-01-12T00:00:00","Comment":"dsjfsfj","Difficulty":2,"TotalDuration":"00:50:00","Rating":2}],"Id":1,"Name":"TestTour","TourDescription":"Test Tour","From":"Graz","To":"Villach","Distance":108.773,"TransportType":0,"RouteImage":"C:\\Users\\farha\\Desktop\\FinalProject\\TourPlanner\\TourPlanner.BL\\Assets\\GrazVillach.png","EstimatedTime":"02:20:42"}]

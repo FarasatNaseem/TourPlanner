@@ -1300,19 +1300,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Privat\\.nuget\\packages\\": {}
+    "C:\\Users\\farha\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Privat\\SWEN2_PROJECT\\TourPlanner\\TourPlanner.API\\TourPlanner.API.csproj",
+      "projectUniqueName": "C:\\Users\\farha\\Desktop\\FinalProject\\TourPlanner\\TourPlanner.API\\TourPlanner.API.csproj",
       "projectName": "TourPlanner.API",
-      "projectPath": "C:\\Users\\Privat\\SWEN2_PROJECT\\TourPlanner\\TourPlanner.API\\TourPlanner.API.csproj",
-      "packagesPath": "C:\\Users\\Privat\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Privat\\SWEN2_PROJECT\\TourPlanner\\TourPlanner.API\\obj\\",
+      "projectPath": "C:\\Users\\farha\\Desktop\\FinalProject\\TourPlanner\\TourPlanner.API\\TourPlanner.API.csproj",
+      "packagesPath": "C:\\Users\\farha\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\farha\\Desktop\\FinalProject\\TourPlanner\\TourPlanner.API\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Privat\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\farha\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -1326,11 +1326,11 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
-            "C:\\Users\\Privat\\SWEN2_PROJECT\\TourPlanner\\TourPlanner.Model\\TourPlanner.Model.csproj": {
-              "projectPath": "C:\\Users\\Privat\\SWEN2_PROJECT\\TourPlanner\\TourPlanner.Model\\TourPlanner.Model.csproj"
+            "C:\\Users\\farha\\Desktop\\FinalProject\\TourPlanner\\TourPlanner.Model\\TourPlanner.Model.csproj": {
+              "projectPath": "C:\\Users\\farha\\Desktop\\FinalProject\\TourPlanner\\TourPlanner.Model\\TourPlanner.Model.csproj"
             },
-            "C:\\Users\\Privat\\SWEN2_PROJECT\\TourPlanner\\TourPlanner.Server.BL\\TourPlanner.Server.BL.csproj": {
-              "projectPath": "C:\\Users\\Privat\\SWEN2_PROJECT\\TourPlanner\\TourPlanner.Server.BL\\TourPlanner.Server.BL.csproj"
+            "C:\\Users\\farha\\Desktop\\FinalProject\\TourPlanner\\TourPlanner.Server.BL\\TourPlanner.Server.BL.csproj": {
+              "projectPath": "C:\\Users\\farha\\Desktop\\FinalProject\\TourPlanner\\TourPlanner.Server.BL\\TourPlanner.Server.BL.csproj"
             }
           }
         }
@@ -1376,7 +1376,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.401\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.407\\RuntimeIdentifierGraph.json"
       }
     }
   }

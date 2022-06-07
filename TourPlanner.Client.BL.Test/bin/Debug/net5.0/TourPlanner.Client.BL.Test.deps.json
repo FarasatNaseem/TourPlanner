@@ -1406,8 +1406,10 @@
       },
       "MapQuestApi/1.0.0": {
         "dependencies": {
+          "Logging": "1.0.0",
           "Microsoft.Extensions.Configuration.Binder": "6.0.0",
           "Microsoft.Extensions.Configuration.Json": "6.0.0",
+          "Microsoft.Extensions.Logging.Abstractions": "6.0.1",
           "Newtonsoft.Json": "13.0.1",
           "TourPlanner.Model": "1.0.0"
         },

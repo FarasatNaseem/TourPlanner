@@ -1,5 +1,7 @@
 ﻿namespace MapQuestApi.Image
 {
+    using Logging;
+    using Microsoft.Extensions.Logging;
     using System;
     using System.IO;
     using System.Net.Http;
@@ -8,6 +10,8 @@
 
     public class RouteImageApiService : AbstractMapQuestApiService<RouteImageApiResponse>
     {
+
+        private readonly ILogger logger = Logger.CreateLogger<AbstractMapQuestApiService<RouteImageApiResponse>>();
         private RouteImageApiRequest _routeImageApiRequest;
         private string _url;
         private string _filePath;
@@ -34,11 +38,14 @@
                         }
                     }
                 }
+                logger.Log(LogLevel.Information, "Image has been fetched.");
 
                 return new RouteImageApiResponse(this._filePath, true);
             }
             catch (Exception ex)
             {
+                logger.Log(LogLevel.Error, ex.StackTrace);
+
                 return new RouteImageApiResponse("Cant fetch image from given URL", false);
             }
         }

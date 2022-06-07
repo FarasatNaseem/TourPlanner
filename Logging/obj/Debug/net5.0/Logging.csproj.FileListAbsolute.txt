@@ -58,3 +58,15 @@ C:\Users\Privat\SWEN2_PROJECT\TourPlanner\Logging\obj\Debug\net5.0\Logging.dll
 C:\Users\Privat\SWEN2_PROJECT\TourPlanner\Logging\obj\Debug\net5.0\ref\Logging.dll
 C:\Users\Privat\SWEN2_PROJECT\TourPlanner\Logging\obj\Debug\net5.0\Logging.pdb
 C:\Users\Privat\SWEN2_PROJECT\TourPlanner\Logging\obj\Debug\net5.0\Logging.csproj.AssemblyReference.cache
+C:\Users\farha\Desktop\FinalProject\TourPlanner\Logging\bin\Debug\net5.0\Logging.deps.json
+C:\Users\farha\Desktop\FinalProject\TourPlanner\Logging\bin\Debug\net5.0\Logging.dll
+C:\Users\farha\Desktop\FinalProject\TourPlanner\Logging\bin\Debug\net5.0\ref\Logging.dll
+C:\Users\farha\Desktop\FinalProject\TourPlanner\Logging\bin\Debug\net5.0\Logging.pdb
+C:\Users\farha\Desktop\FinalProject\TourPlanner\Logging\obj\Debug\net5.0\Logging.csproj.AssemblyReference.cache
+C:\Users\farha\Desktop\FinalProject\TourPlanner\Logging\obj\Debug\net5.0\Logging.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\farha\Desktop\FinalProject\TourPlanner\Logging\obj\Debug\net5.0\Logging.AssemblyInfoInputs.cache
+C:\Users\farha\Desktop\FinalProject\TourPlanner\Logging\obj\Debug\net5.0\Logging.AssemblyInfo.cs
+C:\Users\farha\Desktop\FinalProject\TourPlanner\Logging\obj\Debug\net5.0\Logging.csproj.CoreCompileInputs.cache
+C:\Users\farha\Desktop\FinalProject\TourPlanner\Logging\obj\Debug\net5.0\Logging.dll
+C:\Users\farha\Desktop\FinalProject\TourPlanner\Logging\obj\Debug\net5.0\ref\Logging.dll
+C:\Users\farha\Desktop\FinalProject\TourPlanner\Logging\obj\Debug\net5.0\Logging.pdb

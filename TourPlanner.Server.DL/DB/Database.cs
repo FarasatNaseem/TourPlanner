@@ -117,11 +117,13 @@ namespace TourPlanner.Server.DL.DB
                 var storeTourResult = this.StoreTours(tours);
                 var storeTourLogResult = this.StoreTourLogs(tours);
 
+                logger.Log(LogLevel.Information, "Backup has been stored.");
+
                 return (true, "Tours data has been imported.");
             }
             catch (Exception ex)
             {
-                // log.
+                logger.Log(LogLevel.Error, ex.StackTrace);
             }
 
             return (false, "Tours data cant be imported.");
@@ -150,11 +152,13 @@ namespace TourPlanner.Server.DL.DB
                     isFound = false;
                 }
 
+                logger.Log(LogLevel.Information, "Tours data has been imported.");
+
                 return (true, "Tours data has been imported.");
             }
             catch (Exception ex)
             {
-                // log.
+                logger.Log(LogLevel.Error, ex.StackTrace);
             }
 
             return (false, "Tours data cant be imported.");
@@ -186,12 +190,13 @@ namespace TourPlanner.Server.DL.DB
                     }
                 }
 
+                logger.Log(LogLevel.Information, "Tour log data has been imported.");
 
                 return (true, "Tour log data has been imported.");
             }
             catch (Exception ex)
             {
-                // log.
+                logger.Log(LogLevel.Error, ex.StackTrace);
             }
 
             return (false, "Tour log data cant be imported.");
@@ -320,12 +325,14 @@ namespace TourPlanner.Server.DL.DB
         public (TourSchemaWithoutLog, string) GetTourById(int id)
         {
             var tour = this.GetAllTourWithoutLog().Item1.Where(x => x.Id == id).First();
+            logger.Log(LogLevel.Information, "Tour data is fetched successfully.");
             return (tour, "Tour data is fetched successfully");
         }
 
         public (TourSchemaWithoutLog, string) GetTourByName(string name)
         {
             var tour = this.GetAllTourWithoutLog().Item1.Where(x => x.Name == name).FirstOrDefault();
+            logger.Log(LogLevel.Information, "Tour data is fetched successfully.");
             return (tour, "Tour data is fetched successfully");
         }
 
@@ -353,12 +360,16 @@ namespace TourPlanner.Server.DL.DB
                 }
                 catch (Exception ex)
                 {
+                    logger.Log(LogLevel.Error, ex.StackTrace);
+
                     return (false, ex.Message);
                 }
                 finally
                 {
                     connection.Close();
                 }
+
+                logger.Log(LogLevel.Information, "Tour data is updated successfully.");
 
                 return (true, "Tour data is updated");
             }
@@ -384,12 +395,16 @@ namespace TourPlanner.Server.DL.DB
                 }
                 catch (Exception ex)
                 {
+                    logger.Log(LogLevel.Error, ex.StackTrace);
+
                     return (false, ex.Message);
                 }
                 finally
                 {
                     connection.Close();
                 }
+
+                logger.Log(LogLevel.Information, "Tour data is updated successfully.");
 
                 return (true, "Tour log data is updated");
             }
@@ -451,6 +466,7 @@ namespace TourPlanner.Server.DL.DB
                     connection.Close();
                 }
             }
+            logger.Log(LogLevel.Information, "Tours are fetched successfully.");
 
             return (tourLogs, "Tours are fetched successfully");
         }
@@ -463,10 +479,14 @@ namespace TourPlanner.Server.DL.DB
 
                 var sortedTourLogs = tourLogs.Where(x => x.TourId == id).ToList();
 
+                logger.Log(LogLevel.Information, "Tour logs are fetched successfully.");
+
                 return (sortedTourLogs, "Tour logs are fetched successfully");
             }
             catch (Exception ex)
             {
+                logger.Log(LogLevel.Error, ex.StackTrace);
+
                 return (null, "Due to some error logs cant be fetched.");
             }
         }
@@ -488,6 +508,8 @@ namespace TourPlanner.Server.DL.DB
             }
             catch (Exception ex)
             {
+                logger.Log(LogLevel.Error, ex.StackTrace);
+
                 return (null, "Due to some error log cant be fetched.");
             }
         }
@@ -535,8 +557,10 @@ namespace TourPlanner.Server.DL.DB
 
                 return (filteredTourLogs, $"Sorted Tour logs of id {id} are fetched successfully");
             }
-            catch
+            catch (Exception ex)
             {
+                logger.Log(LogLevel.Error, ex.StackTrace);
+
                 return (null, $"Nothing is found like {someText}");
             }
         }
@@ -558,6 +582,8 @@ namespace TourPlanner.Server.DL.DB
                 }
                 catch (Exception ex)
                 {
+                    logger.Log(LogLevel.Error, ex.StackTrace);
+
                     return (false, "Tour cant be deleted!");
                 }
                 finally
@@ -586,6 +612,8 @@ namespace TourPlanner.Server.DL.DB
                 }
                 catch (Exception ex)
                 {
+                    logger.Log(LogLevel.Error, ex.StackTrace);
+
                     return (false, "Tour log cant be deleted!");
                 }
                 finally
@@ -636,6 +664,8 @@ namespace TourPlanner.Server.DL.DB
                 }
                 catch (Exception ex)
                 {
+                    logger.Log(LogLevel.Error, ex.StackTrace);
+
                     throw new Exception(ex.Message);
                 }
                 finally
