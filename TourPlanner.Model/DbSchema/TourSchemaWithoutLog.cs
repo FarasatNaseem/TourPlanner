@@ -8,6 +8,7 @@ namespace TourPlanner.Model.DbSchema
 {
     public class TourSchemaWithoutLog
     {
+        //public TourSchemaWithoutLog() { }
         public TourSchemaWithoutLog(int id, string name, string from, string to, string tourDescription, TransportType transportType, double distance, string routeImage, TimeSpan estimatedTime)
         {
             this.Id = id;

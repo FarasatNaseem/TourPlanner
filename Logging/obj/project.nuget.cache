@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "zBiceeVAvaH6tWuOEMyNIxD1HxuhirnZKETeNe7em7Zdkh7EdRQLMNcQfq/5SEC9Z0KEVvDexwZlxE43hEWRkw==",
+  "dgSpecHash": "fqRKzTCHX0knKCI8vb1gRZya7WxebVZvmNDC8cJidLVc4Z8G5krCiVF2ik2fCO8x1+pq/rnnj1EkEPpk7EtYQQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Privat\\TourPlanner\\Logging\\Logging.csproj",
+  "projectFilePath": "C:\\Users\\Privat\\SWEN2_PROJECT\\TourPlanner\\Logging\\Logging.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Privat\\.nuget\\packages\\microsoft.extensions.configuration\\6.0.0\\microsoft.extensions.configuration.6.0.0.nupkg.sha512",
     "C:\\Users\\Privat\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\6.0.0\\microsoft.extensions.configuration.abstractions.6.0.0.nupkg.sha512",

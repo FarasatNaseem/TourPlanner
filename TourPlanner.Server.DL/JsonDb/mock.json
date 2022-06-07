@@ -1,0 +1,1 @@
+{"Behavior":1,"CallBase":false,"DefaultValueProvider":{},"Object":{"Id":0,"Name":null,"TourDescription":null,"From":null,"To":null,"Distance":0.0,"TransportType":0,"RouteImage":null,"EstimatedTime":"00:00:00","Logs":null},"Name":"Mock<Tour:1>","Switches":0,"DefaultValue":0,"Invocations":[],"Setups":[]}

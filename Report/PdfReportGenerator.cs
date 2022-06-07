@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.IO;
 using iText.IO.Font.Constants;
+using iText.IO.Image;
 using iText.Kernel.Colors;
 using iText.Kernel.Font;
 using iText.Kernel.Pdf;
@@ -22,7 +23,6 @@ namespace Report
             this._pdf = new PdfDocument(this._writer);
             this._document = new Document(this._pdf);
         }
-
 
         private Paragraph CreateHeader(string headerText)
         {
@@ -116,12 +116,17 @@ namespace Report
                 var tourTable = this.CreateTourTable(tourTablecols, reportData);
 
                 this._document.Add(tourTable);
+               
+                ImageData imageData = ImageDataFactory.Create(reportData.RouteImage);
+                this._document.Add(new Image(imageData));
 
-                this._document.Add(new AreaBreak());
+                /// this._document.Add(new AreaBreak());
+                if (reportData.Logs.Count > 0)
+                {
+                    var tourLogTable = this.CreateTourLogTable(tourLogTablecols, reportData.Logs);
 
-                var tourLogTable = this.CreateTourLogTable(tourLogTablecols, reportData.Logs);
-
-                this._document.Add(tourLogTable);
+                    this._document.Add(tourLogTable);
+                }
 
                 this._document.Close();
 

@@ -54,7 +54,7 @@ namespace TourPlanner.PL.View {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/TourPlanner.PL;component/view/addreviewview.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/TourPlanner.PL;V1.0.0.0;component/view/addreviewview.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\..\View\AddReviewView.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

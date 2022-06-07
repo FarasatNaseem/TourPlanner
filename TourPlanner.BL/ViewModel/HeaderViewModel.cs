@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Input;
+using System.Windows;
 using TourPlanner.Client.BL.Command;
 
 namespace TourPlanner.Client.BL.ViewModel
@@ -13,12 +14,14 @@ namespace TourPlanner.Client.BL.ViewModel
 
         private BaseCommand importCommand;
         private BaseCommand exportCommand;
+        private BaseCommand generateSpecialReportCommand;
         private BaseCommand updateViewCommand;
         private BaseViewModel selectedViewModel;
 
         private ITourPlannerCommand _importTourCommand;
         private ITourPlannerCommand _exportTourCommnad;
         private ITourPlannerCommand _updateViewCommand;
+        private ITourPlannerCommand _generateSpecialReportCommand;
 
         public HeaderViewModel(MainViewModel mainViewModel)
         {

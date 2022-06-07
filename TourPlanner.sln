@@ -42,9 +42,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MapQuestApi.Test", "MapQues
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Report.Test", "Report.Test\Report.Test.csproj", "{2B700993-009D-42DE-A680-C6375A9E6F84}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Logging", "Logging\Logging.csproj", "{52D098D7-FFD1-4B2B-AB2F-6395C5F1FC2B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Logging", "Logging\Logging.csproj", "{52D098D7-FFD1-4B2B-AB2F-6395C5F1FC2B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TourPlanner.FileSystem.Test", "TourPlanner.FileSystem.Test\TourPlanner.FileSystem.Test.csproj", "{C3635FE6-032B-48C7-89E8-FEA12B2C34E2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TourPlanner.FileSystem.Test", "TourPlanner.FileSystem.Test\TourPlanner.FileSystem.Test.csproj", "{C3635FE6-032B-48C7-89E8-FEA12B2C34E2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TourPlanner.Server.DL.Test", "TourPlanner.Server.DL.Test\TourPlanner.Server.DL.Test.csproj", "{7D3A661A-156A-4F08-83D6-3B31AA161D0F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -116,6 +118,10 @@ Global
 		{C3635FE6-032B-48C7-89E8-FEA12B2C34E2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C3635FE6-032B-48C7-89E8-FEA12B2C34E2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C3635FE6-032B-48C7-89E8-FEA12B2C34E2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7D3A661A-156A-4F08-83D6-3B31AA161D0F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7D3A661A-156A-4F08-83D6-3B31AA161D0F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7D3A661A-156A-4F08-83D6-3B31AA161D0F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7D3A661A-156A-4F08-83D6-3B31AA161D0F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -137,6 +143,7 @@ Global
 		{2B700993-009D-42DE-A680-C6375A9E6F84} = {61E34135-4E31-469B-9AEF-1FB1DBABDE1A}
 		{52D098D7-FFD1-4B2B-AB2F-6395C5F1FC2B} = {61E34135-4E31-469B-9AEF-1FB1DBABDE1A}
 		{C3635FE6-032B-48C7-89E8-FEA12B2C34E2} = {61E34135-4E31-469B-9AEF-1FB1DBABDE1A}
+		{7D3A661A-156A-4F08-83D6-3B31AA161D0F} = {710E2D1F-7973-4F17-AF76-355FB252271D}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {3B62392C-CCC2-428D-89CD-75603F943770}

@@ -1,1 +1,14 @@
-[{"Logs":[{"Id":1,"TourId":1,"DateTime":"2002-11-11T00:00:00","Comment":"This is my comment","Difficulty":2,"TotalDuration":"11:11:00","Rating":2},{"Id":2,"TourId":1,"DateTime":"2020-11-01T00:00:00","Comment":"second comment","Difficulty":2,"TotalDuration":"12:12:00","Rating":2}],"Id":1,"Name":"Tour 1","TourDescription":"I am travelling to klagenfurt from vienna","From":"Vienna","To":"Klagenfurt","Distance":184.243,"TransportType":0,"RouteImage":"C:\\Users\\Privat\\TourPlanner\\TourPlanner.BL\\Assets\\ViennaKlagenfurt.png","EstimatedTime":"03:13:14"}]
+[
+  {
+    "Logs": [],
+    "Id": 1,
+    "Name": "Tour 1",
+    "TourDescription": "VIE-VIL",
+    "From": "Vienna",
+    "To": "Villach",
+    "Distance": 204.388,
+    "TransportType": 0,
+    "RouteImage": "C:\\Users\\Privat\\SWEN2_PROJECT\\TourPlanner\\TourPlanner.BL\\Assets\\ViennaVillach.png",
+    "EstimatedTime": "03:40:05"
+  }
+]

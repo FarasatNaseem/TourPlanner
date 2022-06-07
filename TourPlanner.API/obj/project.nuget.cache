@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "DLQGTFo1zgW+QQpBlVzXrr54Rn3vhQLQVtBlJSlEJ7cx8yQFlQQxnsCYYfySEsUAGPcyEANonkwY6z04kCL0ag==",
+  "dgSpecHash": "Mj/JuXMrDkWLf6Rwx0t9EMmyo05aeKcQ4/1qizPwKrLzRk/XL7/vH6Ix7xZugcuGpHOG0OjlxGordEKmEo2ivg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Privat\\TourPlanner\\TourPlanner.API\\TourPlanner.API.csproj",
+  "projectFilePath": "C:\\Users\\Privat\\SWEN2_PROJECT\\TourPlanner\\TourPlanner.API\\TourPlanner.API.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Privat\\.nuget\\packages\\microsoft.extensions.apidescription.server\\3.0.0\\microsoft.extensions.apidescription.server.3.0.0.nupkg.sha512",
     "C:\\Users\\Privat\\.nuget\\packages\\microsoft.extensions.configuration\\6.0.1\\microsoft.extensions.configuration.6.0.1.nupkg.sha512",

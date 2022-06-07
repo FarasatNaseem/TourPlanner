@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "BtkJ2Oj7Wo+0DrCpyxp+d5AGPX8/d3o/8Z33d3W/C6Ref52ZSR8Tk+iRAkUe6XVxHcuG+eGRp3zSgtHlCpbQoA==",
+  "dgSpecHash": "j67t5hRZ4+YsBZNgMKfsUB6jYi8KixPYQQBPFWybmdMciCFL9Beue7xbiJNWWGw0vy1oNc0ytpji09RqX53msg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Privat\\TourPlanner\\TourPlanner.BL\\TourPlanner.Client.BL.csproj",
+  "projectFilePath": "C:\\Users\\Privat\\SWEN2_PROJECT\\TourPlanner\\TourPlanner.BL\\TourPlanner.Client.BL.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Privat\\.nuget\\packages\\itext7\\7.2.2\\itext7.7.2.2.nupkg.sha512",
     "C:\\Users\\Privat\\.nuget\\packages\\itext7.commons\\7.2.2\\itext7.commons.7.2.2.nupkg.sha512",

@@ -31,6 +31,14 @@ namespace TourPlanner.Server.DL.DB
 
         public (bool, string) AddTour(TourSchemaWithoutLog tourSchema)
         {
+            var tour = this.GetTourByName(tourSchema.Name);
+
+            if (!(tour.Item1 is null))
+            {
+                return (false, "Tour cant be added.");
+            }
+
+
             using (IDbConnection connection = this.Connect())
             {
                 try
@@ -119,7 +127,6 @@ namespace TourPlanner.Server.DL.DB
             return (false, "Tours data cant be imported.");
         }
 
-
         private (bool, string) StoreTours(List<TourSchemaWithLog> tours)
         {
             bool isFound = false;
@@ -190,7 +197,6 @@ namespace TourPlanner.Server.DL.DB
             return (false, "Tour log data cant be imported.");
         }
 
-
         public (bool, string) AddReview(ReviewSchema reviewSchema)
         {
             using (IDbConnection connection = this.Connect())
@@ -222,7 +228,6 @@ namespace TourPlanner.Server.DL.DB
                 return (true, "Review has been added.");
             }
         }
-
         public (List<ReviewSchema>, string) GetAllReview()
         {
             var reviews = new List<ReviewSchema>();
@@ -297,6 +302,8 @@ namespace TourPlanner.Server.DL.DB
                     cmd.Dispose();
 
                     logger.Log(LogLevel.Information, "Tours data has been fetched successfully");
+
+                    return (tours, "Tours are fetched successfully");
                 }
                 catch (Exception ex)
                 {
@@ -308,13 +315,17 @@ namespace TourPlanner.Server.DL.DB
                     connection.Close();
                 }
             }
-
-            return (tours, "Tours are fetched successfully");
         }
 
         public (TourSchemaWithoutLog, string) GetTourById(int id)
         {
             var tour = this.GetAllTourWithoutLog().Item1.Where(x => x.Id == id).First();
+            return (tour, "Tour data is fetched successfully");
+        }
+
+        public (TourSchemaWithoutLog, string) GetTourByName(string name)
+        {
+            var tour = this.GetAllTourWithoutLog().Item1.Where(x => x.Name == name).FirstOrDefault();
             return (tour, "Tour data is fetched successfully");
         }
 
@@ -480,6 +491,8 @@ namespace TourPlanner.Server.DL.DB
                 return (null, "Due to some error log cant be fetched.");
             }
         }
+
+       
 
         public (List<TourSchemaWithLog>, string) FilterTours(string someText)
         {

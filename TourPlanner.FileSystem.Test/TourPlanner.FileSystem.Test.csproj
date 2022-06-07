@@ -10,6 +10,7 @@
     <PackageReference Include="Microsoft.Extensions.Configuration.Binder" Version="6.0.0" />
     <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="6.0.0" />
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.9.4" />
+    <PackageReference Include="Moq" Version="4.18.1" />
     <PackageReference Include="Nito.AsyncEx.Context" Version="5.1.2" />
     <PackageReference Include="NUnit" Version="3.13.1" />
     <PackageReference Include="NUnit3TestAdapter" Version="3.17.0" />
@@ -18,6 +19,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\TourPlanner.FileSystem\TourPlanner.FileSystem.csproj" />
+    <ProjectReference Include="..\TourPlanner.Model\TourPlanner.Model.csproj" />
   </ItemGroup>
 
 </Project>

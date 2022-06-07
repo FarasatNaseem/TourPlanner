@@ -4,6 +4,7 @@
     using System.Collections.Generic;
     public class Tour
     {
+        public Tour() { }
         public Tour (string name,string from, string to, string tourDescription, TransportType transportType)
         {
             this.Name = name;

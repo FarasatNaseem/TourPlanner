@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Privat\\TourPlanner\\MapQuestApi.Test\\MapQuestApi.Test.csproj": {}
+    "C:\\Users\\Privat\\SWEN2_PROJECT\\TourPlanner\\MapQuestApi.Test\\MapQuestApi.Test.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Privat\\TourPlanner\\MapQuestApi.Test\\MapQuestApi.Test.csproj": {
+    "C:\\Users\\Privat\\SWEN2_PROJECT\\TourPlanner\\MapQuestApi.Test\\MapQuestApi.Test.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Privat\\TourPlanner\\MapQuestApi.Test\\MapQuestApi.Test.csproj",
+        "projectUniqueName": "C:\\Users\\Privat\\SWEN2_PROJECT\\TourPlanner\\MapQuestApi.Test\\MapQuestApi.Test.csproj",
         "projectName": "MapQuestApi.Test",
-        "projectPath": "C:\\Users\\Privat\\TourPlanner\\MapQuestApi.Test\\MapQuestApi.Test.csproj",
+        "projectPath": "C:\\Users\\Privat\\SWEN2_PROJECT\\TourPlanner\\MapQuestApi.Test\\MapQuestApi.Test.csproj",
         "packagesPath": "C:\\Users\\Privat\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Privat\\TourPlanner\\MapQuestApi.Test\\obj\\",
+        "outputPath": "C:\\Users\\Privat\\SWEN2_PROJECT\\TourPlanner\\MapQuestApi.Test\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Privat\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -28,8 +28,8 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "C:\\Users\\Privat\\TourPlanner\\MapQuestApi\\MapQuestApi.csproj": {
-                "projectPath": "C:\\Users\\Privat\\TourPlanner\\MapQuestApi\\MapQuestApi.csproj"
+              "C:\\Users\\Privat\\SWEN2_PROJECT\\TourPlanner\\MapQuestApi\\MapQuestApi.csproj": {
+                "projectPath": "C:\\Users\\Privat\\SWEN2_PROJECT\\TourPlanner\\MapQuestApi\\MapQuestApi.csproj"
               }
             }
           }
@@ -92,14 +92,14 @@
         }
       }
     },
-    "C:\\Users\\Privat\\TourPlanner\\MapQuestApi\\MapQuestApi.csproj": {
+    "C:\\Users\\Privat\\SWEN2_PROJECT\\TourPlanner\\MapQuestApi\\MapQuestApi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Privat\\TourPlanner\\MapQuestApi\\MapQuestApi.csproj",
+        "projectUniqueName": "C:\\Users\\Privat\\SWEN2_PROJECT\\TourPlanner\\MapQuestApi\\MapQuestApi.csproj",
         "projectName": "MapQuestApi",
-        "projectPath": "C:\\Users\\Privat\\TourPlanner\\MapQuestApi\\MapQuestApi.csproj",
+        "projectPath": "C:\\Users\\Privat\\SWEN2_PROJECT\\TourPlanner\\MapQuestApi\\MapQuestApi.csproj",
         "packagesPath": "C:\\Users\\Privat\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Privat\\TourPlanner\\MapQuestApi\\obj\\",
+        "outputPath": "C:\\Users\\Privat\\SWEN2_PROJECT\\TourPlanner\\MapQuestApi\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Privat\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -116,8 +116,8 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "C:\\Users\\Privat\\TourPlanner\\TourPlanner.Model\\TourPlanner.Model.csproj": {
-                "projectPath": "C:\\Users\\Privat\\TourPlanner\\TourPlanner.Model\\TourPlanner.Model.csproj"
+              "C:\\Users\\Privat\\SWEN2_PROJECT\\TourPlanner\\TourPlanner.Model\\TourPlanner.Model.csproj": {
+                "projectPath": "C:\\Users\\Privat\\SWEN2_PROJECT\\TourPlanner\\TourPlanner.Model\\TourPlanner.Model.csproj"
               }
             }
           }
@@ -164,14 +164,14 @@
         }
       }
     },
-    "C:\\Users\\Privat\\TourPlanner\\TourPlanner.Model\\TourPlanner.Model.csproj": {
+    "C:\\Users\\Privat\\SWEN2_PROJECT\\TourPlanner\\TourPlanner.Model\\TourPlanner.Model.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Privat\\TourPlanner\\TourPlanner.Model\\TourPlanner.Model.csproj",
+        "projectUniqueName": "C:\\Users\\Privat\\SWEN2_PROJECT\\TourPlanner\\TourPlanner.Model\\TourPlanner.Model.csproj",
         "projectName": "TourPlanner.Model",
-        "projectPath": "C:\\Users\\Privat\\TourPlanner\\TourPlanner.Model\\TourPlanner.Model.csproj",
+        "projectPath": "C:\\Users\\Privat\\SWEN2_PROJECT\\TourPlanner\\TourPlanner.Model\\TourPlanner.Model.csproj",
         "packagesPath": "C:\\Users\\Privat\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Privat\\TourPlanner\\TourPlanner.Model\\obj\\",
+        "outputPath": "C:\\Users\\Privat\\SWEN2_PROJECT\\TourPlanner\\TourPlanner.Model\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Privat\\AppData\\Roaming\\NuGet\\NuGet.Config",

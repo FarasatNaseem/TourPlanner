@@ -81,11 +81,10 @@
                             <DataTemplate>
                                 <DataGrid ItemsSource="{Binding Logs}" AutoGenerateColumns="False" >
                                     <DataGrid.Columns>
-                                        <DataGridTextColumn Header="Distance" Binding="{Binding Distance}" Width="Auto"/>
                                         <DataGridTextColumn Header="DateTime" Binding="{Binding DateTime}" Width="Auto"/>
                                         <DataGridTextColumn Header="Comment" Binding="{Binding Comment}" Width="Auto"/>
                                         <DataGridTextColumn Header="Difficulty" Binding="{Binding Difficulty}" Width="Auto"/>
-                                        <DataGridTextColumn Header="Duration" Binding="{Binding Duration}" Width="Auto"/>
+                                        <DataGridTextColumn Header="Duration" Binding="{Binding TotalDuration}" Width="Auto"/>
                                         <c1:DataGridTemplateColumn>
                                             <c1:DataGridTemplateColumn.CellTemplate>
                                                 <DataTemplate>

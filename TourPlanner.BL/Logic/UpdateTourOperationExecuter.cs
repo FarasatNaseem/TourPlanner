@@ -105,6 +105,7 @@ namespace TourPlanner.Client.BL.Logic
                 if (File.Exists(filePath))
                 {
                     File.Delete(filePath);
+
                     return true;
                 }
 

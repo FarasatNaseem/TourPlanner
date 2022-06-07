@@ -28,13 +28,12 @@ namespace TourPlanner.API.Controllers
         }
 
         [HttpGet]
-
-        public string Get()
+        public ActionResult Get()
         {
             var response = this._serverOperationExecuter.GetAllTourWithLogs();
 
-
-            return JsonConvert.SerializeObject(response.Item1);
+            return StatusCode(StatusCodes.Status200OK,
+                JsonConvert.SerializeObject(response.Item1));
         }
 
         [HttpGet("{id:int}")]
@@ -69,7 +68,7 @@ namespace TourPlanner.API.Controllers
             return JsonConvert.SerializeObject(response.Item1);
         }
 
-      
+
         [HttpPut]
         public ActionResult Put(object body)
         {

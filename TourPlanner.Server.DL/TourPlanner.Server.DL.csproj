@@ -16,4 +16,8 @@
     <ProjectReference Include="..\TourPlanner.Model\TourPlanner.Model.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="DB\" />
+  </ItemGroup>
+
 </Project>

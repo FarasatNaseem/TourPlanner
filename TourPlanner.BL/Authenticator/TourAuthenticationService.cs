@@ -1,5 +1,10 @@
 ﻿namespace TourPlanner.Client.BL.Authenticator
 {
+    using Newtonsoft.Json;
+    using Nito.AsyncEx;
+    using System.Collections.Generic;
+    using TourPlanner.FileSystem.Handler;
+    using TourPlanner.FileSystem.JSON;
     using TourPlanner.Model;
     public enum TourAuthenticationServiceMessage
     {
@@ -16,7 +21,7 @@
     {
         public TourAuthenticationServiceMessage Authenticate(Tour tour)
         {
-            if (!this.IsOK(tour) || !this.AreFromAndToDifferent(tour.From, tour.To))
+            if (!this.IsOK(tour) || !this.AreFromAndToDifferent(tour.From, tour.To) || !this.IsCityNameCorrect(tour.From) || !this.IsCityNameCorrect(tour.To))
             {
                 return TourAuthenticationServiceMessage.Error;
             }
@@ -32,6 +37,21 @@
         private bool AreFromAndToDifferent(string from, string to)
         {
             return from != to ? true : false;
+        }
+
+        private bool IsCityNameCorrect(string cityName)
+        {
+            IFileHandler handler = new JSONFileHandler();
+            var jsonFileReaderResponse = AsyncContext.Run(() => handler.Read(Constraint.BASEURL + "TourPlanner.Server.DL\\JsonDb\\city.json"));
+            var cities = JsonConvert.DeserializeObject<List<City>>(jsonFileReaderResponse.Item1);
+
+            foreach(var city in cities)
+            {
+                if (city.Name == cityName)
+                    return true;
+            }
+
+            return false;
         }
     }
 }

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Privat\\TourPlanner\\Logging\\Logging.csproj": {}
+    "C:\\Users\\Privat\\SWEN2_PROJECT\\TourPlanner\\Logging\\Logging.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Privat\\TourPlanner\\Logging\\Logging.csproj": {
+    "C:\\Users\\Privat\\SWEN2_PROJECT\\TourPlanner\\Logging\\Logging.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Privat\\TourPlanner\\Logging\\Logging.csproj",
+        "projectUniqueName": "C:\\Users\\Privat\\SWEN2_PROJECT\\TourPlanner\\Logging\\Logging.csproj",
         "projectName": "Logging",
-        "projectPath": "C:\\Users\\Privat\\TourPlanner\\Logging\\Logging.csproj",
+        "projectPath": "C:\\Users\\Privat\\SWEN2_PROJECT\\TourPlanner\\Logging\\Logging.csproj",
         "packagesPath": "C:\\Users\\Privat\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Privat\\TourPlanner\\Logging\\obj\\",
+        "outputPath": "C:\\Users\\Privat\\SWEN2_PROJECT\\TourPlanner\\Logging\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Privat\\AppData\\Roaming\\NuGet\\NuGet.Config",

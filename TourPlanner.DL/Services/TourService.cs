@@ -31,11 +31,16 @@ namespace TourPlanner.Client.DL.Services
 
         public override async Task<GenericApiResponse> Create(object dataToStoreInDB)
         {
+            var settings = new Newtonsoft.Json.JsonSerializerSettings();
+            // This tells your serializer that multiple references are okay.
+            settings.ReferenceLoopHandling = ReferenceLoopHandling.Ignore;
+
             Tour tour = (Tour)dataToStoreInDB;
 
+          
             var apiResponse = await Task.Run(() => this.HttpClient.PostAsync($"https://localhost:5001/Tour",
                    new StringContent(
-                       JsonConvert.SerializeObject(tour),
+                       JsonConvert.SerializeObject(tour, settings),
                        Encoding.Default,
                        "application/json"
                    ))).ConfigureAwait(false);
@@ -46,7 +51,7 @@ namespace TourPlanner.Client.DL.Services
 
                 logger.Log(LogLevel.Information, "Tour is created successfully");
 
-                return new GenericApiResponse("New Tour is created", null, true);
+                return new GenericApiResponse($"{data}", null, true);
             }
 
             logger.Log(LogLevel.Error, "Due to some error new tour cant be created.");
@@ -135,11 +140,15 @@ namespace TourPlanner.Client.DL.Services
 
         public override async Task<GenericApiResponse> Update(object listOfUpdatedData)
         {
+            var settings = new Newtonsoft.Json.JsonSerializerSettings();
+            // This tells your serializer that multiple references are okay.
+            settings.ReferenceLoopHandling = ReferenceLoopHandling.Ignore;
+
             Tour tour = (Tour)listOfUpdatedData;
 
             var apiResponse = await Task.Run(() => this.HttpClient.PutAsync($"https://localhost:5001/Tour",
                    new StringContent(
-                       JsonConvert.SerializeObject(tour),
+                       JsonConvert.SerializeObject(tour, settings),
                        Encoding.Default,
                        "application/json"
                    ))).ConfigureAwait(false);
@@ -165,11 +174,15 @@ namespace TourPlanner.Client.DL.Services
 
         public override async Task<GenericApiResponse> Import(object dataToStoreInDB)
         {
+            var settings = new Newtonsoft.Json.JsonSerializerSettings();
+            // This tells your serializer that multiple references are okay.
+            settings.ReferenceLoopHandling = ReferenceLoopHandling.Ignore;
+
             var tours = (List<TourSchemaWithLog>)dataToStoreInDB;
 
             var apiResponse = await Task.Run(() => this.HttpClient.PostAsync($"https://localhost:5001/Tour/import",
                    new StringContent(
-                       JsonConvert.SerializeObject(tours),
+                       JsonConvert.SerializeObject(tours, settings),
                        Encoding.Default,
                        "application/json"
                    ))).ConfigureAwait(false);

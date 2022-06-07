@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Privat\\TourPlanner\\TourPlanner.Server.BL\\TourPlanner.Server.BL.csproj": {}
+    "C:\\Users\\Privat\\SWEN2_PROJECT\\TourPlanner\\TourPlanner.Server.BL\\TourPlanner.Server.BL.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Privat\\TourPlanner\\Logging\\Logging.csproj": {
+    "C:\\Users\\Privat\\SWEN2_PROJECT\\TourPlanner\\Logging\\Logging.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Privat\\TourPlanner\\Logging\\Logging.csproj",
+        "projectUniqueName": "C:\\Users\\Privat\\SWEN2_PROJECT\\TourPlanner\\Logging\\Logging.csproj",
         "projectName": "Logging",
-        "projectPath": "C:\\Users\\Privat\\TourPlanner\\Logging\\Logging.csproj",
+        "projectPath": "C:\\Users\\Privat\\SWEN2_PROJECT\\TourPlanner\\Logging\\Logging.csproj",
         "packagesPath": "C:\\Users\\Privat\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Privat\\TourPlanner\\Logging\\obj\\",
+        "outputPath": "C:\\Users\\Privat\\SWEN2_PROJECT\\TourPlanner\\Logging\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Privat\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -76,14 +76,14 @@
         }
       }
     },
-    "C:\\Users\\Privat\\TourPlanner\\TourPlanner.FileSystem\\TourPlanner.FileSystem.csproj": {
+    "C:\\Users\\Privat\\SWEN2_PROJECT\\TourPlanner\\TourPlanner.FileSystem\\TourPlanner.FileSystem.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Privat\\TourPlanner\\TourPlanner.FileSystem\\TourPlanner.FileSystem.csproj",
+        "projectUniqueName": "C:\\Users\\Privat\\SWEN2_PROJECT\\TourPlanner\\TourPlanner.FileSystem\\TourPlanner.FileSystem.csproj",
         "projectName": "TourPlanner.FileSystem",
-        "projectPath": "C:\\Users\\Privat\\TourPlanner\\TourPlanner.FileSystem\\TourPlanner.FileSystem.csproj",
+        "projectPath": "C:\\Users\\Privat\\SWEN2_PROJECT\\TourPlanner\\TourPlanner.FileSystem\\TourPlanner.FileSystem.csproj",
         "packagesPath": "C:\\Users\\Privat\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Privat\\TourPlanner\\TourPlanner.FileSystem\\obj\\",
+        "outputPath": "C:\\Users\\Privat\\SWEN2_PROJECT\\TourPlanner\\TourPlanner.FileSystem\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Privat\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -100,8 +100,8 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "C:\\Users\\Privat\\TourPlanner\\Logging\\Logging.csproj": {
-                "projectPath": "C:\\Users\\Privat\\TourPlanner\\Logging\\Logging.csproj"
+              "C:\\Users\\Privat\\SWEN2_PROJECT\\TourPlanner\\Logging\\Logging.csproj": {
+                "projectPath": "C:\\Users\\Privat\\SWEN2_PROJECT\\TourPlanner\\Logging\\Logging.csproj"
               }
             }
           }
@@ -148,14 +148,14 @@
         }
       }
     },
-    "C:\\Users\\Privat\\TourPlanner\\TourPlanner.Model\\TourPlanner.Model.csproj": {
+    "C:\\Users\\Privat\\SWEN2_PROJECT\\TourPlanner\\TourPlanner.Model\\TourPlanner.Model.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Privat\\TourPlanner\\TourPlanner.Model\\TourPlanner.Model.csproj",
+        "projectUniqueName": "C:\\Users\\Privat\\SWEN2_PROJECT\\TourPlanner\\TourPlanner.Model\\TourPlanner.Model.csproj",
         "projectName": "TourPlanner.Model",
-        "projectPath": "C:\\Users\\Privat\\TourPlanner\\TourPlanner.Model\\TourPlanner.Model.csproj",
+        "projectPath": "C:\\Users\\Privat\\SWEN2_PROJECT\\TourPlanner\\TourPlanner.Model\\TourPlanner.Model.csproj",
         "packagesPath": "C:\\Users\\Privat\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Privat\\TourPlanner\\TourPlanner.Model\\obj\\",
+        "outputPath": "C:\\Users\\Privat\\SWEN2_PROJECT\\TourPlanner\\TourPlanner.Model\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Privat\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -212,14 +212,14 @@
         }
       }
     },
-    "C:\\Users\\Privat\\TourPlanner\\TourPlanner.Server.BL\\TourPlanner.Server.BL.csproj": {
+    "C:\\Users\\Privat\\SWEN2_PROJECT\\TourPlanner\\TourPlanner.Server.BL\\TourPlanner.Server.BL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Privat\\TourPlanner\\TourPlanner.Server.BL\\TourPlanner.Server.BL.csproj",
+        "projectUniqueName": "C:\\Users\\Privat\\SWEN2_PROJECT\\TourPlanner\\TourPlanner.Server.BL\\TourPlanner.Server.BL.csproj",
         "projectName": "TourPlanner.Server.BL",
-        "projectPath": "C:\\Users\\Privat\\TourPlanner\\TourPlanner.Server.BL\\TourPlanner.Server.BL.csproj",
+        "projectPath": "C:\\Users\\Privat\\SWEN2_PROJECT\\TourPlanner\\TourPlanner.Server.BL\\TourPlanner.Server.BL.csproj",
         "packagesPath": "C:\\Users\\Privat\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Privat\\TourPlanner\\TourPlanner.Server.BL\\obj\\",
+        "outputPath": "C:\\Users\\Privat\\SWEN2_PROJECT\\TourPlanner\\TourPlanner.Server.BL\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Privat\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -236,14 +236,14 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "C:\\Users\\Privat\\TourPlanner\\TourPlanner.FileSystem\\TourPlanner.FileSystem.csproj": {
-                "projectPath": "C:\\Users\\Privat\\TourPlanner\\TourPlanner.FileSystem\\TourPlanner.FileSystem.csproj"
+              "C:\\Users\\Privat\\SWEN2_PROJECT\\TourPlanner\\TourPlanner.FileSystem\\TourPlanner.FileSystem.csproj": {
+                "projectPath": "C:\\Users\\Privat\\SWEN2_PROJECT\\TourPlanner\\TourPlanner.FileSystem\\TourPlanner.FileSystem.csproj"
               },
-              "C:\\Users\\Privat\\TourPlanner\\TourPlanner.Model\\TourPlanner.Model.csproj": {
-                "projectPath": "C:\\Users\\Privat\\TourPlanner\\TourPlanner.Model\\TourPlanner.Model.csproj"
+              "C:\\Users\\Privat\\SWEN2_PROJECT\\TourPlanner\\TourPlanner.Model\\TourPlanner.Model.csproj": {
+                "projectPath": "C:\\Users\\Privat\\SWEN2_PROJECT\\TourPlanner\\TourPlanner.Model\\TourPlanner.Model.csproj"
               },
-              "C:\\Users\\Privat\\TourPlanner\\TourPlanner.Server.DL\\TourPlanner.Server.DL.csproj": {
-                "projectPath": "C:\\Users\\Privat\\TourPlanner\\TourPlanner.Server.DL\\TourPlanner.Server.DL.csproj"
+              "C:\\Users\\Privat\\SWEN2_PROJECT\\TourPlanner\\TourPlanner.Server.DL\\TourPlanner.Server.DL.csproj": {
+                "projectPath": "C:\\Users\\Privat\\SWEN2_PROJECT\\TourPlanner\\TourPlanner.Server.DL\\TourPlanner.Server.DL.csproj"
               }
             }
           }
@@ -294,14 +294,14 @@
         }
       }
     },
-    "C:\\Users\\Privat\\TourPlanner\\TourPlanner.Server.DL\\TourPlanner.Server.DL.csproj": {
+    "C:\\Users\\Privat\\SWEN2_PROJECT\\TourPlanner\\TourPlanner.Server.DL\\TourPlanner.Server.DL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Privat\\TourPlanner\\TourPlanner.Server.DL\\TourPlanner.Server.DL.csproj",
+        "projectUniqueName": "C:\\Users\\Privat\\SWEN2_PROJECT\\TourPlanner\\TourPlanner.Server.DL\\TourPlanner.Server.DL.csproj",
         "projectName": "TourPlanner.Server.DL",
-        "projectPath": "C:\\Users\\Privat\\TourPlanner\\TourPlanner.Server.DL\\TourPlanner.Server.DL.csproj",
+        "projectPath": "C:\\Users\\Privat\\SWEN2_PROJECT\\TourPlanner\\TourPlanner.Server.DL\\TourPlanner.Server.DL.csproj",
         "packagesPath": "C:\\Users\\Privat\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Privat\\TourPlanner\\TourPlanner.Server.DL\\obj\\",
+        "outputPath": "C:\\Users\\Privat\\SWEN2_PROJECT\\TourPlanner\\TourPlanner.Server.DL\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Privat\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -318,11 +318,11 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "C:\\Users\\Privat\\TourPlanner\\Logging\\Logging.csproj": {
-                "projectPath": "C:\\Users\\Privat\\TourPlanner\\Logging\\Logging.csproj"
+              "C:\\Users\\Privat\\SWEN2_PROJECT\\TourPlanner\\Logging\\Logging.csproj": {
+                "projectPath": "C:\\Users\\Privat\\SWEN2_PROJECT\\TourPlanner\\Logging\\Logging.csproj"
               },
-              "C:\\Users\\Privat\\TourPlanner\\TourPlanner.Model\\TourPlanner.Model.csproj": {
-                "projectPath": "C:\\Users\\Privat\\TourPlanner\\TourPlanner.Model\\TourPlanner.Model.csproj"
+              "C:\\Users\\Privat\\SWEN2_PROJECT\\TourPlanner\\TourPlanner.Model\\TourPlanner.Model.csproj": {
+                "projectPath": "C:\\Users\\Privat\\SWEN2_PROJECT\\TourPlanner\\TourPlanner.Model\\TourPlanner.Model.csproj"
               }
             }
           }

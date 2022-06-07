@@ -46,3 +46,15 @@ C:\Users\farha\Desktop\TourPlannerRepo3\TourPlanner\TourPlanner.Model\obj\Debug\
 C:\Users\farha\Desktop\TourPlannerRepo3\TourPlanner\TourPlanner.Model\obj\Debug\net5.0\TourPlanner.Model.dll
 C:\Users\farha\Desktop\TourPlannerRepo3\TourPlanner\TourPlanner.Model\obj\Debug\net5.0\ref\TourPlanner.Model.dll
 C:\Users\farha\Desktop\TourPlannerRepo3\TourPlanner\TourPlanner.Model\obj\Debug\net5.0\TourPlanner.Model.pdb
+C:\Users\Privat\SWEN2_PROJECT\TourPlanner\TourPlanner.Model\bin\Debug\net5.0\TourPlanner.Model.deps.json
+C:\Users\Privat\SWEN2_PROJECT\TourPlanner\TourPlanner.Model\bin\Debug\net5.0\TourPlanner.Model.dll
+C:\Users\Privat\SWEN2_PROJECT\TourPlanner\TourPlanner.Model\bin\Debug\net5.0\ref\TourPlanner.Model.dll
+C:\Users\Privat\SWEN2_PROJECT\TourPlanner\TourPlanner.Model\bin\Debug\net5.0\TourPlanner.Model.pdb
+C:\Users\Privat\SWEN2_PROJECT\TourPlanner\TourPlanner.Model\obj\Debug\net5.0\TourPlanner.Model.csproj.AssemblyReference.cache
+C:\Users\Privat\SWEN2_PROJECT\TourPlanner\TourPlanner.Model\obj\Debug\net5.0\TourPlanner.Model.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Privat\SWEN2_PROJECT\TourPlanner\TourPlanner.Model\obj\Debug\net5.0\TourPlanner.Model.AssemblyInfoInputs.cache
+C:\Users\Privat\SWEN2_PROJECT\TourPlanner\TourPlanner.Model\obj\Debug\net5.0\TourPlanner.Model.AssemblyInfo.cs
+C:\Users\Privat\SWEN2_PROJECT\TourPlanner\TourPlanner.Model\obj\Debug\net5.0\TourPlanner.Model.csproj.CoreCompileInputs.cache
+C:\Users\Privat\SWEN2_PROJECT\TourPlanner\TourPlanner.Model\obj\Debug\net5.0\TourPlanner.Model.dll
+C:\Users\Privat\SWEN2_PROJECT\TourPlanner\TourPlanner.Model\obj\Debug\net5.0\ref\TourPlanner.Model.dll
+C:\Users\Privat\SWEN2_PROJECT\TourPlanner\TourPlanner.Model\obj\Debug\net5.0\TourPlanner.Model.pdb
