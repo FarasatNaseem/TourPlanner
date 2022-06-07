@@ -26,6 +26,24 @@ First of all we created 3 separate folders: Client, Server & Shared.
 The server folder contains the bonus feature, which we will explain more in detail later on.
 The client folder contains
 
+### Design Pattern
+Singleton pattern
+
+### Programm functionality
+User can create Tours
+If there a re Tours in the DB already, they will be loaded
+If name of Tour already exists then a new tour with the same name cant be added
+
+User can search for Tours and in Tours selbst
+
+export -> remove all Tours -> Import -> Load Tours and there will be all the tours
+
+After creating a tour the data will be also saved in the Tours.json file
+
+Da wir nur 4 städte definiert haben wird bei andern Städten ein Fehler ausgegeben
+
+Unit test: man muss Server laufen lasse damit die paar unit tests funktionieren
+
 ### Database
 
 ```cs
