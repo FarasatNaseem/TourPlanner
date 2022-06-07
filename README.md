@@ -6,9 +6,20 @@ A user is able to create (bike-, hike-, running- or vacation-) tours in advance 
 ## Failures
 
 ### 1 WPF
+Because I, M. Farhan Saifee, wasn't familiar with WPF at all at the beginning, it wasn't necessarly hard, but it took a lot of time to learn about it.
+And while implementing the navigation between the views there were some complications.
+
+### 2 Layering
+We had quite a few problems about the layering part of this project, which held us back a little bit.
+There were mostly problems with the communication between database and the 3 layers. It was very hard at first and it took time to solve it.
+
+### 3 Unittests
+
 
 
 ## Lessons Learned
+
+
 
 ## Design
 First of all we created 3 separate folders: Client, Server & Shared.
@@ -72,6 +83,7 @@ The Tourplanner.DL project contains the database. Other than that, it also has a
 <ADD PICTURE OF SWAGGER HERE>
 
 ## Unique Feature
+Reviews
 
 ## Tracked Time
 
