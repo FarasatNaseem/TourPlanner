@@ -51,6 +51,7 @@ At first we thought about Unittesting as an easy part of this project compared t
 ## Lessons Learned
 
 #### Muhammad Farasat Hussein:
+I learned more about unittests and mocking during this project. Other than that, I learned more about asynchronous programming.
 
 #### Mohammad Farhan Saifee:
 As a person who had nothing to do with C# 1 year ago, and not even heard of something called WPF, this and the last project (MonsterCardGame) helped me a lot to gather an understanding of how things work with C#. At the TGM we only had JAVA as a programming language and thankfully the syntax of both, Java and C#, are similiar to eacht other. So it wasn't hard to leanr C# and WPF as I thought.\
@@ -61,28 +62,31 @@ I also learned about people in general because I often changed the perspective a
 
 <img width="428" alt="image" src="https://user-images.githubusercontent.com/46992929/172458106-0476fb38-52f4-4df5-9c71-c9087d2ad2ab.png">
 
+The tour planner application has been splited in to 3 different solution folders.
 
-First of all we created 3 separate folders: Client, Server & Shared.
-The server folder contains the bonus feature, which we will explain more in detail later on.
-The client folder contains
+Client: Basically there are 3 differnt layers in this folder. 
+    TourPlanner.PL: This solution just contains views of the application.
+    TourPlanner.Client.BL: This solution is used to validate user data, which comes from PL.
+    TourPlanner.Client.DL: This solution is used to send data to server, which comes from BL.
+
+Server: Basically there are 3 differnt layers in this folder. 
+    TourPlanner.Api: This solution is just a controller, where requests have been arrived.
+    TourPlanner.Server.BL: This solution is used to send data to DL.
+    TourPlanner.Server.DL: This solution is used to store data into database.
 
 ### Design Pattern
-Singleton pattern
+#### Singleton pattern
+TourPlannerApiServiceProvider is just a provider, who contains instances of service class and it was not necessary to create too many provider objects.
 
 ### Programm functionality
-User can create Tours
-If there a re Tours in the DB already, they will be loaded
-If name of Tour already exists then a new tour with the same name cant be added
-
-User can search for Tours and in Tours selbst
-
-export -> remove all Tours -> Import -> Load Tours and there will be all the tours
-
-After creating a tour the data will be also saved in the Tours.json file
-
-Da wir nur 4 städte definiert haben wird bei andern Städten ein Fehler ausgegeben
-
-Unit test: man muss Server laufen lasse damit die paar unit tests funktionieren
+User can:
+* create, update, delete tours
+* create, update, delete tour logs
+* generate tour report
+* search for tours
+* search for tour logs
+* export and import tours
+* give reviews/feedbacks
 
 #### Use-Case Diagram:
 <img width="400" alt="image" src="https://user-images.githubusercontent.com/46992929/172453960-ccf4110a-afe4-4336-804b-0c3e73cc232d.png">
@@ -129,10 +133,103 @@ public (bool, string) AddTour(TourSchemaWithoutLog tourSchema)
         }
 ```
 
-### PSQL
-
 ### Unittests
+Solution name: MapQuestApi.Test
 
+Test 1 in class RouteApiServiceTest: GetResponseMustBeTrue_Test()
+
+This test is checked, weather tour distance and time are fetched successfully not
+
+Test 2 in class RouteImageApiServiceTest: GetResponseMustBeTrue_Test()
+
+This test is checked, weather tour image is fetched successfully or not
+
+Reason: Since we are using public api to fetch image, total time and distance, was it necessary
+	to test the response.
+
+Solution name: Report.Test
+
+Test 3 in class PdfReportGeneratorTest:  GenerateResponseMustbeTrue_Test()
+
+This test is just checking, weather report is generated successfully or not.
+
+Reason: Since generating is a very important feature of tour planner application
+	thats why was it important to create a test.
+
+
+Solution name: TourPlanner.Client.BL.Test
+
+Test 4 in class TourAuthenticationServiceTest: AuthenticateMustReturnSuccess_Test()
+
+This test is just validating user entered tour data.
+
+Reason: Because it is very important to send correct data to server, thats why was it necessary
+	to create a test.
+
+Test 5 in class TourLogAuthenticationServiceTest: AuthenticateMustReturnError_Test()
+This test is just validating user entered tour data.
+Reason: Because it is very important to send correct data to server, thats why was it necessary
+	to create a test.
+
+Test 6 in class ViewModelTest: AddCommand_Test()
+
+This test is just validating, weather command is triggered or not when user click the button.
+
+Reason: It is one of the most important feature, because if a button doesnt work in the application
+	then user cant do anything.
+ 
+Test 7 in class ViewModelTest: UpdateViewCommand_Test()
+
+This test is just validating, weather navigation system of the application is working properly or not.
+
+Reason: It is also one of the most important feature, because if navigation system doesnt work properly
+	then user cant switch from one view to another view.
+
+Solution name: TourPlanner.Client.DL.Test
+
+Test 8 in class AbstractServiceTest: CreateMustReturnTrue_Test()
+Test 9 in class AbstractServiceTest: DeleteMustReturn_True()
+Test 10 in class AbstractServiceTest: UpdateMustReturnTrue_Test()
+Test 11 in class AbstractServiceTest: ImportMustReturnTrue_Test()
+Test 12 in class AbstractServiceTest: ReadAllMustReturn_True()
+Test 13 in class AbstractServiceTest: ReadByIdMustReturn_True()
+Test 14 in class AbstractServiceTest: ReadListMustReturn_True()
+
+These functions are just validating, weather requests are send to server to properly or not.
+
+Reason: These functions are very important, because if services dont work properly then data will not be send
+	to server, thats why these tests were necessary to create.
+
+Solution name: TourPlanner.FileSystem.Test
+
+Test 15 in class JSONFileHandlerTest: ReadShouldBeReturnJSONData_Test()
+
+This function is just checking, weather file data is read properly or not.
+
+Reason: This function plays a very important role in this application and used in different use cases.
+	If this function doesnt work properly then tours cant be imported, thats why it was necessary
+	 to create a test for it.
+
+Test 16 in class JSONFileHandlerTest: WriteShouldBeReturnJSONData_Test()
+
+This function is just checking, weather data is written in file properly or not.
+
+Reason: This function also plays a very important role in this application and used in different use cases.
+	If this function doesnt work properly then tours cant be exported, thats why it was necessary 
+	to create a test for it.
+
+
+Solution name: TourPlanner.Server.DL.Test
+
+Test 17 in class DatabaseTest: DeleteTourByIdMustReturnTrue_Test()
+Test 18 in class DatabaseTest: StoreBackupMustReturnTrue_Test()
+Test 19 in class DatabaseTest: GetAllTourWithLogsMustReturnTours_Test()
+Test 20 in class DatabaseTest: FilterToursMustNotReturnNull_Test()
+
+These functions are just validating, weather CRUD functions are working properly in database or not.
+
+Reason: Again, these functions are very important, if these functions dont work properly then data 
+	cant be stored in database, thats why was it necessary to create these tests.
 
 Here is an example. This unittest checks whether the data has been stored successfully or not:
 
@@ -194,4 +291,3 @@ Total: **120h**
 
 https://github.com/FarasatNaseem/TourPlanner
 
-## Abgabe
